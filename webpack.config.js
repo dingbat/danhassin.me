@@ -23,6 +23,9 @@ module.exports = {
       { test: /\.html$/, loader: "file?name=[name].[ext]", },
       { test: /\.sass$/, loaders: ["style", "css", "sass?indentedSyntax"] },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', exclude: /node_modules/, },
+      
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
     ],
   },
 

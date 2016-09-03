@@ -1,0 +1,48 @@
+@import 'variables'
+
+.software
+
+  i.fa-github
+    font-size: 20px
+    margin-right: 5px
+      
+  .content
+    margin: auto
+    width: 75%
+
+    .col
+      vertical-align: top
+      text-align: left
+      width: 32%
+      display: inline-block
+
+      h2
+        color: darken($color-ish, 20%)
+
+      .item
+        margin-bottom: 50px
+
+        h3
+          font-size: 20px
+          margin-bottom: 5px
+
+        img
+          width: 80%
+          border: $color-ish 1px solid
+
+        .tech
+          color: $color-ish
+
+        .links
+          a
+            margin: 0 5px
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9em
+
+            &:before
+              content: '<'
+            &:after
+              content: '>'
+
+    .col:nth-child(2)
+      margin: 0 2%

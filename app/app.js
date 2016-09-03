@@ -6,6 +6,7 @@ import Index from './index.js';
 import Software from './software.js';
 
 import './style/main.sass';
+import 'font-awesome-webpack';
 
 export default class App extends Component {
   render() {
