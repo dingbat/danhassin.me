@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dingbat.github.io/";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -58,7 +58,7 @@
 
 	var _index2 = _interopRequireDefault(_index);
 
-	__webpack_require__(177);
+	__webpack_require__(178);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21453,6 +21453,10 @@
 
 	__webpack_require__(173);
 
+	var _me = __webpack_require__(177);
+
+	var _me2 = _interopRequireDefault(_me);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21484,7 +21488,7 @@
 	            null,
 	            'Dan Hassin'
 	          ),
-	          _react2.default.createElement('img', { src: 'img/me.jpg' })
+	          _react2.default.createElement('img', { src: _me2.default })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -21982,10 +21986,16 @@
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "36524e691d4675ad8c7612764bb61874.jpg";
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(178);
+	var content = __webpack_require__(179);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(176)(content, {});
@@ -22005,7 +22015,7 @@
 	}
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(175)();
