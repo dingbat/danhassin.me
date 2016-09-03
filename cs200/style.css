@@ -1,0 +1,76 @@
+body
+{
+	height:100%;
+}
+
+#editor
+{
+	height: 550px;
+	width: 100%;
+
+	background-color: rgb(253,253,253);
+
+	padding:10px;
+}
+
+#cursor
+{
+	background-color: red;	
+	border-radius: 3px;
+	display:inline-block;
+	width:10px;
+}
+
+.statement
+{
+	/*background-color: rgba(242,242,242,0.5);*/
+	border-radius: 3px;
+}
+
+#depth-menu
+{
+	float: right;
+	display: inline-block;
+	margin-top: -3px;
+}
+
+.suggestions
+{
+	margin-top:0px;
+	padding-bottom:5px;
+}
+
+
+pre < .statement
+{
+	background-color: clear;
+	border-radius: 3px;
+}
+
+.run-btn
+{
+	position: absolute;
+	transform: translateY(-175%);
+  -webkit-transform: translateY(-175%);
+	right: 30px;
+}
+
+#output
+{
+	margin-top: 5px;
+}
+
+.hint
+{
+}
+
+h1
+{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.page-header
+{
+	margin: 10px 0 20px;
+}

@@ -1,0 +1,27 @@
+body
+{
+	background: #D6D6D6;
+	font-family: sans-serif;
+
+	padding: 0;
+	margin: 0;
+
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#album
+{
+	margin: auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+iframe
+{
+	margin: auto;
+
+	width: 530px;
+	height: 900px;
+	border-style: none;
+}

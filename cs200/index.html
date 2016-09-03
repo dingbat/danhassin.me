@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="corpus-model.js"></script>
+	<script type="text/javascript" src="bundle.js"></script>
+	<script type="text/javascript" src="ui.js"></script>
+
+	<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/default.min.css">
+	<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+	<title>probabilistic programming</title>
+</head>
+<body>
+<div class="container">
+	<div class="page-header">
+		<h1>markov-assisted probabilistic programming guided ide</h1><a href="paper.pdf" target="_blank">[?]</a>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<div>
+				<pre id="editor"><div id="cursor"> </div></pre>
+				<button class="btn btn-primary run-btn">Run!</button>
+			</div>
+			<pre id="output"></pre>
+			<div class="hint">
+				<strong>How do I use this?</strong> Use the left/right arrow keys to change the cursor position. Use the up/down arrow keys to select a snippet, and press enter to insert it.
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="btn-group" id="depth-menu">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Depth <span id="current-depth">4</span> <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#" onclick="selectDepth(this);">2</a></li>
+					<li><a href="#" onclick="selectDepth(this);">3</a></li>
+					<li><a href="#" onclick="selectDepth(this);">4</a></li>
+					<li><a href="#" onclick="selectDepth(this);">5</a></li>
+					<li><a href="#" onclick="selectDepth(this);">6</a></li>
+				</ul>
+			</div>
+			<h3 class="suggestions">Suggestions</h3>
+			<ul id="options" class="nav nav-pills nav-stacked">
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
