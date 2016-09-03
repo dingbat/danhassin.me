@@ -3,10 +3,10 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: __dirname + "/app",
-  entry: {
-    javascript: "./app.js",
-    html: "./index.html",
-  },
+  entry: [
+    "./app.js",
+    "./index.html",
+  ],
 
   output: {
     filename: "app.js",
@@ -19,7 +19,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, loaders: ["babel-loader"], exclude: /node_modules/, },
+      { test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/, },
       { test: /\.html$/, loader: "file?name=[name].[ext]", },
       { test: /\.sass$/, loaders: ["style", "css", "sass?indentedSyntax"] },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', exclude: /node_modules/, },
