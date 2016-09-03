@@ -4,7 +4,10 @@ export default class Software extends Component {
   render() {
     return (
       <div className="index">
-        Hi
+        <div className="header">
+          <h1>Software</h1>
+        </div>
+        
       </div>
     )
   }

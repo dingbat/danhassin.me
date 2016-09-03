@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import './index.sass';
+import './style/index.sass';
 import imgMe from '../img/me.jpg';
 
 import { Router, Route, Link } from 'react-router'
 
 export default class Index extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {}
+  }
+
   render() {
     return (
       <div className="index">
@@ -20,17 +26,14 @@ export default class Index extends Component {
             </div>
             &nbsp;|&nbsp;
             <div className="item">
-              <a href="music">music</a>
+              <Link to="music">music</Link>
             </div>
             &nbsp;|&nbsp;
             <div className="item">
-              <a href="writing">writing</a>
+              <Link to="writing">writing</Link>
             </div>
           </div>
           <div className="about">
-            <p>
-              i've worked in <a href="http://www.democracynow.org/" className="line">new york</a> and <a href="http://kpcbfellows.com/" className="line">silicon</a> <a href="http://upthere.com" className="line">valley</a>, and <a href="incontext" className="line">freelanced</a> while backpacking through europe. i am now looking for full-stack web and/or ios contract work.
-            </p>
             <p>
               this site contains some of the things i've made–alone and with others–that i hope will intrigue your literary, musical, and digital curiosities.
             </p>
@@ -45,15 +48,21 @@ export default class Index extends Component {
         <div className="footer">
           <div className="separator">~</div>
 
-          <a href="#" id="contact">contact</a>
+          {!this.state.showEmail && 
+            <a id="contact" onClick={() => this.setState({showEmail: true})}>
+              contact
+            </a>
+          }
           
-          <span id="email" className="hidden">
-            <span className="color-ish">danhassin</span>
-            <span className="color-light">at</span>
-            <span className="color-ish">mac</span>
-            <span className="color-light">dot</span>
-            <span className="color-ish">com</span>
-          </span>
+          {this.state.showEmail && 
+            <span id="email">
+              <span className="color-ish">danhassin</span>
+              <span className="color-light">at</span>
+              <span className="color-ish">mac</span>
+              <span className="color-light">dot</span>
+              <span className="color-ish">com</span>
+            </span>
+          }
 
           <span className="color-light">&nbsp;|&nbsp;</span>
 

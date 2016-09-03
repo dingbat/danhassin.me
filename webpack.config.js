@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js']
   },
 
   module: {
@@ -29,6 +30,10 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: '../CNAME' },
       { from: 'index.html', to: 'software.html' },
-    ])
+    ]),
+
+    new webpack.DefinePlugin({
+      '__DEV__': (process.env.NODE_ENV !== 'production')
+    })
   ],
 }

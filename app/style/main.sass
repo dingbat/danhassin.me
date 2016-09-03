@@ -1,5 +1,4 @@
-$color-ish: gray
-$color-light: lighten(gray, 10%)
+@import 'variables'
 
 body
   padding: 0
@@ -15,15 +14,13 @@ body
   padding-top: 20px
 
 a
+  cursor: pointer
   color: inherit
   text-decoration: none
 
   &:hover
     text-decoration: underline
     color: black
-
-.hidden
-  display: none
 
 .color-ish
   color: $color-ish

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, Link, browserHistory, hashHistory } from 'react-router';
 
 import Index from './index.js';
 import Software from './software.js';
 
-import './main.sass';
+import './style/main.sass';
 
 export default class App extends Component {
   render() {
@@ -18,11 +18,11 @@ const routes = {
   component: App,
   indexRoute: { component: Index },
   childRoutes: [
-    { path: 'software*', component: Software },
+    { path: 'software', component: Software },
   ]
 }
 
 ReactDOM.render(
-  <Router history={browserHistory} routes={routes} />,
+  <Router history={__DEV__ ? hashHistory : browserHistory} routes={routes} />,
   document.getElementById('root')
 );
