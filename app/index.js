@@ -35,12 +35,8 @@ export default class Index extends Component {
           </div>
           <div className="about">
             <p>
-              this site contains some of the things i've made–alone and with others–that i hope will intrigue your literary, musical, and digital curiosities.
-            </p>
-            <p>
-              thank you for visiting!
-              <br />
-              -dan
+              hi, oh uh, hi, i haven't decided what to write here yet.
+              anyway, thanks for visiting! -dan
             </p>
           </div>
         </div>
