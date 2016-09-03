@@ -31,7 +31,9 @@ module.exports = {
 
   plugins: [
     new CopyWebpackPlugin([
-      { from: '../CNAME' },
+      { from: '../other/CNAME' },
+      { from: '../other/swrb', to: 'swrb/' },
+      { from: '../other/cs200', to: 'cs200/' },
       { from: 'index.html', to: 'software.html' },
     ]),
 
