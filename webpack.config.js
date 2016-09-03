@@ -3,6 +3,7 @@ module.exports = {
   entry: {
     javascript: "./app.js",
     html: "./index.html",
+    cname: "../CNAME",
   },
 
   output: {
@@ -25,6 +26,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "file?name=[name].[ext]",
+      },
+      {
+        test: /CNAME$/,
+        loader: "file?name=CNAME",
       },
       {
         test: /\.sass$/,
