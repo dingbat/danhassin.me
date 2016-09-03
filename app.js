@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dingbat.github.io/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -54,15 +54,15 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _greeting = __webpack_require__(172);
+	var _index = __webpack_require__(172);
 
-	var _greeting2 = _interopRequireDefault(_greeting);
+	var _index2 = _interopRequireDefault(_index);
 
 	__webpack_require__(173);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_greeting2.default, null), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(_index2.default, null), document.body);
 
 /***/ },
 /* 1 */
@@ -21473,8 +21473,8 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "app" },
-	        "Hi!??"
+	        { className: "test" },
+	        "Test"
 	      );
 	    }
 	  }]);
@@ -21519,7 +21519,7 @@
 
 
 	// module
-	exports.push([module.id, ".sassy {\n  color: red; }\n", ""]);
+	exports.push([module.id, ".test {\n  color: blue; }\n", ""]);
 
 	// exports
 
