@@ -1,9 +1,10 @@
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   context: __dirname + "/app",
   entry: {
     javascript: "./app.js",
     html: "./index.html",
-    cname: "../CNAME",
   },
 
   output: {
@@ -17,24 +18,17 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: ["babel-loader"],
-      },
-      {
-        test: /\.html$/,
-        loader: "file?name=[name].[ext]",
-      },
-      {
-        test: /CNAME$/,
-        loader: "file?name=CNAME",
-      },
-      {
-        test: /\.sass$/,
-        loaders: ["style", "css", "sass?indentedSyntax"]
-      },
-      { test: /\.(png|jpg)$/, exclude: /node_modules/, loader: 'url-loader?limit=8192' },
-    ],    
-  }
+      { test: /\.js$/, loaders: ["babel-loader"], exclude: /node_modules/, },
+      { test: /\.html$/, loader: "file?name=[name].[ext]", },
+      { test: /\.sass$/, loaders: ["style", "css", "sass?indentedSyntax"] },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', exclude: /node_modules/, },
+    ],
+  },
+
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: '../CNAME' },
+      { from: 'index.html', to: 'software.html' },
+    ])
+  ],
 }

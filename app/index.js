@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './index.sass';
 import imgMe from '../img/me.jpg';
 
-class App extends Component {
+import { Router, Route, Link } from 'react-router'
+
+export default class Index extends Component {
   render() {
     return (
       <div className="index">
@@ -14,7 +16,7 @@ class App extends Component {
         <div className="content">
           <div className="menu">
             <div className="item">
-              <a href="projects">software</a>
+              <Link to="software">software</Link>
             </div>
             &nbsp;|&nbsp;
             <div className="item">
@@ -61,5 +63,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
