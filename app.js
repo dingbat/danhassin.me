@@ -58,11 +58,11 @@
 
 	var _index2 = _interopRequireDefault(_index);
 
-	__webpack_require__(173);
+	__webpack_require__(177);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_index2.default, null), document.body);
+	_reactDom2.default.render(_react2.default.createElement(_index2.default, null), document.getElementById('root'));
 
 /***/ },
 /* 1 */
@@ -21439,7 +21439,7 @@
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21450,6 +21450,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(173);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21469,12 +21471,156 @@
 	  }
 
 	  _createClass(App, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "test" },
-	        "Test"
+	        'div',
+	        { className: 'index' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'header' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Dan Hassin'
+	          ),
+	          _react2.default.createElement('img', { src: 'img/me.jpg' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'content' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'menu' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'item' },
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'projects' },
+	                'software'
+	              )
+	            ),
+	            ' | ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'item' },
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'music' },
+	                'music'
+	              )
+	            ),
+	            ' | ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'item' },
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'writing' },
+	                'writing'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'about' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'i\'ve worked in ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'http://www.democracynow.org/', className: 'line' },
+	                'new york'
+	              ),
+	              ' and ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'http://kpcbfellows.com/', className: 'line' },
+	                'silicon'
+	              ),
+	              ' ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'http://upthere.com', className: 'line' },
+	                'valley'
+	              ),
+	              ', and ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'incontext', className: 'line' },
+	                'freelanced'
+	              ),
+	              ' while backpacking through europe. i am now looking for full-stack web and/or ios contract work.'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'this site contains some of the things i\'ve made–alone and with others–that i hope will intrigue your literary, musical, and digital curiosities.'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'thank you for visiting!',
+	              _react2.default.createElement('br', null),
+	              '-dan'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'separator' },
+	            '~'
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: '#', id: 'contact' },
+	            'contact'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { id: 'email', className: 'hidden' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'danhassin'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-light' },
+	              'at'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'mac'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-light' },
+	              'dot'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'com'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'color-light' },
+	            ' | '
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'stuff/hassin-resume.pdf', target: '_blank', className: 'color-ish' },
+	            'resume'
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -21500,8 +21646,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js?indentedSyntax!./main.sass", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js?indentedSyntax!./main.sass");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js?indentedSyntax!./index.sass", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js?indentedSyntax!./index.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21519,7 +21665,7 @@
 
 
 	// module
-	exports.push([module.id, ".test {\n  color: blue; }\n", ""]);
+	exports.push([module.id, ".container {\n  text-align: center; }\n\n.header {\n  margin-top: 50px;\n  margin-bottom: 40px; }\n  .header img {\n    width: 200px;\n    border-radius: 10px; }\n\n.content {\n  color: gray;\n  padding-bottom: 10px;\n  width: 448px;\n  margin-left: auto;\n  margin-right: auto; }\n  .content .menu {\n    margin-bottom: 30px;\n    font-size: 20px; }\n    .content .menu .item {\n      display: inline-block; }\n  .content .about {\n    text-align: justify; }\n\n.footer {\n  color: gray;\n  font-size: 0.95em;\n  margin-top: 10px;\n  padding-bottom: 60px; }\n  .footer .separator {\n    font-size: 1em;\n    padding: 10px 0px; }\n", ""]);
 
 	// exports
 
@@ -21830,6 +21976,46 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
+
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(178);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(176)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js?indentedSyntax!./main.sass", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js?indentedSyntax!./main.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(175)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: 'Oxygen', sans-serif; }\n\n.container {\n  width: 75%;\n  margin-left: auto;\n  margin-right: auto;\n  padding-top: 20px; }\n\na {\n  color: inherit;\n  text-decoration: none; }\n  a:hover {\n    text-decoration: underline;\n    color: black; }\n\n.hidden {\n  display: none; }\n\n.color-ish {\n  color: gray; }\n\n.color-light {\n  color: #9a9a9a; }\n", ""]);
+
+	// exports
 
 
 /***/ }
