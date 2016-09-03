@@ -1,2 +1,32 @@
-.test
-  color: blue
+$color-ish: gray
+$color-light: lighten(gray, 10%)
+
+body
+  padding: 0
+  margin: 0
+
+  font-family: 'Oxygen', sans-serif
+
+.container
+  width: 75%
+
+  margin-left: auto
+  margin-right: auto
+  padding-top: 20px
+
+a
+  color: inherit
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+    color: black
+
+.hidden
+  display: none
+
+.color-ish
+  color: $color-ish
+
+.color-light
+  color: $color-light

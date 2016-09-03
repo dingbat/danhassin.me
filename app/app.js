@@ -5,5 +5,5 @@ import './main.sass';
 
 ReactDOM.render(
   <Index />,
-  document.body
+  document.getElementById('root')
 );
