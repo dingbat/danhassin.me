@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './style/software.sass';
 
+import { Link } from 'react-router'
+
 const iosItems = []
 const BigItems = [
   {
@@ -96,7 +98,11 @@ export default class Software extends Component {
     return (
       <div className="software">
         <div className="header">
-          <h1>Software</h1>
+          <h1>
+            <Link to="/"><i className="fa fa-angle-left" /></Link>
+            Software
+            <div className="back-counterbalance" />
+          </h1>
           <div>
             <i className="fa fa-github" />
             follow me on github!&nbsp;
