@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.sass';
+import imgMe from '../img/me.jpg';
 
 class App extends Component {
   render() {
@@ -7,7 +8,7 @@ class App extends Component {
       <div className="index">
         <div className="header">
           <h1>Dan Hassin</h1>
-          <img src="img/me.jpg" />
+          <img src={imgMe} />
         </div>
 
         <div className="content">

@@ -9,7 +9,6 @@ module.exports = {
   output: {
     filename: "app.js",
     path: __dirname + "/dist",
-    publicPath: '/dingbat.github.io/',
   },
 
   resolve: {
@@ -34,7 +33,8 @@ module.exports = {
       {
         test: /\.sass$/,
         loaders: ["style", "css", "sass?indentedSyntax"]
-      }
+      },
+      { test: /\.(png|jpg)$/, exclude: /node_modules/, loader: 'url-loader?limit=8192' },
     ],    
   }
 }
