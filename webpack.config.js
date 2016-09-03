@@ -24,6 +24,7 @@ module.exports = {
       { test: /\.sass$/, loaders: ["style", "css", "sass?indentedSyntax"] },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', exclude: /node_modules/, },
       
+      // FontAwesome
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
     ],
@@ -31,9 +32,7 @@ module.exports = {
 
   plugins: [
     new CopyWebpackPlugin([
-      { from: '../other/CNAME' },
-      { from: '../other/swrb', to: 'swrb/' },
-      { from: '../other/cs200', to: 'cs200/' },
+      { from: '../other', to: '' },
       { from: 'index.html', to: 'software.html' },
     ]),
 
