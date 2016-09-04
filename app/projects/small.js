@@ -2,6 +2,21 @@ import React from 'react';
 
 export default [
   {
+    name: "haml-jsx-loader",
+    link: "https://github.com/dingbat/haml-jsx-loader",
+    links: {
+      github: "https://github.com/dingbat/haml-jsx-loader",
+      npm: "https://www.npmjs.com/package/haml-jsx-loader",
+    },
+    tech: 'js, webpack, mocha',
+    description: () =>
+      <p>
+        a webpack loader that lets you embed HAML into your react.js JSX.
+        never settle for pointy brackets again
+      </p>
+  },
+
+  {
     name: "crm114_native",
     img: "crm114.jpg",
     link: "https://github.com/dingbat/crm114_native",
@@ -55,7 +70,7 @@ export default [
     links: {
       'hackny standings': "http://hackny.org/a/2013/10/fall-2013-hackny-hackathon-recap-and-winners/",
     },
-    tech: 'ios, shapeways API, php',
+    tech: "ios, shapeways API, php (just a tiny bit, don't worry)",
     description: () =>
       <div><p>
         a 24-hour hack, done for the fall 2013 HackNY Hackathon in NYC, my first hackathon.

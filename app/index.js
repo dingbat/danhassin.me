@@ -45,7 +45,7 @@ export default class Index extends Component {
           <div className="separator">~</div>
 
           {!this.state.showEmail && 
-            <a id="contact" onClick={() => this.setState({showEmail: true})}>
+            <a className="show" onClick={() => this.setState({showEmail: true})}>
               contact
             </a>
           }

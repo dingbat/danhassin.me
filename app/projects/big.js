@@ -20,6 +20,19 @@ export default [
   },
 
   {
+    name: "worksource",
+    links: {},
+    tech: 'rails, react.js, react native (iOS & android), letsencrypt',
+    description: () =>
+      <p>
+        freelance project for <a href="http://earthmov.es/">Earth Moves</a>.
+        <br />
+        full-stack (including iOS and android apps), custom CMS for creating and
+        maintaining health insurance benefits guides for employers/employees.
+      </p>
+  },
+
+  {
     name: "skedge",
     img: "skedge.png",
     link: "http://www.skedgeur.com",
