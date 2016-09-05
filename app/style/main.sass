@@ -43,32 +43,3 @@ a[href], a.show
 
 .color-light
   color: $color-light
-
-// Animations
-
-.page.push-enter
-  opacity: 0
-  transform: translate(80%, 0px)
-
-.page.pop-enter
-  opacity: 0
-  transform: translate(-80%, 0px)
-
-.page.push-enter.push-enter-active, .page.pop-enter.pop-enter-active
-  transform: translate(0px, 0px)
-  opacity: 1
-  
-.page.push-leave, .page.pop-leave
-  opacity: 1
-  transform: translate(0px, 0px)
-
-.page.push-leave.push-leave-active
-  opacity: 0
-  transform: translate(-80%, 0px)
-
-.page.pop-leave.pop-leave-active
-  opacity: 0
-  transform: translate(80%, 0px)
-
-.page.push-enter-active, .page.push-leave-active, .page.pop-enter-active, .page.pop-leave-active
-  transition: transform $page-transition-speed, opacity $page-transition-speed

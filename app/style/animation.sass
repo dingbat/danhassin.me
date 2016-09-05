@@ -1,0 +1,35 @@
+@import 'variables'
+
+// Animations
+
+.page
+  &.push-enter
+    opacity: 0
+    transform: translate(0px, 80%) scale(0.5, 0.5)
+
+  &.pop-enter
+    opacity: 0
+    transform: scale(0.5, 0.5)
+
+  &.push-enter.push-enter-active,
+  &.pop-enter.pop-enter-active
+    transform: translate(0px, 0px) scale(1, 1)
+    opacity: 1
+    
+  &.push-leave, .pop-leave
+    opacity: 1
+    transform: translate(0px, 0px) scale(1, 1)
+
+  &.push-leave.push-leave-active
+    opacity: 0
+    transform: scale(0.5, 0.5)
+
+  &.pop-leave.pop-leave-active
+    opacity: 0
+    transform: translate(0px, 80%) scale(0.5, 0.5)
+
+  &.push-enter-active,
+  &.push-leave-active,
+  &.pop-enter-active,
+  &.pop-leave-active
+    transition: transform $page-transition-speed, opacity $page-transition-speed

@@ -6,6 +6,7 @@ import Index from './index.js';
 import Software from './software.js';
 
 import './style/main.sass';
+import './style/animation.sass';
 import 'font-awesome-webpack';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -17,8 +18,8 @@ const App = ({children, location}) => {
     %div
       %ReactCSSTransitionGroup(
         transitionName={transition}
-        transitionEnterTimeout={750}
-        transitionLeaveTimeout={750}
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={500}
       )
         .page.container(key={key})
           {children}
