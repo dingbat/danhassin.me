@@ -10,6 +10,7 @@ import 'font-awesome-webpack';
 
 import Home from 'home.js';
 import Software from 'software.js';
+import Music from 'music.js';
 
 const App = ({children, location}) => {
   const key = location.pathname.replace("/","")
@@ -32,6 +33,7 @@ const routes = {
   indexRoute: { component: Home },
   childRoutes: [
     { path: 'software', component: Software },
+    { path: 'music', component: Music },
   ]
 }
 
