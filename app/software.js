@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './style/software.sass';
-
 import { Link } from 'react-router';
 
-import iOSItems from './projects/ios';
-import BigItems from './projects/big';
-import SmallItems from './projects/small';
+import 'style/software.sass';
+
+import iOSItems from 'projects/ios';
+import BigItems from 'projects/big';
+import SmallItems from 'projects/small';
 
 export default class Software extends Component {
   renderItem(item) {
@@ -15,7 +15,7 @@ export default class Software extends Component {
           {item.img &&
             <img
               className={item.noBorder ? 'no-border' : item.app ? 'app' : null}
-              src={require(`../img/s/${item.img}`)}
+              src={require(`img/s/${item.img}`)}
             />
           }
           <h3>{item.name}</h3>

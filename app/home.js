@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './style/index.sass';
-import imgMe from '../img/me.jpg';
+import 'style/index.sass';
+import imgMe from 'img/me.jpg';
 
 import { Router, Route, Link } from 'react-router'
 
-export default class Index extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props)
 

@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, hashHistory } from 'react-router';
 
-import Index from './index.js';
-import Software from './software.js';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import './style/main.sass';
-import './style/animation.sass';
+import 'style/main.sass';
+import 'style/animation.sass';
 import 'font-awesome-webpack';
 
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Home from 'home.js';
+import Software from 'software.js';
 
 const App = ({children, location}) => {
   const key = location.pathname.replace("/","")
@@ -29,7 +29,7 @@ const App = ({children, location}) => {
 const routes = {
   path: '/',
   component: App,
-  indexRoute: { component: Index },
+  indexRoute: { component: Home },
   childRoutes: [
     { path: 'software', component: Software },
   ]

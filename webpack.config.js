@@ -14,7 +14,11 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
+    modulesDirectories: [
+       __dirname + '/app',
+       __dirname + '/node_modules',
+    ]
   },
 
   module: {
