@@ -8,13 +8,14 @@ import 'style/main.sass';
 import 'style/animation.sass';
 import 'font-awesome-webpack';
 
-import Home from 'home.js';
-import Software from 'software.js';
-import Music from 'music.js';
+import Home from 'home';
+import Software from 'software';
+import Music from 'music';
+import Writing from 'writing';
 
 const App = ({children, location}) => {
   const key = location.pathname.replace("/","")
-  const transition = key.length === 0 ? "pop" : "push"
+  const transition = key === '' ? "pop" : "push"
   return (~
     %div
       %ReactCSSTransitionGroup(
@@ -34,6 +35,7 @@ const routes = {
   childRoutes: [
     { path: 'software', component: Software },
     { path: 'music', component: Music },
+    { path: 'writing', component: Writing },
   ]
 }
 

@@ -46,19 +46,13 @@ export default class Software extends Component {
         .content
           .col
             %h2 iOS/macOS
-            {iOSItems.map((item) =>
-              this.renderItem(item)
-            )}
+            {iOSItems.map(this.renderItem)}
           .col
             %h2 bigger things
-            {BigItems.map((item) =>
-              this.renderItem(item)
-            )}
+            {BigItems.map(this.renderItem)}
           .col
             %h2 smaller things
-            {SmallItems.map((item) =>
-              this.renderItem(item)
-            )}
+            {SmallItems.map(this.renderItem)}
     ~)
   }
 }
