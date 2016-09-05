@@ -38,6 +38,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: '../other', to: '' },
       { from: 'index.html', to: 'software.html' },
+      { from: 'index.html', to: 'music.html' },
+      { from: 'index.html', to: 'writing.html' },
     ]),
 
     new webpack.DefinePlugin({
