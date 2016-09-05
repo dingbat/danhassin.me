@@ -8,9 +8,20 @@ import Software from './software.js';
 import './style/main.sass';
 import 'font-awesome-webpack';
 
+import { RouteTransition, presets } from 'react-router-transition';
+
 export default class App extends Component {
   render() {
-    return this.props.children;
+    return (
+      <div>
+        <RouteTransition
+          pathname={this.props.location.pathname}
+          {...presets.pop}
+        >
+          {this.props.children}
+        </RouteTransition>
+      </div>
+    )
   }
 }
 
