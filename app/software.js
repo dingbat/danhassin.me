@@ -9,66 +9,56 @@ import SmallItems from 'projects/small';
 
 export default class Software extends Component {
   renderItem(item) {
-    return (
-      <div key={item.name} className="item">
-        <a href={item.link}>
-          {item.img &&
-            <img
+    return (~
+      .item(key={item.name})
+        %a(href={item.link})
+          {item.img && (~
+            %img(
               className={item.noBorder ? 'no-border' : item.app ? 'app' : null}
               src={require(`img/s/${item.img}`)}
-            />
-          }
-          <h3>{item.name}</h3>
-        </a>
+            )
+          ~)}
+          %h3 {item.name}
+
         {item.description()}
-        <p className="tech">
+        %p.tech
           {item.tech}
-        </p>
-        <div className="links">
+        .links
           {Object.keys(item.links).map((link) =>
-            <a key={link} href={item.links[link]}>{link}</a>
+            (~ %a(key={link} href={item.links[link]}) {link} ~)
           )}
-        </div>
-      </div>
-    )
+    ~)
   }
 
   render() {
-    return (
-      <div className="software">
-        <div className="header">
-          <h1>
-            <Link to="/"><i className="fa fa-angle-left" /></Link>
+    return (~
+      .software
+        .header
+          %h1
+            %Link(to="/") %i.fa.fa-angle-left
             Software
-            <div className="back-counterbalance" />
-          </h1>
-          <div>
-            <i className="fa fa-github" />
-            follow me on github!&nbsp;
-            <a href="https://github.com/dingbat">@dingbat</a>
-          </div>
-        </div>
-        <div className="content">
-          <div className="col">
-            <h2>iOS/macOS</h2>
+            .back-counterbalance
+          .
+            %i.fa.fa-github
+            follow me on github!
+            %a(href="https://github.com/dingbat")> @dingbat
+          
+        .content
+          .col
+            %h2 iOS/macOS
             {iOSItems.map((item) =>
               this.renderItem(item)
             )}
-          </div>
-          <div className="col">
-            <h2>bigger things</h2>
+          .col
+            %h2 bigger things
             {BigItems.map((item) =>
               this.renderItem(item)
             )}
-          </div>
-          <div className="col">
-            <h2>smaller things</h2>
+          .col
+            %h2 smaller things
             {SmallItems.map((item) =>
               this.renderItem(item)
             )}
-          </div>
-        </div>
-      </div>
-    )
+    ~)
   }
 }
