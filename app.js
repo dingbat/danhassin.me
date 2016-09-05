@@ -27280,7 +27280,7 @@
 	          ),
 	          !this.state.showEmail && _react2.default.createElement(
 	            'a',
-	            { id: 'contact', onClick: function onClick() {
+	            { className: 'show', onClick: function onClick() {
 	                return _this2.setState({ showEmail: true });
 	              } },
 	            'contact'
@@ -28050,6 +28050,25 @@
 	    );
 	  }
 	}, {
+	  name: "worksource",
+	  links: {},
+	  tech: 'rails, react.js, react native (iOS & android), letsencrypt',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "freelance project for ",
+	      _react2.default.createElement(
+	        "a",
+	        { href: "http://earthmov.es/" },
+	        "Earth Moves"
+	      ),
+	      ".",
+	      _react2.default.createElement("br", null),
+	      "full-stack (including iOS and android apps), custom CMS for creating and maintaining health insurance benefits guides for employers/employees."
+	    );
+	  }
+	}, {
 	  name: "skedge",
 	  img: "skedge.png",
 	  link: "http://www.skedgeur.com",
@@ -28150,6 +28169,21 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = [{
+	  name: "haml-jsx-loader",
+	  link: "https://github.com/dingbat/haml-jsx-loader",
+	  links: {
+	    github: "https://github.com/dingbat/haml-jsx-loader",
+	    npm: "https://www.npmjs.com/package/haml-jsx-loader"
+	  },
+	  tech: 'js, webpack, mocha',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "a webpack loader that lets you embed HAML into your react.js JSX. never settle for pointy brackets again"
+	    );
+	  }
+	}, {
 	  name: "crm114_native",
 	  img: "crm114.jpg",
 	  link: "https://github.com/dingbat/crm114_native",
@@ -28210,7 +28244,7 @@
 	  links: {
 	    'hackny standings': "http://hackny.org/a/2013/10/fall-2013-hackny-hackathon-recap-and-winners/"
 	  },
-	  tech: 'ios, shapeways API, php',
+	  tech: "ios, shapeways API, php (just a tiny bit, don't worry)",
 	  description: function description() {
 	    return _react2.default.createElement(
 	      "div",
@@ -28409,7 +28443,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: 'Oxygen', sans-serif; }\n\n.container {\n  width: 75%;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-top: 20px; }\n\n.header {\n  margin-top: 50px;\n  margin-bottom: 40px; }\n  .header i.fa-angle-left, .header .back-counterbalance {\n    width: 200px;\n    font-size: 35px;\n    padding-right: 15px;\n    display: inline-block; }\n\na {\n  cursor: pointer;\n  color: inherit;\n  text-decoration: none; }\n  a:hover {\n    text-decoration: underline;\n    color: black; }\n\n.color-ish {\n  color: gray; }\n\n.color-light {\n  color: #9a9a9a; }\n", ""]);
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: 'Oxygen', sans-serif; }\n\n.container {\n  width: 75%;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n  padding-top: 20px; }\n\n.header {\n  margin-top: 50px;\n  margin-bottom: 40px; }\n  .header i.fa-angle-left, .header .back-counterbalance {\n    width: 200px;\n    font-size: 35px;\n    padding-right: 15px;\n    display: inline-block; }\n\na[href], a.show {\n  cursor: pointer;\n  color: inherit;\n  text-decoration: none; }\n  a[href]:hover, a.show:hover {\n    text-decoration: underline;\n    color: black; }\n\n.color-ish {\n  color: gray; }\n\n.color-light {\n  color: #9a9a9a; }\n", ""]);
 
 	// exports
 
