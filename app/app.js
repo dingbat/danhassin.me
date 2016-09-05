@@ -8,21 +8,21 @@ import Software from './software.js';
 import './style/main.sass';
 import 'font-awesome-webpack';
 
-import { RouteTransition, presets } from 'react-router-transition';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <RouteTransition
-          pathname={this.props.location.pathname}
-          {...presets.pop}
-        >
-          {this.props.children}
-        </RouteTransition>
-      </div>
-    )
-  }
+const App = ({children, location}) => {
+  const key = location.pathname.replace("/","")
+  const transition = key.length === 0 ? "pop" : "push"
+  return (~
+    %div
+      %ReactCSSTransitionGroup(
+        transitionName={transition}
+        transitionEnterTimeout={750}
+        transitionLeaveTimeout={750}
+      )
+        .page.container(key={key})
+          {children}
+  ~)
 }
 
 const routes = {

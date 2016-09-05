@@ -19,7 +19,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/, },
+      { test: /\.js$/, loaders: ['react-hot', 'babel', 'haml-jsx'], exclude: /node_modules/, },
       { test: /\.html$/, loader: "file?name=[name].[ext]", },
       { test: /\.sass$/, loaders: ["style", "css", "sass?indentedSyntax"] },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', exclude: /node_modules/, },

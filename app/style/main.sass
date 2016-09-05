@@ -7,13 +7,16 @@ body
   font-family: 'Oxygen', sans-serif
 
 .container
-  width: 75%
+  width: 80%
 
   text-align: center
 
-  margin-left: auto
-  margin-right: auto
   padding-top: 20px
+
+  // needed for transitions to work
+  // (so that two pages can 'overlay' each other)
+  position: absolute
+  left: 10%
 
 .header
   margin-top: 50px
@@ -40,3 +43,32 @@ a[href], a.show
 
 .color-light
   color: $color-light
+
+// Animations
+
+.page.push-enter
+  opacity: 0
+  transform: translate(80%, 0px)
+
+.page.pop-enter
+  opacity: 0
+  transform: translate(-80%, 0px)
+
+.page.push-enter.push-enter-active, .page.pop-enter.pop-enter-active
+  transform: translate(0px, 0px)
+  opacity: 1
+  
+.page.push-leave, .page.pop-leave
+  opacity: 1
+  transform: translate(0px, 0px)
+
+.page.push-leave.push-leave-active
+  opacity: 0
+  transform: translate(-80%, 0px)
+
+.page.pop-leave.pop-leave-active
+  opacity: 0
+  transform: translate(80%, 0px)
+
+.page.push-enter-active, .page.push-leave-active, .page.pop-enter-active, .page.pop-leave-active
+  transition: transform $page-transition-speed, opacity $page-transition-speed
