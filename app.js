@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(14);
-	module.exports = __webpack_require__(297);
+	module.exports = __webpack_require__(305);
 
 
 /***/ },
@@ -79,21 +79,31 @@
 
 	var _reactRouter = __webpack_require__(186);
 
-	var _index = __webpack_require__(249);
+	var _reactAddonsCssTransitionGroup = __webpack_require__(248);
 
-	var _index2 = _interopRequireDefault(_index);
+	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
-	var _software = __webpack_require__(255);
+	__webpack_require__(255);
+
+	__webpack_require__(259);
+
+	__webpack_require__(261);
+
+	var _home = __webpack_require__(272);
+
+	var _home2 = _interopRequireDefault(_home);
+
+	var _software = __webpack_require__(276);
 
 	var _software2 = _interopRequireDefault(_software);
 
-	__webpack_require__(277);
+	var _music = __webpack_require__(298);
 
-	__webpack_require__(279);
+	var _music2 = _interopRequireDefault(_music);
 
-	var _reactAddonsCssTransitionGroup = __webpack_require__(290);
+	var _writing = __webpack_require__(302);
 
-	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+	var _writing2 = _interopRequireDefault(_writing);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -102,13 +112,13 @@
 	  var location = _ref.location;
 
 	  var key = location.pathname.replace("/", "");
-	  var transition = key.length === 0 ? "pop" : "push";
+	  var transition = key === '' ? "pop" : "push";
 	  return _react2.default.createElement(
 	    'div',
 	    null,
 	    _react2.default.createElement(
 	      _reactAddonsCssTransitionGroup2.default,
-	      { transitionName: transition, transitionEnterTimeout: 750, transitionLeaveTimeout: 750 },
+	      { transitionName: transition, transitionEnterTimeout: 500, transitionLeaveTimeout: 500 },
 	      _react2.default.createElement(
 	        'div',
 	        { key: key, className: 'page container' },
@@ -121,8 +131,8 @@
 	var routes = {
 	  path: '/',
 	  component: App,
-	  indexRoute: { component: _index2.default },
-	  childRoutes: [{ path: 'software', component: _software2.default }]
+	  indexRoute: { component: _home2.default },
+	  childRoutes: [{ path: 'software', component: _software2.default }, { path: 'music', component: _music2.default }, { path: 'writing', component: _writing2.default }]
 	};
 
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history:  false ? _reactRouter.hashHistory : _reactRouter.browserHistory, routes: routes }), document.getElementById('root'));
@@ -21546,81 +21556,81 @@
 
 	var _Router3 = _interopRequireDefault(_Router2);
 
-	var _Link2 = __webpack_require__(226);
+	var _Link2 = __webpack_require__(225);
 
 	var _Link3 = _interopRequireDefault(_Link2);
 
-	var _IndexLink2 = __webpack_require__(227);
+	var _IndexLink2 = __webpack_require__(226);
 
 	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
 
-	var _withRouter2 = __webpack_require__(228);
+	var _withRouter2 = __webpack_require__(227);
 
 	var _withRouter3 = _interopRequireDefault(_withRouter2);
 
-	var _IndexRedirect2 = __webpack_require__(230);
+	var _IndexRedirect2 = __webpack_require__(229);
 
 	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 
-	var _IndexRoute2 = __webpack_require__(232);
+	var _IndexRoute2 = __webpack_require__(231);
 
 	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 
-	var _Redirect2 = __webpack_require__(231);
+	var _Redirect2 = __webpack_require__(230);
 
 	var _Redirect3 = _interopRequireDefault(_Redirect2);
 
-	var _Route2 = __webpack_require__(233);
+	var _Route2 = __webpack_require__(232);
 
 	var _Route3 = _interopRequireDefault(_Route2);
 
-	var _History2 = __webpack_require__(234);
+	var _History2 = __webpack_require__(233);
 
 	var _History3 = _interopRequireDefault(_History2);
 
-	var _Lifecycle2 = __webpack_require__(235);
+	var _Lifecycle2 = __webpack_require__(234);
 
 	var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
 
-	var _RouteContext2 = __webpack_require__(236);
+	var _RouteContext2 = __webpack_require__(235);
 
 	var _RouteContext3 = _interopRequireDefault(_RouteContext2);
 
-	var _useRoutes2 = __webpack_require__(237);
+	var _useRoutes2 = __webpack_require__(236);
 
 	var _useRoutes3 = _interopRequireDefault(_useRoutes2);
 
-	var _RouterContext2 = __webpack_require__(223);
+	var _RouterContext2 = __webpack_require__(222);
 
 	var _RouterContext3 = _interopRequireDefault(_RouterContext2);
 
-	var _RoutingContext2 = __webpack_require__(238);
+	var _RoutingContext2 = __webpack_require__(237);
 
 	var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
 
 	var _PropTypes3 = _interopRequireDefault(_PropTypes2);
 
-	var _match2 = __webpack_require__(239);
+	var _match2 = __webpack_require__(238);
 
 	var _match3 = _interopRequireDefault(_match2);
 
-	var _useRouterHistory2 = __webpack_require__(243);
+	var _useRouterHistory2 = __webpack_require__(242);
 
 	var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
 
-	var _applyRouterMiddleware2 = __webpack_require__(244);
+	var _applyRouterMiddleware2 = __webpack_require__(243);
 
 	var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
 
-	var _browserHistory2 = __webpack_require__(245);
+	var _browserHistory2 = __webpack_require__(244);
 
 	var _browserHistory3 = _interopRequireDefault(_browserHistory2);
 
-	var _hashHistory2 = __webpack_require__(248);
+	var _hashHistory2 = __webpack_require__(247);
 
 	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
 
-	var _createMemoryHistory2 = __webpack_require__(240);
+	var _createMemoryHistory2 = __webpack_require__(239);
 
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 
@@ -22382,7 +22392,7 @@
 
 	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-	var _useQueries = __webpack_require__(212);
+	var _useQueries = __webpack_require__(211);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
@@ -22394,19 +22404,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _createTransitionManager = __webpack_require__(215);
+	var _createTransitionManager = __webpack_require__(214);
 
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
 	var _InternalPropTypes = __webpack_require__(192);
 
-	var _RouterContext = __webpack_require__(223);
+	var _RouterContext = __webpack_require__(222);
 
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
 	var _RouteUtils = __webpack_require__(187);
 
-	var _RouterUtils = __webpack_require__(225);
+	var _RouterUtils = __webpack_require__(224);
 
 	var _routerWarning = __webpack_require__(190);
 
@@ -22610,7 +22620,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -22618,17 +22628,17 @@
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(197);
 
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(198);
 
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(199);
 
-	var _DOMUtils = __webpack_require__(201);
+	var _DOMUtils = __webpack_require__(200);
 
-	var _DOMStateStorage = __webpack_require__(202);
+	var _DOMStateStorage = __webpack_require__(201);
 
-	var _createDOMHistory = __webpack_require__(203);
+	var _createDOMHistory = __webpack_require__(202);
 
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 
@@ -22852,73 +22862,6 @@
 
 /***/ },
 /* 197 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-
-	'use strict';
-
-	/**
-	 * Similar to invariant but only logs a warning if the condition is not met.
-	 * This can be used to log issues in development environments in critical
-	 * paths. Removing the logging code for production environments will keep the
-	 * same logic and follow the same code paths.
-	 */
-
-	var warning = function() {};
-
-	if (process.env.NODE_ENV !== 'production') {
-	  warning = function(condition, format, args) {
-	    var len = arguments.length;
-	    args = new Array(len > 2 ? len - 2 : 0);
-	    for (var key = 2; key < len; key++) {
-	      args[key - 2] = arguments[key];
-	    }
-	    if (format === undefined) {
-	      throw new Error(
-	        '`warning(condition, format, ...args)` requires a warning ' +
-	        'message argument'
-	      );
-	    }
-
-	    if (format.length < 10 || (/^[s\W]*$/).test(format)) {
-	      throw new Error(
-	        'The warning format should be able to uniquely identify this ' +
-	        'warning. Please, use a more descriptive format than: ' + format
-	      );
-	    }
-
-	    if (!condition) {
-	      var argIndex = 0;
-	      var message = 'Warning: ' +
-	        format.replace(/%s/g, function() {
-	          return args[argIndex++];
-	        });
-	      if (typeof console !== 'undefined') {
-	        console.error(message);
-	      }
-	      try {
-	        // This error was thrown as a convenience so that you can use this stack
-	        // to find the callsite that caused this warning to fire.
-	        throw new Error(message);
-	      } catch(x) {}
-	    }
-	  };
-	}
-
-	module.exports = warning;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
-
-/***/ },
-/* 198 */
 /***/ function(module, exports) {
 
 	/**
@@ -22954,7 +22897,7 @@
 	};
 
 /***/ },
-/* 199 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -22965,7 +22908,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -23007,7 +22950,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 200 */
+/* 199 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23017,7 +22960,7 @@
 	exports.canUseDOM = canUseDOM;
 
 /***/ },
-/* 201 */
+/* 200 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23097,7 +23040,7 @@
 	}
 
 /***/ },
-/* 202 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*eslint-disable no-empty */
@@ -23109,7 +23052,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -23176,7 +23119,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 203 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23191,11 +23134,11 @@
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(199);
 
-	var _DOMUtils = __webpack_require__(201);
+	var _DOMUtils = __webpack_require__(200);
 
-	var _createHistory = __webpack_require__(204);
+	var _createHistory = __webpack_require__(203);
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -23222,7 +23165,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 204 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23233,29 +23176,29 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _deepEqual = __webpack_require__(205);
+	var _deepEqual = __webpack_require__(204);
 
 	var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(198);
 
-	var _AsyncUtils = __webpack_require__(208);
+	var _AsyncUtils = __webpack_require__(207);
 
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(197);
 
-	var _createLocation2 = __webpack_require__(209);
+	var _createLocation2 = __webpack_require__(208);
 
 	var _createLocation3 = _interopRequireDefault(_createLocation2);
 
-	var _runTransitionHook = __webpack_require__(210);
+	var _runTransitionHook = __webpack_require__(209);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(210);
 
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -23516,12 +23459,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 205 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var pSlice = Array.prototype.slice;
-	var objectKeys = __webpack_require__(206);
-	var isArguments = __webpack_require__(207);
+	var objectKeys = __webpack_require__(205);
+	var isArguments = __webpack_require__(206);
 
 	var deepEqual = module.exports = function (actual, expected, opts) {
 	  if (!opts) opts = {};
@@ -23616,7 +23559,7 @@
 
 
 /***/ },
-/* 206 */
+/* 205 */
 /***/ function(module, exports) {
 
 	exports = module.exports = typeof Object.keys === 'function'
@@ -23631,7 +23574,7 @@
 
 
 /***/ },
-/* 207 */
+/* 206 */
 /***/ function(module, exports) {
 
 	var supportsArgumentsClass = (function(){
@@ -23657,7 +23600,7 @@
 
 
 /***/ },
-/* 208 */
+/* 207 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -23720,7 +23663,7 @@
 	}
 
 /***/ },
-/* 209 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23731,13 +23674,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(197);
 
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(198);
 
 	function createLocation() {
 	  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
@@ -23777,7 +23720,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 210 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23786,7 +23729,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -23807,7 +23750,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 211 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23816,7 +23759,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -23832,7 +23775,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 212 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -23843,19 +23786,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _queryString = __webpack_require__(213);
+	var _queryString = __webpack_require__(212);
 
-	var _runTransitionHook = __webpack_require__(210);
+	var _runTransitionHook = __webpack_require__(209);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(198);
 
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(210);
 
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -24014,28 +23957,41 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 213 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strictUriEncode = __webpack_require__(214);
+	var strictUriEncode = __webpack_require__(213);
+	var objectAssign = __webpack_require__(18);
+
+	function encode(value, opts) {
+		if (opts.encode) {
+			return opts.strict ? strictUriEncode(value) : encodeURIComponent(value);
+		}
+
+		return value;
+	}
 
 	exports.extract = function (str) {
 		return str.split('?')[1] || '';
 	};
 
 	exports.parse = function (str) {
+		// Create an object with no prototype
+		// https://github.com/sindresorhus/query-string/issues/47
+		var ret = Object.create(null);
+
 		if (typeof str !== 'string') {
-			return {};
+			return ret;
 		}
 
 		str = str.trim().replace(/^(\?|#|&)/, '');
 
 		if (!str) {
-			return {};
+			return ret;
 		}
 
-		return str.split('&').reduce(function (ret, param) {
+		str.split('&').forEach(function (param) {
 			var parts = param.replace(/\+/g, ' ').split('=');
 			// Firefox (pre 40) decodes `%3D` to `=`
 			// https://github.com/sindresorhus/query-string/pull/37
@@ -24048,19 +24004,26 @@
 			// http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
 			val = val === undefined ? null : decodeURIComponent(val);
 
-			if (!ret.hasOwnProperty(key)) {
+			if (ret[key] === undefined) {
 				ret[key] = val;
 			} else if (Array.isArray(ret[key])) {
 				ret[key].push(val);
 			} else {
 				ret[key] = [ret[key], val];
 			}
+		});
 
-			return ret;
-		}, {});
+		return ret;
 	};
 
-	exports.stringify = function (obj) {
+	exports.stringify = function (obj, opts) {
+		var defaults = {
+			encode: true,
+			strict: true
+		};
+
+		opts = objectAssign(defaults, opts);
+
 		return obj ? Object.keys(obj).sort().map(function (key) {
 			var val = obj[key];
 
@@ -24069,16 +24032,28 @@
 			}
 
 			if (val === null) {
-				return key;
+				return encode(key, opts);
 			}
 
 			if (Array.isArray(val)) {
-				return val.slice().sort().map(function (val2) {
-					return strictUriEncode(key) + '=' + strictUriEncode(val2);
-				}).join('&');
+				var result = [];
+
+				val.slice().forEach(function (val2) {
+					if (val2 === undefined) {
+						return;
+					}
+
+					if (val2 === null) {
+						result.push(encode(key, opts));
+					} else {
+						result.push(encode(key, opts) + '=' + encode(val2, opts));
+					}
+				});
+
+				return result.join('&');
 			}
 
-			return strictUriEncode(key) + '=' + strictUriEncode(val);
+			return encode(key, opts) + '=' + encode(val, opts);
 		}).filter(function (x) {
 			return x.length > 0;
 		}).join('&') : '';
@@ -24086,7 +24061,7 @@
 
 
 /***/ },
-/* 214 */
+/* 213 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24098,7 +24073,7 @@
 
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -24113,23 +24088,23 @@
 
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(197);
 
-	var _computeChangedRoutes2 = __webpack_require__(216);
+	var _computeChangedRoutes2 = __webpack_require__(215);
 
 	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 
-	var _TransitionUtils = __webpack_require__(217);
+	var _TransitionUtils = __webpack_require__(216);
 
-	var _isActive2 = __webpack_require__(219);
+	var _isActive2 = __webpack_require__(218);
 
 	var _isActive3 = _interopRequireDefault(_isActive2);
 
-	var _getComponents = __webpack_require__(220);
+	var _getComponents = __webpack_require__(219);
 
 	var _getComponents2 = _interopRequireDefault(_getComponents);
 
-	var _matchRoutes = __webpack_require__(222);
+	var _matchRoutes = __webpack_require__(221);
 
 	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 
@@ -24412,7 +24387,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 216 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24494,7 +24469,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 217 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -24504,7 +24479,7 @@
 	exports.runChangeHooks = runChangeHooks;
 	exports.runLeaveHooks = runLeaveHooks;
 
-	var _AsyncUtils = __webpack_require__(218);
+	var _AsyncUtils = __webpack_require__(217);
 
 	var _routerWarning = __webpack_require__(190);
 
@@ -24622,7 +24597,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 218 */
+/* 217 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -24715,7 +24690,7 @@
 	}
 
 /***/ },
-/* 219 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24872,16 +24847,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 220 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _AsyncUtils = __webpack_require__(218);
+	var _AsyncUtils = __webpack_require__(217);
 
-	var _makeStateWithLocation = __webpack_require__(221);
+	var _makeStateWithLocation = __webpack_require__(220);
 
 	var _makeStateWithLocation2 = _interopRequireDefault(_makeStateWithLocation);
 
@@ -24923,7 +24898,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 221 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -24978,7 +24953,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 222 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -24991,9 +24966,9 @@
 
 	exports.default = matchRoutes;
 
-	var _AsyncUtils = __webpack_require__(218);
+	var _AsyncUtils = __webpack_require__(217);
 
-	var _makeStateWithLocation = __webpack_require__(221);
+	var _makeStateWithLocation = __webpack_require__(220);
 
 	var _makeStateWithLocation2 = _interopRequireDefault(_makeStateWithLocation);
 
@@ -25235,7 +25210,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 223 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25258,7 +25233,7 @@
 
 	var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 
-	var _getRouteParams = __webpack_require__(224);
+	var _getRouteParams = __webpack_require__(223);
 
 	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
 
@@ -25397,7 +25372,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 224 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25428,7 +25403,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 225 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25466,7 +25441,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 226 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25643,7 +25618,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 227 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25656,7 +25631,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Link = __webpack_require__(226);
+	var _Link = __webpack_require__(225);
 
 	var _Link2 = _interopRequireDefault(_Link);
 
@@ -25676,7 +25651,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 228 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25695,7 +25670,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _hoistNonReactStatics = __webpack_require__(229);
+	var _hoistNonReactStatics = __webpack_require__(228);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -25746,7 +25721,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 229 */
+/* 228 */
 /***/ function(module, exports) {
 
 	/**
@@ -25802,7 +25777,7 @@
 
 
 /***/ },
-/* 230 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25821,7 +25796,7 @@
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Redirect = __webpack_require__(231);
+	var _Redirect = __webpack_require__(230);
 
 	var _Redirect2 = _interopRequireDefault(_Redirect);
 
@@ -25871,7 +25846,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 231 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -25979,7 +25954,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26045,7 +26020,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 233 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26108,7 +26083,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 234 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26143,7 +26118,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 235 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26217,7 +26192,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 236 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26268,7 +26243,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26277,11 +26252,11 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _useQueries = __webpack_require__(212);
+	var _useQueries = __webpack_require__(211);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _createTransitionManager = __webpack_require__(215);
+	var _createTransitionManager = __webpack_require__(214);
 
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -26325,7 +26300,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26336,7 +26311,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _RouterContext = __webpack_require__(223);
+	var _RouterContext = __webpack_require__(222);
 
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
@@ -26361,7 +26336,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26374,17 +26349,17 @@
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _createMemoryHistory = __webpack_require__(240);
+	var _createMemoryHistory = __webpack_require__(239);
 
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
-	var _createTransitionManager = __webpack_require__(215);
+	var _createTransitionManager = __webpack_require__(214);
 
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
 	var _RouteUtils = __webpack_require__(187);
 
-	var _RouterUtils = __webpack_require__(225);
+	var _RouterUtils = __webpack_require__(224);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26448,7 +26423,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26456,15 +26431,15 @@
 	exports.__esModule = true;
 	exports.default = createMemoryHistory;
 
-	var _useQueries = __webpack_require__(212);
+	var _useQueries = __webpack_require__(211);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _useBasename = __webpack_require__(241);
+	var _useBasename = __webpack_require__(240);
 
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 
-	var _createMemoryHistory = __webpack_require__(242);
+	var _createMemoryHistory = __webpack_require__(241);
 
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
@@ -26485,7 +26460,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26496,19 +26471,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(199);
 
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(198);
 
-	var _runTransitionHook = __webpack_require__(210);
+	var _runTransitionHook = __webpack_require__(209);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _deprecate = __webpack_require__(211);
+	var _deprecate = __webpack_require__(210);
 
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -26649,7 +26624,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26660,7 +26635,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(197);
+	var _warning = __webpack_require__(191);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -26668,11 +26643,11 @@
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(198);
 
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(197);
 
-	var _createHistory = __webpack_require__(204);
+	var _createHistory = __webpack_require__(203);
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -26809,7 +26784,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26817,11 +26792,11 @@
 	exports.__esModule = true;
 	exports.default = useRouterHistory;
 
-	var _useQueries = __webpack_require__(212);
+	var _useQueries = __webpack_require__(211);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _useBasename = __webpack_require__(241);
+	var _useBasename = __webpack_require__(240);
 
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 
@@ -26837,7 +26812,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26850,7 +26825,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _RouterContext = __webpack_require__(223);
+	var _RouterContext = __webpack_require__(222);
 
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
@@ -26900,18 +26875,18 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _createBrowserHistory = __webpack_require__(246);
+	var _createBrowserHistory = __webpack_require__(245);
 
 	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-	var _createRouterHistory = __webpack_require__(247);
+	var _createRouterHistory = __webpack_require__(246);
 
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -26921,7 +26896,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26936,17 +26911,17 @@
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Actions = __webpack_require__(198);
+	var _Actions = __webpack_require__(197);
 
-	var _PathUtils = __webpack_require__(199);
+	var _PathUtils = __webpack_require__(198);
 
-	var _ExecutionEnvironment = __webpack_require__(200);
+	var _ExecutionEnvironment = __webpack_require__(199);
 
-	var _DOMUtils = __webpack_require__(201);
+	var _DOMUtils = __webpack_require__(200);
 
-	var _DOMStateStorage = __webpack_require__(202);
+	var _DOMStateStorage = __webpack_require__(201);
 
-	var _createDOMHistory = __webpack_require__(203);
+	var _createDOMHistory = __webpack_require__(202);
 
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 
@@ -27107,7 +27082,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27120,7 +27095,7 @@
 	  return history;
 	};
 
-	var _useRouterHistory = __webpack_require__(243);
+	var _useRouterHistory = __webpack_require__(242);
 
 	var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 
@@ -27131,7 +27106,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 248 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27142,7 +27117,7 @@
 
 	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-	var _createRouterHistory = __webpack_require__(247);
+	var _createRouterHistory = __webpack_require__(246);
 
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -27152,199 +27127,859 @@
 	module.exports = exports['default'];
 
 /***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(249);
+
+/***/ },
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactCSSTransitionGroup
+	 */
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	var _assign = __webpack_require__(18);
+
+	var React = __webpack_require__(16);
+
+	var ReactTransitionGroup = __webpack_require__(250);
+	var ReactCSSTransitionGroupChild = __webpack_require__(252);
+
+	function createTransitionTimeoutPropValidator(transitionType) {
+	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
+	  var enabledPropName = 'transition' + transitionType;
+
+	  return function (props) {
+	    // If the transition is enabled
+	    if (props[enabledPropName]) {
+	      // If no timeout duration is provided
+	      if (props[timeoutPropName] == null) {
+	        return new Error(timeoutPropName + ' wasn\'t supplied to ReactCSSTransitionGroup: ' + 'this can cause unreliable animations and won\'t be supported in ' + 'a future version of React. See ' + 'https://fb.me/react-animation-transition-group-timeout for more ' + 'information.');
+
+	        // If the duration isn't a number
+	      } else if (typeof props[timeoutPropName] !== 'number') {
+	          return new Error(timeoutPropName + ' must be a number (in milliseconds)');
+	        }
+	    }
+	  };
+	}
+
+	/**
+	 * An easy way to perform CSS transitions and animations when a React component
+	 * enters or leaves the DOM.
+	 * See https://facebook.github.io/react/docs/animation.html#high-level-api-reactcsstransitiongroup
+	 */
+	var ReactCSSTransitionGroup = React.createClass({
+	  displayName: 'ReactCSSTransitionGroup',
+
+	  propTypes: {
+	    transitionName: ReactCSSTransitionGroupChild.propTypes.name,
+
+	    transitionAppear: React.PropTypes.bool,
+	    transitionEnter: React.PropTypes.bool,
+	    transitionLeave: React.PropTypes.bool,
+	    transitionAppearTimeout: createTransitionTimeoutPropValidator('Appear'),
+	    transitionEnterTimeout: createTransitionTimeoutPropValidator('Enter'),
+	    transitionLeaveTimeout: createTransitionTimeoutPropValidator('Leave')
+	  },
+
+	  getDefaultProps: function () {
+	    return {
+	      transitionAppear: false,
+	      transitionEnter: true,
+	      transitionLeave: true
+	    };
+	  },
+
+	  _wrapChild: function (child) {
+	    // We need to provide this childFactory so that
+	    // ReactCSSTransitionGroupChild can receive updates to name, enter, and
+	    // leave while it is leaving.
+	    return React.createElement(ReactCSSTransitionGroupChild, {
+	      name: this.props.transitionName,
+	      appear: this.props.transitionAppear,
+	      enter: this.props.transitionEnter,
+	      leave: this.props.transitionLeave,
+	      appearTimeout: this.props.transitionAppearTimeout,
+	      enterTimeout: this.props.transitionEnterTimeout,
+	      leaveTimeout: this.props.transitionLeaveTimeout
+	    }, child);
+	  },
+
+	  render: function () {
+	    return React.createElement(ReactTransitionGroup, _assign({}, this.props, { childFactory: this._wrapChild }));
+	  }
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(15);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(250);
-
-	var _me = __webpack_require__(254);
-
-	var _me2 = _interopRequireDefault(_me);
-
-	var _reactRouter = __webpack_require__(186);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Index = function (_Component) {
-	  _inherits(Index, _Component);
-
-	  function Index(props) {
-	    _classCallCheck(this, Index);
-
-	    var _this = _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).call(this, props));
-
-	    _this.state = {};
-	    return _this;
-	  }
-
-	  _createClass(Index, [{
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'index' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'header' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Dan Hassin'
-	          ),
-	          _react2.default.createElement('img', { src: _me2.default })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'content' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'menu' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'item' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: 'software' },
-	                'software'
-	              )
-	            ),
-	            ' | ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'item' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: 'music' },
-	                'music'
-	              )
-	            ),
-	            ' | ',
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'item' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: 'writing' },
-	                'writing'
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'about' },
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'hi, oh uh, hi, i haven\'t decided what to write here yet. anyway, thanks for visiting! -dan'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'footer' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'separator' },
-	            '~'
-	          ),
-	          !this.state.showEmail && _react2.default.createElement(
-	            'a',
-	            { className: 'show', onClick: function onClick() {
-	                return _this2.setState({ showEmail: true });
-	              } },
-	            'contact'
-	          ),
-	          this.state.showEmail && _react2.default.createElement(
-	            'span',
-	            { id: 'email' },
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-ish' },
-	              'danhassin'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-light' },
-	              'at'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-ish' },
-	              'mac'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-light' },
-	              'dot'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-ish' },
-	              'com'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'color-light' },
-	            ' | '
-	          ),
-	          _react2.default.createElement(
-	            'a',
-	            { href: 'stuff/hassin-resume.pdf', target: '_blank', className: 'color-ish' },
-	            'resume'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Index;
-	}(_react.Component);
-
-	exports.default = Index;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	module.exports = ReactCSSTransitionGroup;
 
 /***/ },
 /* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactTransitionGroup
+	 */
+
+	'use strict';
+
+	var _assign = __webpack_require__(18);
+
+	var React = __webpack_require__(16);
+	var ReactInstanceMap = __webpack_require__(133);
+	var ReactTransitionChildMapping = __webpack_require__(251);
+
+	var emptyFunction = __webpack_require__(26);
+
+	/**
+	 * A basis for animations. When children are declaratively added or removed,
+	 * special lifecycle hooks are called.
+	 * See https://facebook.github.io/react/docs/animation.html#low-level-api-reacttransitiongroup
+	 */
+	var ReactTransitionGroup = React.createClass({
+	  displayName: 'ReactTransitionGroup',
+
+	  propTypes: {
+	    component: React.PropTypes.any,
+	    childFactory: React.PropTypes.func
+	  },
+
+	  getDefaultProps: function () {
+	    return {
+	      component: 'span',
+	      childFactory: emptyFunction.thatReturnsArgument
+	    };
+	  },
+
+	  getInitialState: function () {
+	    return {
+	      // TODO: can we get useful debug information to show at this point?
+	      children: ReactTransitionChildMapping.getChildMapping(this.props.children)
+	    };
+	  },
+
+	  componentWillMount: function () {
+	    this.currentlyTransitioningKeys = {};
+	    this.keysToEnter = [];
+	    this.keysToLeave = [];
+	  },
+
+	  componentDidMount: function () {
+	    var initialChildMapping = this.state.children;
+	    for (var key in initialChildMapping) {
+	      if (initialChildMapping[key]) {
+	        this.performAppear(key);
+	      }
+	    }
+	  },
+
+	  componentWillReceiveProps: function (nextProps) {
+	    var nextChildMapping;
+	    if (process.env.NODE_ENV !== 'production') {
+	      nextChildMapping = ReactTransitionChildMapping.getChildMapping(nextProps.children, ReactInstanceMap.get(this)._debugID);
+	    } else {
+	      nextChildMapping = ReactTransitionChildMapping.getChildMapping(nextProps.children);
+	    }
+	    var prevChildMapping = this.state.children;
+
+	    this.setState({
+	      children: ReactTransitionChildMapping.mergeChildMappings(prevChildMapping, nextChildMapping)
+	    });
+
+	    var key;
+
+	    for (key in nextChildMapping) {
+	      var hasPrev = prevChildMapping && prevChildMapping.hasOwnProperty(key);
+	      if (nextChildMapping[key] && !hasPrev && !this.currentlyTransitioningKeys[key]) {
+	        this.keysToEnter.push(key);
+	      }
+	    }
+
+	    for (key in prevChildMapping) {
+	      var hasNext = nextChildMapping && nextChildMapping.hasOwnProperty(key);
+	      if (prevChildMapping[key] && !hasNext && !this.currentlyTransitioningKeys[key]) {
+	        this.keysToLeave.push(key);
+	      }
+	    }
+
+	    // If we want to someday check for reordering, we could do it here.
+	  },
+
+	  componentDidUpdate: function () {
+	    var keysToEnter = this.keysToEnter;
+	    this.keysToEnter = [];
+	    keysToEnter.forEach(this.performEnter);
+
+	    var keysToLeave = this.keysToLeave;
+	    this.keysToLeave = [];
+	    keysToLeave.forEach(this.performLeave);
+	  },
+
+	  performAppear: function (key) {
+	    this.currentlyTransitioningKeys[key] = true;
+
+	    var component = this.refs[key];
+
+	    if (component.componentWillAppear) {
+	      component.componentWillAppear(this._handleDoneAppearing.bind(this, key));
+	    } else {
+	      this._handleDoneAppearing(key);
+	    }
+	  },
+
+	  _handleDoneAppearing: function (key) {
+	    var component = this.refs[key];
+	    if (component.componentDidAppear) {
+	      component.componentDidAppear();
+	    }
+
+	    delete this.currentlyTransitioningKeys[key];
+
+	    var currentChildMapping;
+	    if (process.env.NODE_ENV !== 'production') {
+	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children, ReactInstanceMap.get(this)._debugID);
+	    } else {
+	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
+	    }
+
+	    if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
+	      // This was removed before it had fully appeared. Remove it.
+	      this.performLeave(key);
+	    }
+	  },
+
+	  performEnter: function (key) {
+	    this.currentlyTransitioningKeys[key] = true;
+
+	    var component = this.refs[key];
+
+	    if (component.componentWillEnter) {
+	      component.componentWillEnter(this._handleDoneEntering.bind(this, key));
+	    } else {
+	      this._handleDoneEntering(key);
+	    }
+	  },
+
+	  _handleDoneEntering: function (key) {
+	    var component = this.refs[key];
+	    if (component.componentDidEnter) {
+	      component.componentDidEnter();
+	    }
+
+	    delete this.currentlyTransitioningKeys[key];
+
+	    var currentChildMapping;
+	    if (process.env.NODE_ENV !== 'production') {
+	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children, ReactInstanceMap.get(this)._debugID);
+	    } else {
+	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
+	    }
+
+	    if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
+	      // This was removed before it had fully entered. Remove it.
+	      this.performLeave(key);
+	    }
+	  },
+
+	  performLeave: function (key) {
+	    this.currentlyTransitioningKeys[key] = true;
+
+	    var component = this.refs[key];
+	    if (component.componentWillLeave) {
+	      component.componentWillLeave(this._handleDoneLeaving.bind(this, key));
+	    } else {
+	      // Note that this is somewhat dangerous b/c it calls setState()
+	      // again, effectively mutating the component before all the work
+	      // is done.
+	      this._handleDoneLeaving(key);
+	    }
+	  },
+
+	  _handleDoneLeaving: function (key) {
+	    var component = this.refs[key];
+
+	    if (component.componentDidLeave) {
+	      component.componentDidLeave();
+	    }
+
+	    delete this.currentlyTransitioningKeys[key];
+
+	    var currentChildMapping;
+	    if (process.env.NODE_ENV !== 'production') {
+	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children, ReactInstanceMap.get(this)._debugID);
+	    } else {
+	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
+	    }
+
+	    if (currentChildMapping && currentChildMapping.hasOwnProperty(key)) {
+	      // This entered again before it fully left. Add it again.
+	      this.performEnter(key);
+	    } else {
+	      this.setState(function (state) {
+	        var newChildren = _assign({}, state.children);
+	        delete newChildren[key];
+	        return { children: newChildren };
+	      });
+	    }
+	  },
+
+	  render: function () {
+	    // TODO: we could get rid of the need for the wrapper node
+	    // by cloning a single child
+	    var childrenToRender = [];
+	    for (var key in this.state.children) {
+	      var child = this.state.children[key];
+	      if (child) {
+	        // You may need to apply reactive updates to a child as it is leaving.
+	        // The normal React way to do it won't work since the child will have
+	        // already been removed. In case you need this behavior you can provide
+	        // a childFactory function to wrap every child, even the ones that are
+	        // leaving.
+	        childrenToRender.push(React.cloneElement(this.props.childFactory(child), { ref: key, key: key }));
+	      }
+	    }
+
+	    // Do not forward ReactTransitionGroup props to primitive DOM nodes
+	    var props = _assign({}, this.props);
+	    delete props.transitionLeave;
+	    delete props.transitionName;
+	    delete props.transitionAppear;
+	    delete props.transitionEnter;
+	    delete props.childFactory;
+	    delete props.transitionLeaveTimeout;
+	    delete props.transitionEnterTimeout;
+	    delete props.transitionAppearTimeout;
+	    delete props.component;
+
+	    return React.createElement(this.props.component, props, childrenToRender);
+	  }
+	});
+
+	module.exports = ReactTransitionGroup;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactTransitionChildMapping
+	 */
+
+	'use strict';
+
+	var flattenChildren = __webpack_require__(142);
+
+	var ReactTransitionChildMapping = {
+	  /**
+	   * Given `this.props.children`, return an object mapping key to child. Just
+	   * simple syntactic sugar around flattenChildren().
+	   *
+	   * @param {*} children `this.props.children`
+	   * @param {number=} selfDebugID Optional debugID of the current internal instance.
+	   * @return {object} Mapping of key to child
+	   */
+	  getChildMapping: function (children, selfDebugID) {
+	    if (!children) {
+	      return children;
+	    }
+
+	    if (process.env.NODE_ENV !== 'production') {
+	      return flattenChildren(children, selfDebugID);
+	    }
+
+	    return flattenChildren(children);
+	  },
+
+	  /**
+	   * When you're adding or removing children some may be added or removed in the
+	   * same render pass. We want to show *both* since we want to simultaneously
+	   * animate elements in and out. This function takes a previous set of keys
+	   * and a new set of keys and merges them with its best guess of the correct
+	   * ordering. In the future we may expose some of the utilities in
+	   * ReactMultiChild to make this easy, but for now React itself does not
+	   * directly have this concept of the union of prevChildren and nextChildren
+	   * so we implement it here.
+	   *
+	   * @param {object} prev prev children as returned from
+	   * `ReactTransitionChildMapping.getChildMapping()`.
+	   * @param {object} next next children as returned from
+	   * `ReactTransitionChildMapping.getChildMapping()`.
+	   * @return {object} a key set that contains all keys in `prev` and all keys
+	   * in `next` in a reasonable order.
+	   */
+	  mergeChildMappings: function (prev, next) {
+	    prev = prev || {};
+	    next = next || {};
+
+	    function getValueForKey(key) {
+	      if (next.hasOwnProperty(key)) {
+	        return next[key];
+	      } else {
+	        return prev[key];
+	      }
+	    }
+
+	    // For each key of `next`, the list of keys to insert before that key in
+	    // the combined list
+	    var nextKeysPending = {};
+
+	    var pendingKeys = [];
+	    for (var prevKey in prev) {
+	      if (next.hasOwnProperty(prevKey)) {
+	        if (pendingKeys.length) {
+	          nextKeysPending[prevKey] = pendingKeys;
+	          pendingKeys = [];
+	        }
+	      } else {
+	        pendingKeys.push(prevKey);
+	      }
+	    }
+
+	    var i;
+	    var childMapping = {};
+	    for (var nextKey in next) {
+	      if (nextKeysPending.hasOwnProperty(nextKey)) {
+	        for (i = 0; i < nextKeysPending[nextKey].length; i++) {
+	          var pendingNextKey = nextKeysPending[nextKey][i];
+	          childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
+	        }
+	      }
+	      childMapping[nextKey] = getValueForKey(nextKey);
+	    }
+
+	    // Finally, add the keys which didn't appear before any key in `next`
+	    for (i = 0; i < pendingKeys.length; i++) {
+	      childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
+	    }
+
+	    return childMapping;
+	  }
+	};
+
+	module.exports = ReactTransitionChildMapping;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactCSSTransitionGroupChild
+	 */
+
+	'use strict';
+
+	var React = __webpack_require__(16);
+	var ReactDOM = __webpack_require__(49);
+
+	var CSSCore = __webpack_require__(253);
+	var ReactTransitionEvents = __webpack_require__(254);
+
+	var onlyChild = __webpack_require__(47);
+
+	var TICK = 17;
+
+	var ReactCSSTransitionGroupChild = React.createClass({
+	  displayName: 'ReactCSSTransitionGroupChild',
+
+	  propTypes: {
+	    name: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.shape({
+	      enter: React.PropTypes.string,
+	      leave: React.PropTypes.string,
+	      active: React.PropTypes.string
+	    }), React.PropTypes.shape({
+	      enter: React.PropTypes.string,
+	      enterActive: React.PropTypes.string,
+	      leave: React.PropTypes.string,
+	      leaveActive: React.PropTypes.string,
+	      appear: React.PropTypes.string,
+	      appearActive: React.PropTypes.string
+	    })]).isRequired,
+
+	    // Once we require timeouts to be specified, we can remove the
+	    // boolean flags (appear etc.) and just accept a number
+	    // or a bool for the timeout flags (appearTimeout etc.)
+	    appear: React.PropTypes.bool,
+	    enter: React.PropTypes.bool,
+	    leave: React.PropTypes.bool,
+	    appearTimeout: React.PropTypes.number,
+	    enterTimeout: React.PropTypes.number,
+	    leaveTimeout: React.PropTypes.number
+	  },
+
+	  transition: function (animationType, finishCallback, userSpecifiedDelay) {
+	    var node = ReactDOM.findDOMNode(this);
+
+	    if (!node) {
+	      if (finishCallback) {
+	        finishCallback();
+	      }
+	      return;
+	    }
+
+	    var className = this.props.name[animationType] || this.props.name + '-' + animationType;
+	    var activeClassName = this.props.name[animationType + 'Active'] || className + '-active';
+	    var timeout = null;
+
+	    var endListener = function (e) {
+	      if (e && e.target !== node) {
+	        return;
+	      }
+
+	      clearTimeout(timeout);
+
+	      CSSCore.removeClass(node, className);
+	      CSSCore.removeClass(node, activeClassName);
+
+	      ReactTransitionEvents.removeEndEventListener(node, endListener);
+
+	      // Usually this optional callback is used for informing an owner of
+	      // a leave animation and telling it to remove the child.
+	      if (finishCallback) {
+	        finishCallback();
+	      }
+	    };
+
+	    CSSCore.addClass(node, className);
+
+	    // Need to do this to actually trigger a transition.
+	    this.queueClassAndNode(activeClassName, node);
+
+	    // If the user specified a timeout delay.
+	    if (userSpecifiedDelay) {
+	      // Clean-up the animation after the specified delay
+	      timeout = setTimeout(endListener, userSpecifiedDelay);
+	      this.transitionTimeouts.push(timeout);
+	    } else {
+	      // DEPRECATED: this listener will be removed in a future version of react
+	      ReactTransitionEvents.addEndEventListener(node, endListener);
+	    }
+	  },
+
+	  queueClassAndNode: function (className, node) {
+	    this.classNameAndNodeQueue.push({
+	      className: className,
+	      node: node
+	    });
+
+	    if (!this.timeout) {
+	      this.timeout = setTimeout(this.flushClassNameAndNodeQueue, TICK);
+	    }
+	  },
+
+	  flushClassNameAndNodeQueue: function () {
+	    if (this.isMounted()) {
+	      this.classNameAndNodeQueue.forEach(function (obj) {
+	        CSSCore.addClass(obj.node, obj.className);
+	      });
+	    }
+	    this.classNameAndNodeQueue.length = 0;
+	    this.timeout = null;
+	  },
+
+	  componentWillMount: function () {
+	    this.classNameAndNodeQueue = [];
+	    this.transitionTimeouts = [];
+	  },
+
+	  componentWillUnmount: function () {
+	    if (this.timeout) {
+	      clearTimeout(this.timeout);
+	    }
+	    this.transitionTimeouts.forEach(function (timeout) {
+	      clearTimeout(timeout);
+	    });
+
+	    this.classNameAndNodeQueue.length = 0;
+	  },
+
+	  componentWillAppear: function (done) {
+	    if (this.props.appear) {
+	      this.transition('appear', done, this.props.appearTimeout);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  componentWillEnter: function (done) {
+	    if (this.props.enter) {
+	      this.transition('enter', done, this.props.enterTimeout);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  componentWillLeave: function (done) {
+	    if (this.props.leave) {
+	      this.transition('leave', done, this.props.leaveTimeout);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  render: function () {
+	    return onlyChild(this.props.children);
+	  }
+	});
+
+	module.exports = ReactCSSTransitionGroupChild;
+
+/***/ },
+/* 253 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+	/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @typechecks
+	 */
+
+	var invariant = __webpack_require__(22);
+
+	/**
+	 * The CSSCore module specifies the API (and implements most of the methods)
+	 * that should be used when dealing with the display of elements (via their
+	 * CSS classes and visibility on screen. It is an API focused on mutating the
+	 * display and not reading it as no logical state should be encoded in the
+	 * display of elements.
+	 */
+
+	/* Slow implementation for browsers that don't natively support .matches() */
+	function matchesSelector_SLOW(element, selector) {
+	  var root = element;
+	  while (root.parentNode) {
+	    root = root.parentNode;
+	  }
+
+	  var all = root.querySelectorAll(selector);
+	  return Array.prototype.indexOf.call(all, element) !== -1;
+	}
+
+	var CSSCore = {
+
+	  /**
+	   * Adds the class passed in to the element if it doesn't already have it.
+	   *
+	   * @param {DOMElement} element the element to set the class on
+	   * @param {string} className the CSS className
+	   * @return {DOMElement} the element passed in
+	   */
+	  addClass: function addClass(element, className) {
+	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.addClass takes only a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : void 0;
+
+	    if (className) {
+	      if (element.classList) {
+	        element.classList.add(className);
+	      } else if (!CSSCore.hasClass(element, className)) {
+	        element.className = element.className + ' ' + className;
+	      }
+	    }
+	    return element;
+	  },
+
+	  /**
+	   * Removes the class passed in from the element
+	   *
+	   * @param {DOMElement} element the element to set the class on
+	   * @param {string} className the CSS className
+	   * @return {DOMElement} the element passed in
+	   */
+	  removeClass: function removeClass(element, className) {
+	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.removeClass takes only a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : void 0;
+
+	    if (className) {
+	      if (element.classList) {
+	        element.classList.remove(className);
+	      } else if (CSSCore.hasClass(element, className)) {
+	        element.className = element.className.replace(new RegExp('(^|\\s)' + className + '(?:\\s|$)', 'g'), '$1').replace(/\s+/g, ' ') // multiple spaces to one
+	        .replace(/^\s*|\s*$/g, ''); // trim the ends
+	      }
+	    }
+	    return element;
+	  },
+
+	  /**
+	   * Helper to add or remove a class from an element based on a condition.
+	   *
+	   * @param {DOMElement} element the element to set the class on
+	   * @param {string} className the CSS className
+	   * @param {*} bool condition to whether to add or remove the class
+	   * @return {DOMElement} the element passed in
+	   */
+	  conditionClass: function conditionClass(element, className, bool) {
+	    return (bool ? CSSCore.addClass : CSSCore.removeClass)(element, className);
+	  },
+
+	  /**
+	   * Tests whether the element has the class specified.
+	   *
+	   * @param {DOMNode|DOMWindow} element the element to check the class on
+	   * @param {string} className the CSS className
+	   * @return {boolean} true if the element has the class, false if not
+	   */
+	  hasClass: function hasClass(element, className) {
+	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSS.hasClass takes only a single class name.') : invariant(false) : void 0;
+	    if (element.classList) {
+	      return !!className && element.classList.contains(className);
+	    }
+	    return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+	  },
+
+	  /**
+	   * Tests whether the element matches the selector specified
+	   *
+	   * @param {DOMNode|DOMWindow} element the element that we are querying
+	   * @param {string} selector the CSS selector
+	   * @return {boolean} true if the element matches the selector, false if not
+	   */
+	  matchesSelector: function matchesSelector(element, selector) {
+	    var matchesImpl = element.matches || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector || function (s) {
+	      return matchesSelector_SLOW(element, s);
+	    };
+	    return matchesImpl.call(element, selector);
+	  }
+
+	};
+
+	module.exports = CSSCore;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+
+/***/ },
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactTransitionEvents
+	 */
+
+	'use strict';
+
+	var ExecutionEnvironment = __webpack_require__(63);
+
+	var getVendorPrefixedEventName = __webpack_require__(123);
+
+	var endEvents = [];
+
+	function detectEvents() {
+	  var animEnd = getVendorPrefixedEventName('animationend');
+	  var transEnd = getVendorPrefixedEventName('transitionend');
+
+	  if (animEnd) {
+	    endEvents.push(animEnd);
+	  }
+
+	  if (transEnd) {
+	    endEvents.push(transEnd);
+	  }
+	}
+
+	if (ExecutionEnvironment.canUseDOM) {
+	  detectEvents();
+	}
+
+	// We use the raw {add|remove}EventListener() call because EventListener
+	// does not know how to remove event listeners and we really should
+	// clean up. Also, these events are not triggered in older browsers
+	// so we should be A-OK here.
+
+	function addEventListener(node, eventName, eventListener) {
+	  node.addEventListener(eventName, eventListener, false);
+	}
+
+	function removeEventListener(node, eventName, eventListener) {
+	  node.removeEventListener(eventName, eventListener, false);
+	}
+
+	var ReactTransitionEvents = {
+	  addEndEventListener: function (node, eventListener) {
+	    if (endEvents.length === 0) {
+	      // If CSS transitions are not supported, trigger an "end animation"
+	      // event immediately.
+	      window.setTimeout(eventListener, 0);
+	      return;
+	    }
+	    endEvents.forEach(function (endEvent) {
+	      addEventListener(node, endEvent, eventListener);
+	    });
+	  },
+
+	  removeEndEventListener: function (node, eventListener) {
+	    if (endEvents.length === 0) {
+	      return;
+	    }
+	    endEvents.forEach(function (endEvent) {
+	      removeEventListener(node, endEvent, eventListener);
+	    });
+	  }
+	};
+
+	module.exports = ReactTransitionEvents;
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(251);
+	var content = __webpack_require__(256);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(253)(content, {});
+	var update = __webpack_require__(258)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./index.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./index.sass");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./main.sass", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./main.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27354,21 +27989,21 @@
 	}
 
 /***/ },
-/* 251 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(252)();
+	exports = module.exports = __webpack_require__(257)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".index .header img {\n  width: 200px;\n  border-radius: 10px; }\n\n.index .content {\n  color: gray;\n  padding-bottom: 10px;\n  width: 448px;\n  margin-left: auto;\n  margin-right: auto; }\n  .index .content .menu {\n    margin-bottom: 30px;\n    font-size: 20px; }\n    .index .content .menu .item {\n      display: inline-block; }\n  .index .content .about {\n    text-align: justify; }\n\n.index .footer {\n  color: gray;\n  font-size: 0.95em;\n  margin-top: 10px;\n  padding-bottom: 60px; }\n  .index .footer .separator {\n    font-size: 1em;\n    padding: 10px 0px; }\n  .index .footer #email span {\n    margin: 0 2px; }\n", ""]);
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: 'Oxygen', sans-serif; }\n\n.container {\n  width: 80%;\n  text-align: center;\n  padding-top: 20px;\n  position: absolute;\n  left: 10%; }\n\n.header {\n  margin-top: 50px;\n  margin-bottom: 40px; }\n  .header i.fa-angle-left, .header .back-counterbalance {\n    width: 200px;\n    font-size: 35px;\n    padding-right: 15px;\n    display: inline-block; }\n\na[href], a.show {\n  cursor: pointer;\n  color: inherit;\n  text-decoration: none; }\n  a[href]:hover, a.show:hover {\n    text-decoration: underline;\n    color: black; }\n\n.color-ish {\n  color: gray; }\n\n.color-light {\n  color: #9a9a9a; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 252 */
+/* 257 */
 /***/ function(module, exports) {
 
 	/*
@@ -27424,7 +28059,7 @@
 
 
 /***/ },
-/* 253 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -27676,203 +28311,23 @@
 
 
 /***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "36524e691d4675ad8c7612764bb61874.jpg";
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(15);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(256);
-
-	var _reactRouter = __webpack_require__(186);
-
-	var _ios = __webpack_require__(258);
-
-	var _ios2 = _interopRequireDefault(_ios);
-
-	var _big = __webpack_require__(259);
-
-	var _big2 = _interopRequireDefault(_big);
-
-	var _small = __webpack_require__(260);
-
-	var _small2 = _interopRequireDefault(_small);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Software = function (_Component) {
-	  _inherits(Software, _Component);
-
-	  function Software() {
-	    _classCallCheck(this, Software);
-
-	    return _possibleConstructorReturn(this, (Software.__proto__ || Object.getPrototypeOf(Software)).apply(this, arguments));
-	  }
-
-	  _createClass(Software, [{
-	    key: 'renderItem',
-	    value: function renderItem(item) {
-	      return _react2.default.createElement(
-	        'div',
-	        { key: item.name, className: 'item' },
-	        _react2.default.createElement(
-	          'a',
-	          { href: item.link },
-	          item.img && _react2.default.createElement('img', {
-	            className: item.noBorder ? 'no-border' : item.app ? 'app' : null,
-	            src: __webpack_require__(261)("./" + item.img)
-	          }),
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            item.name
-	          )
-	        ),
-	        item.description(),
-	        _react2.default.createElement(
-	          'p',
-	          { className: 'tech' },
-	          item.tech
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'links' },
-	          Object.keys(item.links).map(function (link) {
-	            return _react2.default.createElement(
-	              'a',
-	              { key: link, href: item.links[link] },
-	              link
-	            );
-	          })
-	        )
-	      );
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'software' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'header' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              _react2.default.createElement('i', { className: 'fa fa-angle-left' })
-	            ),
-	            'Software',
-	            _react2.default.createElement('div', { className: 'back-counterbalance' })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement('i', { className: 'fa fa-github' }),
-	            'follow me on github! ',
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'https://github.com/dingbat' },
-	              '@dingbat'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'content' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'iOS/macOS'
-	            ),
-	            _ios2.default.map(function (item) {
-	              return _this2.renderItem(item);
-	            })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'bigger things'
-	            ),
-	            _big2.default.map(function (item) {
-	              return _this2.renderItem(item);
-	            })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col' },
-	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'smaller things'
-	            ),
-	            _small2.default.map(function (item) {
-	              return _this2.renderItem(item);
-	            })
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Software;
-	}(_react.Component);
-
-	exports.default = Software;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "software.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 256 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(257);
+	var content = __webpack_require__(260);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(253)(content, {});
+	var update = __webpack_require__(258)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./software.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./software.sass");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./animation.sass", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./animation.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27882,581 +28337,37 @@
 	}
 
 /***/ },
-/* 257 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(252)();
+	exports = module.exports = __webpack_require__(257)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".software i.fa-github {\n  font-size: 20px;\n  margin-right: 5px; }\n\n.software .content {\n  margin: auto;\n  width: 90%; }\n  .software .content .col {\n    vertical-align: top;\n    text-align: left;\n    width: 30%;\n    display: inline-block; }\n    .software .content .col:nth-child(2) {\n      margin: 0 5%; }\n    .software .content .col h2 {\n      color: #4d4d4d;\n      margin-bottom: 40px; }\n    .software .content .col .item {\n      margin-bottom: 50px; }\n      .software .content .col .item h3 {\n        font-size: 20px;\n        margin-bottom: 5px; }\n      .software .content .col .item img {\n        width: 80%; }\n        .software .content .col .item img.app {\n          width: 50%; }\n        .software .content .col .item img:not(.no-border):not(.app) {\n          border: gray 1px solid; }\n      .software .content .col .item .tech {\n        color: gray; }\n      .software .content .col .item .links a {\n        margin: 0 5px;\n        font-family: 'Roboto Mono', monospace;\n        font-size: 0.9em; }\n        .software .content .col .item .links a:before {\n          content: '<'; }\n        .software .content .col .item .links a:after {\n          content: '>'; }\n", ""]);
+	exports.push([module.id, ".page.push-enter {\n  opacity: 0;\n  transform: translate(0px, 80%) scale(0.5, 0.5); }\n\n.page.pop-enter {\n  opacity: 0;\n  transform: scale(0.5, 0.5); }\n\n.page.push-enter.push-enter-active, .page.pop-enter.pop-enter-active {\n  transform: translate(0px, 0px) scale(1, 1);\n  opacity: 1; }\n\n.page.push-leave, .page .pop-leave {\n  opacity: 1;\n  transform: translate(0px, 0px) scale(1, 1); }\n\n.page.push-leave.push-leave-active {\n  opacity: 0;\n  transform: scale(0.5, 0.5); }\n\n.page.pop-leave.pop-leave-active {\n  opacity: 0;\n  transform: translate(0px, 80%) scale(0.5, 0.5); }\n\n.page.push-enter-active, .page.push-leave-active, .page.pop-enter-active, .page.pop-leave-active {\n  transition: transform 500ms, opacity 500ms; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 258 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(15);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = [{
-	  name: "camena",
-	  img: "app/camena.png",
-	  app: true,
-	  link: "https://itunes.apple.com/us/app/camena/id312578836?mt=8",
-	  links: {
-	    'app store': "https://itunes.apple.com/us/app/camena/id312578836?mt=8"
-	  },
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "div",
-	      null,
-	      _react2.default.createElement(
-	        "p",
-	        null,
-	        "shows you the lyrics to the song you're listening to. also shows you album, artist, music video, and tour dates."
-	      ),
-	      _react2.default.createElement(
-	        "p",
-	        null,
-	        "my most successful app! (not so much anymore). was #1 in the music category & eventually reached #24 of all paid apps on the app store"
-	      )
-	    );
-	  }
-	}, {
-	  name: "newsalert",
-	  img: "app/na.png",
-	  app: true,
-	  link: "https://itunes.apple.com/us/app/camena/id312578836?mt=8",
-	  links: {
-	    'web access': "http://app.newsalertapp.com/",
-	    'app store': "https://itunes.apple.com/us/app/camena/id312578836?mt=8"
-	  },
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "notifies you automatically whenever keywords of your choice appear in the news."
-	    );
-	  }
-	}, {
-	  name: "dissolve",
-	  img: "app/dissolve.png",
-	  app: true,
-	  link: "https://itunes.apple.com/us/app/dissolve/id554344914?mt=8",
-	  links: {
-	    'app store': "https://itunes.apple.com/us/app/dissolve/id554344914?mt=8"
-	  },
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "make awesome, living doodles and share them with others. each stroke you make will dissolve away as you start your next ones, bringing your drawings to life in continuous evolution. save the replays of the drawing and share them with friends."
-	    );
-	  }
-	}, {
-	  name: "angles",
-	  img: "app/angles.png",
-	  app: true,
-	  link: "https://itunes.apple.com/us/app/angles/id390865784?mt=8",
-	  links: {
-	    'app store': "https://itunes.apple.com/us/app/angles/id390865784?mt=8",
-	    video: "http://vimeo.com/dq/angles"
-	  },
-	  tech: 'chipmunk 2d (C physics)',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "physics-based action/puzzle game, where you continuously bounce a ball into targets using a platform you control. avoid traps, falling off the edge, or more exciting things in later levels"
-	    );
-	  }
-	}, {
-	  name: "countdown",
-	  img: "app/count.png",
-	  noBorder: true,
-	  links: {
-	    'download': "stuff/countdown.zip"
-	  },
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "an applet for macOS that’ll show you how many days away you are from any number of target dates, color-coded"
-	    );
-	  }
-	}];
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ios.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 259 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(15);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = [{
-	  name: "sight unseen",
-	  img: "blackout.png",
-	  link: "http://www.sightunseen.audio",
-	  links: {
-	    teaser: "http://www.sightunseen.audio",
-	    fb: "https://www.facebook.com/blackoutvirtualreality",
-	    twitter: "https://twitter.com/sightunseengame"
-	  },
-	  tech: 'unity (C#), wwise',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "horror audio game.",
-	      _react2.default.createElement("br", null),
-	      "coming soon"
-	    );
-	  }
-	}, {
-	  name: "worksource",
-	  links: {},
-	  tech: 'rails, react.js, react native (iOS & android), letsencrypt',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "freelance project for ",
-	      _react2.default.createElement(
-	        "a",
-	        { href: "http://earthmov.es/" },
-	        "Earth Moves"
-	      ),
-	      ".",
-	      _react2.default.createElement("br", null),
-	      "full-stack (including iOS and android apps), custom CMS for creating and maintaining health insurance benefits guides for employers/employees."
-	    );
-	  }
-	}, {
-	  name: "skedge",
-	  img: "skedge.png",
-	  link: "http://www.skedgeur.com",
-	  links: {
-	    live: "http://skedgeur.com",
-	    source: "https://github.com/RocHack/skedge",
-	    thesis: "https://dropbox.com/s/dg0zic5376d7re4/thesis.pdf?raw=1"
-	  },
-	  tech: 'rails, postgres, react.js, facebook & google integration, latex',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "alternative to rochester's ",
-	      _react2.default.createElement(
-	        "a",
-	        { href: "https://cdcs.ur.rochester.edu" },
-	        "course finder/scheduler system"
-	      ),
-	      "."
-	    );
-	  }
-	}, {
-	  name: "quicktrainer",
-	  img: "qt.jpg",
-	  links: {
-	    'news – WXXI Rochester': "http://innovationtrail.org/post/upstate-researchers-tackle-toilet-training-autistic-children"
-	  },
-	  tech: 'cocoatouch (objective-C), bgscript',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "a system to more effectively toilet-train children with autism. r & d at the university of rochester that involves communication between an iOS app and a bluetooth module placed in the child's underwear."
-	    );
-	  }
-	}, {
-	  name: "probabilistic programming",
-	  img: "ide.png",
-	  link: "cs200/index.html",
-	  links: {
-	    live: "cs200/index.html",
-	    paper: "cs200/paper.pdf",
-	    source: "https://github.com/RocHack/jschain"
-	  },
-	  tech: 'js, node.js, escodegen, esprima',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "proof of concept system for generating javascript programs and code snippets based off a corpus of source files, using a ",
-	      _react2.default.createElement(
-	        "a",
-	        { href: "https://en.wikipedia.org/wiki/Markov_chain" },
-	        "markov-chain"
-	      ),
-	      " mechanism for tree structures."
-	    );
-	  }
-	}, {
-	  name: "nsrails",
-	  img: "iror.png",
-	  noBorder: true,
-	  link: "https://github.com/dingbat/nsrails",
-	  links: {
-	    source: "https://github.com/dingbat/nsrails",
-	    site: "http://nsrails.com",
-	    railsconf: "http://www.youtube.com/watch?feature=player_detailpage&v=5GS9Ta8dqhE#t=311"
-	  },
-	  tech: 'objective-C, coredata, xcunit',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "objective-c framework for high-level, easy, and flexible communication with a RESTful back-end (with rails conventions)."
-	    );
-	  }
-	}];
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "big.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 260 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(15);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = [{
-	  name: "haml-jsx-loader",
-	  link: "https://github.com/dingbat/haml-jsx-loader",
-	  links: {
-	    github: "https://github.com/dingbat/haml-jsx-loader",
-	    npm: "https://www.npmjs.com/package/haml-jsx-loader"
-	  },
-	  tech: 'js, webpack, mocha',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "a webpack loader that lets you embed HAML into your react.js JSX. never settle for pointy brackets again"
-	    );
-	  }
-	}, {
-	  name: "crm114_native",
-	  img: "crm114.jpg",
-	  link: "https://github.com/dingbat/crm114_native",
-	  links: {
-	    source: "https://github.com/dingbat/crm114_native"
-	  },
-	  tech: 'ruby gem, ruby-C bindings',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "a native ruby wrapper around ",
-	      _react2.default.createElement(
-	        "a",
-	        { href: "http://crm114.sourceforge.net/wiki/doku.php" },
-	        "CRM114"
-	      ),
-	      ", a machine learning library in C for text classification."
-	    );
-	  }
-	}, {
-	  name: "clockout",
-	  img: "clockout.png",
-	  noBorder: true,
-	  link: "https://github.com/dingbat/clockout",
-	  links: {
-	    source: "https://github.com/dingbat/crm114_native"
-	  },
-	  tech: 'ruby gem/executable, git hook',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "tool that analyzes a git repository and converts your commits into blocks of time worked (useful as a replacement/addition to contract timekeeping)"
-	    );
-	  }
-	}, {
-	  name: "blarfb",
-	  img: "blarfb.jpg",
-	  link: "https://chrome.google.com/webstore/detail/blarfb/japabiflacoedddenbhneajhepopkdif",
-	  links: {
-	    chrome: "https://chrome.google.com/webstore/detail/blarfb/japabiflacoedddenbhneajhepopkdif",
-	    safari: "stuff/blarfb.safariextz",
-	    source: "https://github.com/dingbat/blarfb"
-	  },
-	  tech: 'chrome, safari extension',
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "got the idly-scroll-fb-when-there's-stuff-to-be-done disease? this may help"
-	    );
-	  }
-	}, {
-	  name: "'memoring'",
-	  img: "memoring.jpg",
-	  link: "https://chrome.google.com/webstore/detail/blarfb/japabiflacoedddenbhneajhepopkdif",
-	  links: {
-	    'hackny standings': "http://hackny.org/a/2013/10/fall-2013-hackny-hackathon-recap-and-winners/"
-	  },
-	  tech: "ios, shapeways API, php (just a tiny bit, don't worry)",
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "div",
-	      null,
-	      _react2.default.createElement(
-	        "p",
-	        null,
-	        "a 24-hour hack, done for the fall 2013 HackNY Hackathon in NYC, my first hackathon. tracks your location throughout a night, and allows you to order a 3d-printed ring in the shape of your walk."
-	      ),
-	      _react2.default.createElement(
-	        "p",
-	        null,
-	        "won 2nd place overall, among around 250 competitors and 50 other projects, and was presented at the november 2013 NY Tech Meetup."
-	      )
-	    );
-	  }
-	}, {
-	  name: "λ-calculus interpreter",
-	  img: "lambda.png",
-	  link: "lambda",
-	  app: true,
-	  links: {},
-	  description: function description() {
-	    return _react2.default.createElement(
-	      "p",
-	      null,
-	      "an interpreter for ",
-	      _react2.default.createElement(
-	        "a",
-	        { href: "http://en.wikipedia.org/wiki/Lambda_calculus" },
-	        "the lambda calculus"
-	      )
-	    );
-	  }
-	}];
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "small.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
 /* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var map = {
-		"./app/angles.png": 262,
-		"./app/camena.png": 263,
-		"./app/count.png": 264,
-		"./app/dissolve.png": 265,
-		"./app/na.png": 266,
-		"./blackout.png": 267,
-		"./blarfb.jpg": 268,
-		"./clockout.png": 269,
-		"./crm114.jpg": 270,
-		"./ide.png": 271,
-		"./iror.png": 272,
-		"./lambda.png": 273,
-		"./memoring.jpg": 274,
-		"./qt.jpg": 275,
-		"./skedge.png": 276
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 261;
+	__webpack_require__(262);
 
 
 /***/ },
 /* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "a572be4cd3efbb38bc6c70b65a1c2744.png";
-
-/***/ },
-/* 263 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0e8cf69aafee78c7aa6060bd99c53570.png";
-
-/***/ },
-/* 264 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0a765bf417a587e80cfad7d6feff4ad8.png";
-
-/***/ },
-/* 265 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/png;base64,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"
-
-/***/ },
-/* 266 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "e97877b2adb119e5b51ee5648a1aecb7.png";
-
-/***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "39f68ea013264c638499e1774002124e.png";
-
-/***/ },
-/* 268 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "baac945d808bb3c8c0c5467b36e45503.jpg";
-
-/***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "de4ff81c5cb8489485c867cdbc726b07.png";
-
-/***/ },
-/* 270 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "ca81815e9a365457b78af9f8025c77db.jpg";
-
-/***/ },
-/* 271 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "1acc2c262227bd1b686d940d4d43af67.png";
-
-/***/ },
-/* 272 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "986cf0494e65b262e9b7d0f3b38bcacf.png";
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "02d43848b1afd004db99b270a42890ca.png";
-
-/***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "8326ca6577dda602a6a6bde4348e4a55.jpg";
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "d0a36672c3f7c5587620a669581140f3.jpg";
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "0c89945685c04743726f490b18ec2194.png";
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(278);
+	var content = __webpack_require__(263);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(253)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./main.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./main.sass");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(252)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: 'Oxygen', sans-serif; }\n\n.container {\n  width: 80%;\n  text-align: center;\n  padding-top: 20px;\n  position: absolute;\n  left: 10%; }\n\n.header {\n  margin-top: 50px;\n  margin-bottom: 40px; }\n  .header i.fa-angle-left, .header .back-counterbalance {\n    width: 200px;\n    font-size: 35px;\n    padding-right: 15px;\n    display: inline-block; }\n\na[href], a.show {\n  cursor: pointer;\n  color: inherit;\n  text-decoration: none; }\n  a[href]:hover, a.show:hover {\n    text-decoration: underline;\n    color: black; }\n\n.color-ish {\n  color: gray; }\n\n.color-light {\n  color: #9a9a9a; }\n\n.page.push-enter {\n  opacity: 0;\n  transform: translate(80%, 0px); }\n\n.page.pop-enter {\n  opacity: 0;\n  transform: translate(-80%, 0px); }\n\n.page.push-enter.push-enter-active, .page.pop-enter.pop-enter-active {\n  transform: translate(0px, 0px);\n  opacity: 1; }\n\n.page.push-leave, .page.pop-leave {\n  opacity: 1;\n  transform: translate(0px, 0px); }\n\n.page.push-leave.push-leave-active {\n  opacity: 0;\n  transform: translate(-80%, 0px); }\n\n.page.pop-leave.pop-leave-active {\n  opacity: 0;\n  transform: translate(80%, 0px); }\n\n.page.push-enter-active, .page.push-leave-active, .page.pop-enter-active, .page.pop-leave-active {\n  transition: transform 750ms, opacity 750ms; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(280);
-
-
-/***/ },
-/* 280 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(281);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(289)(content, {});
+	var update = __webpack_require__(271)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -28473,21 +28384,21 @@
 	}
 
 /***/ },
-/* 281 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(282)();
+	exports = module.exports = __webpack_require__(264)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".fa-border {\n  padding: .2em .25em .15em;\n  border: solid 0.08em #eee;\n  border-radius: .1em;\n}\n.fa-pull-left {\n  float: left;\n}\n.fa-pull-right {\n  float: right;\n}\n.fa.fa-pull-left {\n  margin-right: .3em;\n}\n.fa.fa-pull-right {\n  margin-left: .3em;\n}\n/* Deprecated as of 4.4.0 */\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.fa.pull-left {\n  margin-right: .3em;\n}\n.fa.pull-right {\n  margin-left: .3em;\n}\n.fa {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.fa-fw {\n  width: 1.28571429em;\n  text-align: center;\n}\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\n   readers do not read off random characters that represent icons */\n.fa-glass:before {\n  content: \"\\F000\";\n}\n.fa-music:before {\n  content: \"\\F001\";\n}\n.fa-search:before {\n  content: \"\\F002\";\n}\n.fa-envelope-o:before {\n  content: \"\\F003\";\n}\n.fa-heart:before {\n  content: \"\\F004\";\n}\n.fa-star:before {\n  content: \"\\F005\";\n}\n.fa-star-o:before {\n  content: \"\\F006\";\n}\n.fa-user:before {\n  content: \"\\F007\";\n}\n.fa-film:before {\n  content: \"\\F008\";\n}\n.fa-th-large:before {\n  content: \"\\F009\";\n}\n.fa-th:before {\n  content: \"\\F00A\";\n}\n.fa-th-list:before {\n  content: \"\\F00B\";\n}\n.fa-check:before {\n  content: \"\\F00C\";\n}\n.fa-remove:before,\n.fa-close:before,\n.fa-times:before {\n  content: \"\\F00D\";\n}\n.fa-search-plus:before {\n  content: \"\\F00E\";\n}\n.fa-search-minus:before {\n  content: \"\\F010\";\n}\n.fa-power-off:before {\n  content: \"\\F011\";\n}\n.fa-signal:before {\n  content: \"\\F012\";\n}\n.fa-gear:before,\n.fa-cog:before {\n  content: \"\\F013\";\n}\n.fa-trash-o:before {\n  content: \"\\F014\";\n}\n.fa-home:before {\n  content: \"\\F015\";\n}\n.fa-file-o:before {\n  content: \"\\F016\";\n}\n.fa-clock-o:before {\n  content: \"\\F017\";\n}\n.fa-road:before {\n  content: \"\\F018\";\n}\n.fa-download:before {\n  content: \"\\F019\";\n}\n.fa-arrow-circle-o-down:before {\n  content: \"\\F01A\";\n}\n.fa-arrow-circle-o-up:before {\n  content: \"\\F01B\";\n}\n.fa-inbox:before {\n  content: \"\\F01C\";\n}\n.fa-play-circle-o:before {\n  content: \"\\F01D\";\n}\n.fa-rotate-right:before,\n.fa-repeat:before {\n  content: \"\\F01E\";\n}\n.fa-refresh:before {\n  content: \"\\F021\";\n}\n.fa-list-alt:before {\n  content: \"\\F022\";\n}\n.fa-lock:before {\n  content: \"\\F023\";\n}\n.fa-flag:before {\n  content: \"\\F024\";\n}\n.fa-headphones:before {\n  content: \"\\F025\";\n}\n.fa-volume-off:before {\n  content: \"\\F026\";\n}\n.fa-volume-down:before {\n  content: \"\\F027\";\n}\n.fa-volume-up:before {\n  content: \"\\F028\";\n}\n.fa-qrcode:before {\n  content: \"\\F029\";\n}\n.fa-barcode:before {\n  content: \"\\F02A\";\n}\n.fa-tag:before {\n  content: \"\\F02B\";\n}\n.fa-tags:before {\n  content: \"\\F02C\";\n}\n.fa-book:before {\n  content: \"\\F02D\";\n}\n.fa-bookmark:before {\n  content: \"\\F02E\";\n}\n.fa-print:before {\n  content: \"\\F02F\";\n}\n.fa-camera:before {\n  content: \"\\F030\";\n}\n.fa-font:before {\n  content: \"\\F031\";\n}\n.fa-bold:before {\n  content: \"\\F032\";\n}\n.fa-italic:before {\n  content: \"\\F033\";\n}\n.fa-text-height:before {\n  content: \"\\F034\";\n}\n.fa-text-width:before {\n  content: \"\\F035\";\n}\n.fa-align-left:before {\n  content: \"\\F036\";\n}\n.fa-align-center:before {\n  content: \"\\F037\";\n}\n.fa-align-right:before {\n  content: \"\\F038\";\n}\n.fa-align-justify:before {\n  content: \"\\F039\";\n}\n.fa-list:before {\n  content: \"\\F03A\";\n}\n.fa-dedent:before,\n.fa-outdent:before {\n  content: \"\\F03B\";\n}\n.fa-indent:before {\n  content: \"\\F03C\";\n}\n.fa-video-camera:before {\n  content: \"\\F03D\";\n}\n.fa-photo:before,\n.fa-image:before,\n.fa-picture-o:before {\n  content: \"\\F03E\";\n}\n.fa-pencil:before {\n  content: \"\\F040\";\n}\n.fa-map-marker:before {\n  content: \"\\F041\";\n}\n.fa-adjust:before {\n  content: \"\\F042\";\n}\n.fa-tint:before {\n  content: \"\\F043\";\n}\n.fa-edit:before,\n.fa-pencil-square-o:before {\n  content: \"\\F044\";\n}\n.fa-share-square-o:before {\n  content: \"\\F045\";\n}\n.fa-check-square-o:before {\n  content: \"\\F046\";\n}\n.fa-arrows:before {\n  content: \"\\F047\";\n}\n.fa-step-backward:before {\n  content: \"\\F048\";\n}\n.fa-fast-backward:before {\n  content: \"\\F049\";\n}\n.fa-backward:before {\n  content: \"\\F04A\";\n}\n.fa-play:before {\n  content: \"\\F04B\";\n}\n.fa-pause:before {\n  content: \"\\F04C\";\n}\n.fa-stop:before {\n  content: \"\\F04D\";\n}\n.fa-forward:before {\n  content: \"\\F04E\";\n}\n.fa-fast-forward:before {\n  content: \"\\F050\";\n}\n.fa-step-forward:before {\n  content: \"\\F051\";\n}\n.fa-eject:before {\n  content: \"\\F052\";\n}\n.fa-chevron-left:before {\n  content: \"\\F053\";\n}\n.fa-chevron-right:before {\n  content: \"\\F054\";\n}\n.fa-plus-circle:before {\n  content: \"\\F055\";\n}\n.fa-minus-circle:before {\n  content: \"\\F056\";\n}\n.fa-times-circle:before {\n  content: \"\\F057\";\n}\n.fa-check-circle:before {\n  content: \"\\F058\";\n}\n.fa-question-circle:before {\n  content: \"\\F059\";\n}\n.fa-info-circle:before {\n  content: \"\\F05A\";\n}\n.fa-crosshairs:before {\n  content: \"\\F05B\";\n}\n.fa-times-circle-o:before {\n  content: \"\\F05C\";\n}\n.fa-check-circle-o:before {\n  content: \"\\F05D\";\n}\n.fa-ban:before {\n  content: \"\\F05E\";\n}\n.fa-arrow-left:before {\n  content: \"\\F060\";\n}\n.fa-arrow-right:before {\n  content: \"\\F061\";\n}\n.fa-arrow-up:before {\n  content: \"\\F062\";\n}\n.fa-arrow-down:before {\n  content: \"\\F063\";\n}\n.fa-mail-forward:before,\n.fa-share:before {\n  content: \"\\F064\";\n}\n.fa-expand:before {\n  content: \"\\F065\";\n}\n.fa-compress:before {\n  content: \"\\F066\";\n}\n.fa-plus:before {\n  content: \"\\F067\";\n}\n.fa-minus:before {\n  content: \"\\F068\";\n}\n.fa-asterisk:before {\n  content: \"\\F069\";\n}\n.fa-exclamation-circle:before {\n  content: \"\\F06A\";\n}\n.fa-gift:before {\n  content: \"\\F06B\";\n}\n.fa-leaf:before {\n  content: \"\\F06C\";\n}\n.fa-fire:before {\n  content: \"\\F06D\";\n}\n.fa-eye:before {\n  content: \"\\F06E\";\n}\n.fa-eye-slash:before {\n  content: \"\\F070\";\n}\n.fa-warning:before,\n.fa-exclamation-triangle:before {\n  content: \"\\F071\";\n}\n.fa-plane:before {\n  content: \"\\F072\";\n}\n.fa-calendar:before {\n  content: \"\\F073\";\n}\n.fa-random:before {\n  content: \"\\F074\";\n}\n.fa-comment:before {\n  content: \"\\F075\";\n}\n.fa-magnet:before {\n  content: \"\\F076\";\n}\n.fa-chevron-up:before {\n  content: \"\\F077\";\n}\n.fa-chevron-down:before {\n  content: \"\\F078\";\n}\n.fa-retweet:before {\n  content: \"\\F079\";\n}\n.fa-shopping-cart:before {\n  content: \"\\F07A\";\n}\n.fa-folder:before {\n  content: \"\\F07B\";\n}\n.fa-folder-open:before {\n  content: \"\\F07C\";\n}\n.fa-arrows-v:before {\n  content: \"\\F07D\";\n}\n.fa-arrows-h:before {\n  content: \"\\F07E\";\n}\n.fa-bar-chart-o:before,\n.fa-bar-chart:before {\n  content: \"\\F080\";\n}\n.fa-twitter-square:before {\n  content: \"\\F081\";\n}\n.fa-facebook-square:before {\n  content: \"\\F082\";\n}\n.fa-camera-retro:before {\n  content: \"\\F083\";\n}\n.fa-key:before {\n  content: \"\\F084\";\n}\n.fa-gears:before,\n.fa-cogs:before {\n  content: \"\\F085\";\n}\n.fa-comments:before {\n  content: \"\\F086\";\n}\n.fa-thumbs-o-up:before {\n  content: \"\\F087\";\n}\n.fa-thumbs-o-down:before {\n  content: \"\\F088\";\n}\n.fa-star-half:before {\n  content: \"\\F089\";\n}\n.fa-heart-o:before {\n  content: \"\\F08A\";\n}\n.fa-sign-out:before {\n  content: \"\\F08B\";\n}\n.fa-linkedin-square:before {\n  content: \"\\F08C\";\n}\n.fa-thumb-tack:before {\n  content: \"\\F08D\";\n}\n.fa-external-link:before {\n  content: \"\\F08E\";\n}\n.fa-sign-in:before {\n  content: \"\\F090\";\n}\n.fa-trophy:before {\n  content: \"\\F091\";\n}\n.fa-github-square:before {\n  content: \"\\F092\";\n}\n.fa-upload:before {\n  content: \"\\F093\";\n}\n.fa-lemon-o:before {\n  content: \"\\F094\";\n}\n.fa-phone:before {\n  content: \"\\F095\";\n}\n.fa-square-o:before {\n  content: \"\\F096\";\n}\n.fa-bookmark-o:before {\n  content: \"\\F097\";\n}\n.fa-phone-square:before {\n  content: \"\\F098\";\n}\n.fa-twitter:before {\n  content: \"\\F099\";\n}\n.fa-facebook-f:before,\n.fa-facebook:before {\n  content: \"\\F09A\";\n}\n.fa-github:before {\n  content: \"\\F09B\";\n}\n.fa-unlock:before {\n  content: \"\\F09C\";\n}\n.fa-credit-card:before {\n  content: \"\\F09D\";\n}\n.fa-feed:before,\n.fa-rss:before {\n  content: \"\\F09E\";\n}\n.fa-hdd-o:before {\n  content: \"\\F0A0\";\n}\n.fa-bullhorn:before {\n  content: \"\\F0A1\";\n}\n.fa-bell:before {\n  content: \"\\F0F3\";\n}\n.fa-certificate:before {\n  content: \"\\F0A3\";\n}\n.fa-hand-o-right:before {\n  content: \"\\F0A4\";\n}\n.fa-hand-o-left:before {\n  content: \"\\F0A5\";\n}\n.fa-hand-o-up:before {\n  content: \"\\F0A6\";\n}\n.fa-hand-o-down:before {\n  content: \"\\F0A7\";\n}\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\";\n}\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\";\n}\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\";\n}\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\";\n}\n.fa-globe:before {\n  content: \"\\F0AC\";\n}\n.fa-wrench:before {\n  content: \"\\F0AD\";\n}\n.fa-tasks:before {\n  content: \"\\F0AE\";\n}\n.fa-filter:before {\n  content: \"\\F0B0\";\n}\n.fa-briefcase:before {\n  content: \"\\F0B1\";\n}\n.fa-arrows-alt:before {\n  content: \"\\F0B2\";\n}\n.fa-group:before,\n.fa-users:before {\n  content: \"\\F0C0\";\n}\n.fa-chain:before,\n.fa-link:before {\n  content: \"\\F0C1\";\n}\n.fa-cloud:before {\n  content: \"\\F0C2\";\n}\n.fa-flask:before {\n  content: \"\\F0C3\";\n}\n.fa-cut:before,\n.fa-scissors:before {\n  content: \"\\F0C4\";\n}\n.fa-copy:before,\n.fa-files-o:before {\n  content: \"\\F0C5\";\n}\n.fa-paperclip:before {\n  content: \"\\F0C6\";\n}\n.fa-save:before,\n.fa-floppy-o:before {\n  content: \"\\F0C7\";\n}\n.fa-square:before {\n  content: \"\\F0C8\";\n}\n.fa-navicon:before,\n.fa-reorder:before,\n.fa-bars:before {\n  content: \"\\F0C9\";\n}\n.fa-list-ul:before {\n  content: \"\\F0CA\";\n}\n.fa-list-ol:before {\n  content: \"\\F0CB\";\n}\n.fa-strikethrough:before {\n  content: \"\\F0CC\";\n}\n.fa-underline:before {\n  content: \"\\F0CD\";\n}\n.fa-table:before {\n  content: \"\\F0CE\";\n}\n.fa-magic:before {\n  content: \"\\F0D0\";\n}\n.fa-truck:before {\n  content: \"\\F0D1\";\n}\n.fa-pinterest:before {\n  content: \"\\F0D2\";\n}\n.fa-pinterest-square:before {\n  content: \"\\F0D3\";\n}\n.fa-google-plus-square:before {\n  content: \"\\F0D4\";\n}\n.fa-google-plus:before {\n  content: \"\\F0D5\";\n}\n.fa-money:before {\n  content: \"\\F0D6\";\n}\n.fa-caret-down:before {\n  content: \"\\F0D7\";\n}\n.fa-caret-up:before {\n  content: \"\\F0D8\";\n}\n.fa-caret-left:before {\n  content: \"\\F0D9\";\n}\n.fa-caret-right:before {\n  content: \"\\F0DA\";\n}\n.fa-columns:before {\n  content: \"\\F0DB\";\n}\n.fa-unsorted:before,\n.fa-sort:before {\n  content: \"\\F0DC\";\n}\n.fa-sort-down:before,\n.fa-sort-desc:before {\n  content: \"\\F0DD\";\n}\n.fa-sort-up:before,\n.fa-sort-asc:before {\n  content: \"\\F0DE\";\n}\n.fa-envelope:before {\n  content: \"\\F0E0\";\n}\n.fa-linkedin:before {\n  content: \"\\F0E1\";\n}\n.fa-rotate-left:before,\n.fa-undo:before {\n  content: \"\\F0E2\";\n}\n.fa-legal:before,\n.fa-gavel:before {\n  content: \"\\F0E3\";\n}\n.fa-dashboard:before,\n.fa-tachometer:before {\n  content: \"\\F0E4\";\n}\n.fa-comment-o:before {\n  content: \"\\F0E5\";\n}\n.fa-comments-o:before {\n  content: \"\\F0E6\";\n}\n.fa-flash:before,\n.fa-bolt:before {\n  content: \"\\F0E7\";\n}\n.fa-sitemap:before {\n  content: \"\\F0E8\";\n}\n.fa-umbrella:before {\n  content: \"\\F0E9\";\n}\n.fa-paste:before,\n.fa-clipboard:before {\n  content: \"\\F0EA\";\n}\n.fa-lightbulb-o:before {\n  content: \"\\F0EB\";\n}\n.fa-exchange:before {\n  content: \"\\F0EC\";\n}\n.fa-cloud-download:before {\n  content: \"\\F0ED\";\n}\n.fa-cloud-upload:before {\n  content: \"\\F0EE\";\n}\n.fa-user-md:before {\n  content: \"\\F0F0\";\n}\n.fa-stethoscope:before {\n  content: \"\\F0F1\";\n}\n.fa-suitcase:before {\n  content: \"\\F0F2\";\n}\n.fa-bell-o:before {\n  content: \"\\F0A2\";\n}\n.fa-coffee:before {\n  content: \"\\F0F4\";\n}\n.fa-cutlery:before {\n  content: \"\\F0F5\";\n}\n.fa-file-text-o:before {\n  content: \"\\F0F6\";\n}\n.fa-building-o:before {\n  content: \"\\F0F7\";\n}\n.fa-hospital-o:before {\n  content: \"\\F0F8\";\n}\n.fa-ambulance:before {\n  content: \"\\F0F9\";\n}\n.fa-medkit:before {\n  content: \"\\F0FA\";\n}\n.fa-fighter-jet:before {\n  content: \"\\F0FB\";\n}\n.fa-beer:before {\n  content: \"\\F0FC\";\n}\n.fa-h-square:before {\n  content: \"\\F0FD\";\n}\n.fa-plus-square:before {\n  content: \"\\F0FE\";\n}\n.fa-angle-double-left:before {\n  content: \"\\F100\";\n}\n.fa-angle-double-right:before {\n  content: \"\\F101\";\n}\n.fa-angle-double-up:before {\n  content: \"\\F102\";\n}\n.fa-angle-double-down:before {\n  content: \"\\F103\";\n}\n.fa-angle-left:before {\n  content: \"\\F104\";\n}\n.fa-angle-right:before {\n  content: \"\\F105\";\n}\n.fa-angle-up:before {\n  content: \"\\F106\";\n}\n.fa-angle-down:before {\n  content: \"\\F107\";\n}\n.fa-desktop:before {\n  content: \"\\F108\";\n}\n.fa-laptop:before {\n  content: \"\\F109\";\n}\n.fa-tablet:before {\n  content: \"\\F10A\";\n}\n.fa-mobile-phone:before,\n.fa-mobile:before {\n  content: \"\\F10B\";\n}\n.fa-circle-o:before {\n  content: \"\\F10C\";\n}\n.fa-quote-left:before {\n  content: \"\\F10D\";\n}\n.fa-quote-right:before {\n  content: \"\\F10E\";\n}\n.fa-spinner:before {\n  content: \"\\F110\";\n}\n.fa-circle:before {\n  content: \"\\F111\";\n}\n.fa-mail-reply:before,\n.fa-reply:before {\n  content: \"\\F112\";\n}\n.fa-github-alt:before {\n  content: \"\\F113\";\n}\n.fa-folder-o:before {\n  content: \"\\F114\";\n}\n.fa-folder-open-o:before {\n  content: \"\\F115\";\n}\n.fa-smile-o:before {\n  content: \"\\F118\";\n}\n.fa-frown-o:before {\n  content: \"\\F119\";\n}\n.fa-meh-o:before {\n  content: \"\\F11A\";\n}\n.fa-gamepad:before {\n  content: \"\\F11B\";\n}\n.fa-keyboard-o:before {\n  content: \"\\F11C\";\n}\n.fa-flag-o:before {\n  content: \"\\F11D\";\n}\n.fa-flag-checkered:before {\n  content: \"\\F11E\";\n}\n.fa-terminal:before {\n  content: \"\\F120\";\n}\n.fa-code:before {\n  content: \"\\F121\";\n}\n.fa-mail-reply-all:before,\n.fa-reply-all:before {\n  content: \"\\F122\";\n}\n.fa-star-half-empty:before,\n.fa-star-half-full:before,\n.fa-star-half-o:before {\n  content: \"\\F123\";\n}\n.fa-location-arrow:before {\n  content: \"\\F124\";\n}\n.fa-crop:before {\n  content: \"\\F125\";\n}\n.fa-code-fork:before {\n  content: \"\\F126\";\n}\n.fa-unlink:before,\n.fa-chain-broken:before {\n  content: \"\\F127\";\n}\n.fa-question:before {\n  content: \"\\F128\";\n}\n.fa-info:before {\n  content: \"\\F129\";\n}\n.fa-exclamation:before {\n  content: \"\\F12A\";\n}\n.fa-superscript:before {\n  content: \"\\F12B\";\n}\n.fa-subscript:before {\n  content: \"\\F12C\";\n}\n.fa-eraser:before {\n  content: \"\\F12D\";\n}\n.fa-puzzle-piece:before {\n  content: \"\\F12E\";\n}\n.fa-microphone:before {\n  content: \"\\F130\";\n}\n.fa-microphone-slash:before {\n  content: \"\\F131\";\n}\n.fa-shield:before {\n  content: \"\\F132\";\n}\n.fa-calendar-o:before {\n  content: \"\\F133\";\n}\n.fa-fire-extinguisher:before {\n  content: \"\\F134\";\n}\n.fa-rocket:before {\n  content: \"\\F135\";\n}\n.fa-maxcdn:before {\n  content: \"\\F136\";\n}\n.fa-chevron-circle-left:before {\n  content: \"\\F137\";\n}\n.fa-chevron-circle-right:before {\n  content: \"\\F138\";\n}\n.fa-chevron-circle-up:before {\n  content: \"\\F139\";\n}\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\";\n}\n.fa-html5:before {\n  content: \"\\F13B\";\n}\n.fa-css3:before {\n  content: \"\\F13C\";\n}\n.fa-anchor:before {\n  content: \"\\F13D\";\n}\n.fa-unlock-alt:before {\n  content: \"\\F13E\";\n}\n.fa-bullseye:before {\n  content: \"\\F140\";\n}\n.fa-ellipsis-h:before {\n  content: \"\\F141\";\n}\n.fa-ellipsis-v:before {\n  content: \"\\F142\";\n}\n.fa-rss-square:before {\n  content: \"\\F143\";\n}\n.fa-play-circle:before {\n  content: \"\\F144\";\n}\n.fa-ticket:before {\n  content: \"\\F145\";\n}\n.fa-minus-square:before {\n  content: \"\\F146\";\n}\n.fa-minus-square-o:before {\n  content: \"\\F147\";\n}\n.fa-level-up:before {\n  content: \"\\F148\";\n}\n.fa-level-down:before {\n  content: \"\\F149\";\n}\n.fa-check-square:before {\n  content: \"\\F14A\";\n}\n.fa-pencil-square:before {\n  content: \"\\F14B\";\n}\n.fa-external-link-square:before {\n  content: \"\\F14C\";\n}\n.fa-share-square:before {\n  content: \"\\F14D\";\n}\n.fa-compass:before {\n  content: \"\\F14E\";\n}\n.fa-toggle-down:before,\n.fa-caret-square-o-down:before {\n  content: \"\\F150\";\n}\n.fa-toggle-up:before,\n.fa-caret-square-o-up:before {\n  content: \"\\F151\";\n}\n.fa-toggle-right:before,\n.fa-caret-square-o-right:before {\n  content: \"\\F152\";\n}\n.fa-euro:before,\n.fa-eur:before {\n  content: \"\\F153\";\n}\n.fa-gbp:before {\n  content: \"\\F154\";\n}\n.fa-dollar:before,\n.fa-usd:before {\n  content: \"\\F155\";\n}\n.fa-rupee:before,\n.fa-inr:before {\n  content: \"\\F156\";\n}\n.fa-cny:before,\n.fa-rmb:before,\n.fa-yen:before,\n.fa-jpy:before {\n  content: \"\\F157\";\n}\n.fa-ruble:before,\n.fa-rouble:before,\n.fa-rub:before {\n  content: \"\\F158\";\n}\n.fa-won:before,\n.fa-krw:before {\n  content: \"\\F159\";\n}\n.fa-bitcoin:before,\n.fa-btc:before {\n  content: \"\\F15A\";\n}\n.fa-file:before {\n  content: \"\\F15B\";\n}\n.fa-file-text:before {\n  content: \"\\F15C\";\n}\n.fa-sort-alpha-asc:before {\n  content: \"\\F15D\";\n}\n.fa-sort-alpha-desc:before {\n  content: \"\\F15E\";\n}\n.fa-sort-amount-asc:before {\n  content: \"\\F160\";\n}\n.fa-sort-amount-desc:before {\n  content: \"\\F161\";\n}\n.fa-sort-numeric-asc:before {\n  content: \"\\F162\";\n}\n.fa-sort-numeric-desc:before {\n  content: \"\\F163\";\n}\n.fa-thumbs-up:before {\n  content: \"\\F164\";\n}\n.fa-thumbs-down:before {\n  content: \"\\F165\";\n}\n.fa-youtube-square:before {\n  content: \"\\F166\";\n}\n.fa-youtube:before {\n  content: \"\\F167\";\n}\n.fa-xing:before {\n  content: \"\\F168\";\n}\n.fa-xing-square:before {\n  content: \"\\F169\";\n}\n.fa-youtube-play:before {\n  content: \"\\F16A\";\n}\n.fa-dropbox:before {\n  content: \"\\F16B\";\n}\n.fa-stack-overflow:before {\n  content: \"\\F16C\";\n}\n.fa-instagram:before {\n  content: \"\\F16D\";\n}\n.fa-flickr:before {\n  content: \"\\F16E\";\n}\n.fa-adn:before {\n  content: \"\\F170\";\n}\n.fa-bitbucket:before {\n  content: \"\\F171\";\n}\n.fa-bitbucket-square:before {\n  content: \"\\F172\";\n}\n.fa-tumblr:before {\n  content: \"\\F173\";\n}\n.fa-tumblr-square:before {\n  content: \"\\F174\";\n}\n.fa-long-arrow-down:before {\n  content: \"\\F175\";\n}\n.fa-long-arrow-up:before {\n  content: \"\\F176\";\n}\n.fa-long-arrow-left:before {\n  content: \"\\F177\";\n}\n.fa-long-arrow-right:before {\n  content: \"\\F178\";\n}\n.fa-apple:before {\n  content: \"\\F179\";\n}\n.fa-windows:before {\n  content: \"\\F17A\";\n}\n.fa-android:before {\n  content: \"\\F17B\";\n}\n.fa-linux:before {\n  content: \"\\F17C\";\n}\n.fa-dribbble:before {\n  content: \"\\F17D\";\n}\n.fa-skype:before {\n  content: \"\\F17E\";\n}\n.fa-foursquare:before {\n  content: \"\\F180\";\n}\n.fa-trello:before {\n  content: \"\\F181\";\n}\n.fa-female:before {\n  content: \"\\F182\";\n}\n.fa-male:before {\n  content: \"\\F183\";\n}\n.fa-gittip:before,\n.fa-gratipay:before {\n  content: \"\\F184\";\n}\n.fa-sun-o:before {\n  content: \"\\F185\";\n}\n.fa-moon-o:before {\n  content: \"\\F186\";\n}\n.fa-archive:before {\n  content: \"\\F187\";\n}\n.fa-bug:before {\n  content: \"\\F188\";\n}\n.fa-vk:before {\n  content: \"\\F189\";\n}\n.fa-weibo:before {\n  content: \"\\F18A\";\n}\n.fa-renren:before {\n  content: \"\\F18B\";\n}\n.fa-pagelines:before {\n  content: \"\\F18C\";\n}\n.fa-stack-exchange:before {\n  content: \"\\F18D\";\n}\n.fa-arrow-circle-o-right:before {\n  content: \"\\F18E\";\n}\n.fa-arrow-circle-o-left:before {\n  content: \"\\F190\";\n}\n.fa-toggle-left:before,\n.fa-caret-square-o-left:before {\n  content: \"\\F191\";\n}\n.fa-dot-circle-o:before {\n  content: \"\\F192\";\n}\n.fa-wheelchair:before {\n  content: \"\\F193\";\n}\n.fa-vimeo-square:before {\n  content: \"\\F194\";\n}\n.fa-turkish-lira:before,\n.fa-try:before {\n  content: \"\\F195\";\n}\n.fa-plus-square-o:before {\n  content: \"\\F196\";\n}\n.fa-space-shuttle:before {\n  content: \"\\F197\";\n}\n.fa-slack:before {\n  content: \"\\F198\";\n}\n.fa-envelope-square:before {\n  content: \"\\F199\";\n}\n.fa-wordpress:before {\n  content: \"\\F19A\";\n}\n.fa-openid:before {\n  content: \"\\F19B\";\n}\n.fa-institution:before,\n.fa-bank:before,\n.fa-university:before {\n  content: \"\\F19C\";\n}\n.fa-mortar-board:before,\n.fa-graduation-cap:before {\n  content: \"\\F19D\";\n}\n.fa-yahoo:before {\n  content: \"\\F19E\";\n}\n.fa-google:before {\n  content: \"\\F1A0\";\n}\n.fa-reddit:before {\n  content: \"\\F1A1\";\n}\n.fa-reddit-square:before {\n  content: \"\\F1A2\";\n}\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\";\n}\n.fa-stumbleupon:before {\n  content: \"\\F1A4\";\n}\n.fa-delicious:before {\n  content: \"\\F1A5\";\n}\n.fa-digg:before {\n  content: \"\\F1A6\";\n}\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\";\n}\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\";\n}\n.fa-drupal:before {\n  content: \"\\F1A9\";\n}\n.fa-joomla:before {\n  content: \"\\F1AA\";\n}\n.fa-language:before {\n  content: \"\\F1AB\";\n}\n.fa-fax:before {\n  content: \"\\F1AC\";\n}\n.fa-building:before {\n  content: \"\\F1AD\";\n}\n.fa-child:before {\n  content: \"\\F1AE\";\n}\n.fa-paw:before {\n  content: \"\\F1B0\";\n}\n.fa-spoon:before {\n  content: \"\\F1B1\";\n}\n.fa-cube:before {\n  content: \"\\F1B2\";\n}\n.fa-cubes:before {\n  content: \"\\F1B3\";\n}\n.fa-behance:before {\n  content: \"\\F1B4\";\n}\n.fa-behance-square:before {\n  content: \"\\F1B5\";\n}\n.fa-steam:before {\n  content: \"\\F1B6\";\n}\n.fa-steam-square:before {\n  content: \"\\F1B7\";\n}\n.fa-recycle:before {\n  content: \"\\F1B8\";\n}\n.fa-automobile:before,\n.fa-car:before {\n  content: \"\\F1B9\";\n}\n.fa-cab:before,\n.fa-taxi:before {\n  content: \"\\F1BA\";\n}\n.fa-tree:before {\n  content: \"\\F1BB\";\n}\n.fa-spotify:before {\n  content: \"\\F1BC\";\n}\n.fa-deviantart:before {\n  content: \"\\F1BD\";\n}\n.fa-soundcloud:before {\n  content: \"\\F1BE\";\n}\n.fa-database:before {\n  content: \"\\F1C0\";\n}\n.fa-file-pdf-o:before {\n  content: \"\\F1C1\";\n}\n.fa-file-word-o:before {\n  content: \"\\F1C2\";\n}\n.fa-file-excel-o:before {\n  content: \"\\F1C3\";\n}\n.fa-file-powerpoint-o:before {\n  content: \"\\F1C4\";\n}\n.fa-file-photo-o:before,\n.fa-file-picture-o:before,\n.fa-file-image-o:before {\n  content: \"\\F1C5\";\n}\n.fa-file-zip-o:before,\n.fa-file-archive-o:before {\n  content: \"\\F1C6\";\n}\n.fa-file-sound-o:before,\n.fa-file-audio-o:before {\n  content: \"\\F1C7\";\n}\n.fa-file-movie-o:before,\n.fa-file-video-o:before {\n  content: \"\\F1C8\";\n}\n.fa-file-code-o:before {\n  content: \"\\F1C9\";\n}\n.fa-vine:before {\n  content: \"\\F1CA\";\n}\n.fa-codepen:before {\n  content: \"\\F1CB\";\n}\n.fa-jsfiddle:before {\n  content: \"\\F1CC\";\n}\n.fa-life-bouy:before,\n.fa-life-buoy:before,\n.fa-life-saver:before,\n.fa-support:before,\n.fa-life-ring:before {\n  content: \"\\F1CD\";\n}\n.fa-circle-o-notch:before {\n  content: \"\\F1CE\";\n}\n.fa-ra:before,\n.fa-resistance:before,\n.fa-rebel:before {\n  content: \"\\F1D0\";\n}\n.fa-ge:before,\n.fa-empire:before {\n  content: \"\\F1D1\";\n}\n.fa-git-square:before {\n  content: \"\\F1D2\";\n}\n.fa-git:before {\n  content: \"\\F1D3\";\n}\n.fa-y-combinator-square:before,\n.fa-yc-square:before,\n.fa-hacker-news:before {\n  content: \"\\F1D4\";\n}\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\";\n}\n.fa-qq:before {\n  content: \"\\F1D6\";\n}\n.fa-wechat:before,\n.fa-weixin:before {\n  content: \"\\F1D7\";\n}\n.fa-send:before,\n.fa-paper-plane:before {\n  content: \"\\F1D8\";\n}\n.fa-send-o:before,\n.fa-paper-plane-o:before {\n  content: \"\\F1D9\";\n}\n.fa-history:before {\n  content: \"\\F1DA\";\n}\n.fa-circle-thin:before {\n  content: \"\\F1DB\";\n}\n.fa-header:before {\n  content: \"\\F1DC\";\n}\n.fa-paragraph:before {\n  content: \"\\F1DD\";\n}\n.fa-sliders:before {\n  content: \"\\F1DE\";\n}\n.fa-share-alt:before {\n  content: \"\\F1E0\";\n}\n.fa-share-alt-square:before {\n  content: \"\\F1E1\";\n}\n.fa-bomb:before {\n  content: \"\\F1E2\";\n}\n.fa-soccer-ball-o:before,\n.fa-futbol-o:before {\n  content: \"\\F1E3\";\n}\n.fa-tty:before {\n  content: \"\\F1E4\";\n}\n.fa-binoculars:before {\n  content: \"\\F1E5\";\n}\n.fa-plug:before {\n  content: \"\\F1E6\";\n}\n.fa-slideshare:before {\n  content: \"\\F1E7\";\n}\n.fa-twitch:before {\n  content: \"\\F1E8\";\n}\n.fa-yelp:before {\n  content: \"\\F1E9\";\n}\n.fa-newspaper-o:before {\n  content: \"\\F1EA\";\n}\n.fa-wifi:before {\n  content: \"\\F1EB\";\n}\n.fa-calculator:before {\n  content: \"\\F1EC\";\n}\n.fa-paypal:before {\n  content: \"\\F1ED\";\n}\n.fa-google-wallet:before {\n  content: \"\\F1EE\";\n}\n.fa-cc-visa:before {\n  content: \"\\F1F0\";\n}\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\";\n}\n.fa-cc-discover:before {\n  content: \"\\F1F2\";\n}\n.fa-cc-amex:before {\n  content: \"\\F1F3\";\n}\n.fa-cc-paypal:before {\n  content: \"\\F1F4\";\n}\n.fa-cc-stripe:before {\n  content: \"\\F1F5\";\n}\n.fa-bell-slash:before {\n  content: \"\\F1F6\";\n}\n.fa-bell-slash-o:before {\n  content: \"\\F1F7\";\n}\n.fa-trash:before {\n  content: \"\\F1F8\";\n}\n.fa-copyright:before {\n  content: \"\\F1F9\";\n}\n.fa-at:before {\n  content: \"\\F1FA\";\n}\n.fa-eyedropper:before {\n  content: \"\\F1FB\";\n}\n.fa-paint-brush:before {\n  content: \"\\F1FC\";\n}\n.fa-birthday-cake:before {\n  content: \"\\F1FD\";\n}\n.fa-area-chart:before {\n  content: \"\\F1FE\";\n}\n.fa-pie-chart:before {\n  content: \"\\F200\";\n}\n.fa-line-chart:before {\n  content: \"\\F201\";\n}\n.fa-lastfm:before {\n  content: \"\\F202\";\n}\n.fa-lastfm-square:before {\n  content: \"\\F203\";\n}\n.fa-toggle-off:before {\n  content: \"\\F204\";\n}\n.fa-toggle-on:before {\n  content: \"\\F205\";\n}\n.fa-bicycle:before {\n  content: \"\\F206\";\n}\n.fa-bus:before {\n  content: \"\\F207\";\n}\n.fa-ioxhost:before {\n  content: \"\\F208\";\n}\n.fa-angellist:before {\n  content: \"\\F209\";\n}\n.fa-cc:before {\n  content: \"\\F20A\";\n}\n.fa-shekel:before,\n.fa-sheqel:before,\n.fa-ils:before {\n  content: \"\\F20B\";\n}\n.fa-meanpath:before {\n  content: \"\\F20C\";\n}\n.fa-buysellads:before {\n  content: \"\\F20D\";\n}\n.fa-connectdevelop:before {\n  content: \"\\F20E\";\n}\n.fa-dashcube:before {\n  content: \"\\F210\";\n}\n.fa-forumbee:before {\n  content: \"\\F211\";\n}\n.fa-leanpub:before {\n  content: \"\\F212\";\n}\n.fa-sellsy:before {\n  content: \"\\F213\";\n}\n.fa-shirtsinbulk:before {\n  content: \"\\F214\";\n}\n.fa-simplybuilt:before {\n  content: \"\\F215\";\n}\n.fa-skyatlas:before {\n  content: \"\\F216\";\n}\n.fa-cart-plus:before {\n  content: \"\\F217\";\n}\n.fa-cart-arrow-down:before {\n  content: \"\\F218\";\n}\n.fa-diamond:before {\n  content: \"\\F219\";\n}\n.fa-ship:before {\n  content: \"\\F21A\";\n}\n.fa-user-secret:before {\n  content: \"\\F21B\";\n}\n.fa-motorcycle:before {\n  content: \"\\F21C\";\n}\n.fa-street-view:before {\n  content: \"\\F21D\";\n}\n.fa-heartbeat:before {\n  content: \"\\F21E\";\n}\n.fa-venus:before {\n  content: \"\\F221\";\n}\n.fa-mars:before {\n  content: \"\\F222\";\n}\n.fa-mercury:before {\n  content: \"\\F223\";\n}\n.fa-intersex:before,\n.fa-transgender:before {\n  content: \"\\F224\";\n}\n.fa-transgender-alt:before {\n  content: \"\\F225\";\n}\n.fa-venus-double:before {\n  content: \"\\F226\";\n}\n.fa-mars-double:before {\n  content: \"\\F227\";\n}\n.fa-venus-mars:before {\n  content: \"\\F228\";\n}\n.fa-mars-stroke:before {\n  content: \"\\F229\";\n}\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\";\n}\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\";\n}\n.fa-neuter:before {\n  content: \"\\F22C\";\n}\n.fa-genderless:before {\n  content: \"\\F22D\";\n}\n.fa-facebook-official:before {\n  content: \"\\F230\";\n}\n.fa-pinterest-p:before {\n  content: \"\\F231\";\n}\n.fa-whatsapp:before {\n  content: \"\\F232\";\n}\n.fa-server:before {\n  content: \"\\F233\";\n}\n.fa-user-plus:before {\n  content: \"\\F234\";\n}\n.fa-user-times:before {\n  content: \"\\F235\";\n}\n.fa-hotel:before,\n.fa-bed:before {\n  content: \"\\F236\";\n}\n.fa-viacoin:before {\n  content: \"\\F237\";\n}\n.fa-train:before {\n  content: \"\\F238\";\n}\n.fa-subway:before {\n  content: \"\\F239\";\n}\n.fa-medium:before {\n  content: \"\\F23A\";\n}\n.fa-yc:before,\n.fa-y-combinator:before {\n  content: \"\\F23B\";\n}\n.fa-optin-monster:before {\n  content: \"\\F23C\";\n}\n.fa-opencart:before {\n  content: \"\\F23D\";\n}\n.fa-expeditedssl:before {\n  content: \"\\F23E\";\n}\n.fa-battery-4:before,\n.fa-battery-full:before {\n  content: \"\\F240\";\n}\n.fa-battery-3:before,\n.fa-battery-three-quarters:before {\n  content: \"\\F241\";\n}\n.fa-battery-2:before,\n.fa-battery-half:before {\n  content: \"\\F242\";\n}\n.fa-battery-1:before,\n.fa-battery-quarter:before {\n  content: \"\\F243\";\n}\n.fa-battery-0:before,\n.fa-battery-empty:before {\n  content: \"\\F244\";\n}\n.fa-mouse-pointer:before {\n  content: \"\\F245\";\n}\n.fa-i-cursor:before {\n  content: \"\\F246\";\n}\n.fa-object-group:before {\n  content: \"\\F247\";\n}\n.fa-object-ungroup:before {\n  content: \"\\F248\";\n}\n.fa-sticky-note:before {\n  content: \"\\F249\";\n}\n.fa-sticky-note-o:before {\n  content: \"\\F24A\";\n}\n.fa-cc-jcb:before {\n  content: \"\\F24B\";\n}\n.fa-cc-diners-club:before {\n  content: \"\\F24C\";\n}\n.fa-clone:before {\n  content: \"\\F24D\";\n}\n.fa-balance-scale:before {\n  content: \"\\F24E\";\n}\n.fa-hourglass-o:before {\n  content: \"\\F250\";\n}\n.fa-hourglass-1:before,\n.fa-hourglass-start:before {\n  content: \"\\F251\";\n}\n.fa-hourglass-2:before,\n.fa-hourglass-half:before {\n  content: \"\\F252\";\n}\n.fa-hourglass-3:before,\n.fa-hourglass-end:before {\n  content: \"\\F253\";\n}\n.fa-hourglass:before {\n  content: \"\\F254\";\n}\n.fa-hand-grab-o:before,\n.fa-hand-rock-o:before {\n  content: \"\\F255\";\n}\n.fa-hand-stop-o:before,\n.fa-hand-paper-o:before {\n  content: \"\\F256\";\n}\n.fa-hand-scissors-o:before {\n  content: \"\\F257\";\n}\n.fa-hand-lizard-o:before {\n  content: \"\\F258\";\n}\n.fa-hand-spock-o:before {\n  content: \"\\F259\";\n}\n.fa-hand-pointer-o:before {\n  content: \"\\F25A\";\n}\n.fa-hand-peace-o:before {\n  content: \"\\F25B\";\n}\n.fa-trademark:before {\n  content: \"\\F25C\";\n}\n.fa-registered:before {\n  content: \"\\F25D\";\n}\n.fa-creative-commons:before {\n  content: \"\\F25E\";\n}\n.fa-gg:before {\n  content: \"\\F260\";\n}\n.fa-gg-circle:before {\n  content: \"\\F261\";\n}\n.fa-tripadvisor:before {\n  content: \"\\F262\";\n}\n.fa-odnoklassniki:before {\n  content: \"\\F263\";\n}\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\";\n}\n.fa-get-pocket:before {\n  content: \"\\F265\";\n}\n.fa-wikipedia-w:before {\n  content: \"\\F266\";\n}\n.fa-safari:before {\n  content: \"\\F267\";\n}\n.fa-chrome:before {\n  content: \"\\F268\";\n}\n.fa-firefox:before {\n  content: \"\\F269\";\n}\n.fa-opera:before {\n  content: \"\\F26A\";\n}\n.fa-internet-explorer:before {\n  content: \"\\F26B\";\n}\n.fa-tv:before,\n.fa-television:before {\n  content: \"\\F26C\";\n}\n.fa-contao:before {\n  content: \"\\F26D\";\n}\n.fa-500px:before {\n  content: \"\\F26E\";\n}\n.fa-amazon:before {\n  content: \"\\F270\";\n}\n.fa-calendar-plus-o:before {\n  content: \"\\F271\";\n}\n.fa-calendar-minus-o:before {\n  content: \"\\F272\";\n}\n.fa-calendar-times-o:before {\n  content: \"\\F273\";\n}\n.fa-calendar-check-o:before {\n  content: \"\\F274\";\n}\n.fa-industry:before {\n  content: \"\\F275\";\n}\n.fa-map-pin:before {\n  content: \"\\F276\";\n}\n.fa-map-signs:before {\n  content: \"\\F277\";\n}\n.fa-map-o:before {\n  content: \"\\F278\";\n}\n.fa-map:before {\n  content: \"\\F279\";\n}\n.fa-commenting:before {\n  content: \"\\F27A\";\n}\n.fa-commenting-o:before {\n  content: \"\\F27B\";\n}\n.fa-houzz:before {\n  content: \"\\F27C\";\n}\n.fa-vimeo:before {\n  content: \"\\F27D\";\n}\n.fa-black-tie:before {\n  content: \"\\F27E\";\n}\n.fa-fonticons:before {\n  content: \"\\F280\";\n}\n.fa-reddit-alien:before {\n  content: \"\\F281\";\n}\n.fa-edge:before {\n  content: \"\\F282\";\n}\n.fa-credit-card-alt:before {\n  content: \"\\F283\";\n}\n.fa-codiepie:before {\n  content: \"\\F284\";\n}\n.fa-modx:before {\n  content: \"\\F285\";\n}\n.fa-fort-awesome:before {\n  content: \"\\F286\";\n}\n.fa-usb:before {\n  content: \"\\F287\";\n}\n.fa-product-hunt:before {\n  content: \"\\F288\";\n}\n.fa-mixcloud:before {\n  content: \"\\F289\";\n}\n.fa-scribd:before {\n  content: \"\\F28A\";\n}\n.fa-pause-circle:before {\n  content: \"\\F28B\";\n}\n.fa-pause-circle-o:before {\n  content: \"\\F28C\";\n}\n.fa-stop-circle:before {\n  content: \"\\F28D\";\n}\n.fa-stop-circle-o:before {\n  content: \"\\F28E\";\n}\n.fa-shopping-bag:before {\n  content: \"\\F290\";\n}\n.fa-shopping-basket:before {\n  content: \"\\F291\";\n}\n.fa-hashtag:before {\n  content: \"\\F292\";\n}\n.fa-bluetooth:before {\n  content: \"\\F293\";\n}\n.fa-bluetooth-b:before {\n  content: \"\\F294\";\n}\n.fa-percent:before {\n  content: \"\\F295\";\n}\n.fa-gitlab:before {\n  content: \"\\F296\";\n}\n.fa-wpbeginner:before {\n  content: \"\\F297\";\n}\n.fa-wpforms:before {\n  content: \"\\F298\";\n}\n.fa-envira:before {\n  content: \"\\F299\";\n}\n.fa-universal-access:before {\n  content: \"\\F29A\";\n}\n.fa-wheelchair-alt:before {\n  content: \"\\F29B\";\n}\n.fa-question-circle-o:before {\n  content: \"\\F29C\";\n}\n.fa-blind:before {\n  content: \"\\F29D\";\n}\n.fa-audio-description:before {\n  content: \"\\F29E\";\n}\n.fa-volume-control-phone:before {\n  content: \"\\F2A0\";\n}\n.fa-braille:before {\n  content: \"\\F2A1\";\n}\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\";\n}\n.fa-asl-interpreting:before,\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\";\n}\n.fa-deafness:before,\n.fa-hard-of-hearing:before,\n.fa-deaf:before {\n  content: \"\\F2A4\";\n}\n.fa-glide:before {\n  content: \"\\F2A5\";\n}\n.fa-glide-g:before {\n  content: \"\\F2A6\";\n}\n.fa-signing:before,\n.fa-sign-language:before {\n  content: \"\\F2A7\";\n}\n.fa-low-vision:before {\n  content: \"\\F2A8\";\n}\n.fa-viadeo:before {\n  content: \"\\F2A9\";\n}\n.fa-viadeo-square:before {\n  content: \"\\F2AA\";\n}\n.fa-snapchat:before {\n  content: \"\\F2AB\";\n}\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\";\n}\n.fa-snapchat-square:before {\n  content: \"\\F2AD\";\n}\n.fa-pied-piper:before {\n  content: \"\\F2AE\";\n}\n.fa-first-order:before {\n  content: \"\\F2B0\";\n}\n.fa-yoast:before {\n  content: \"\\F2B1\";\n}\n.fa-themeisle:before {\n  content: \"\\F2B2\";\n}\n.fa-google-plus-circle:before,\n.fa-google-plus-official:before {\n  content: \"\\F2B3\";\n}\n.fa-fa:before,\n.fa-font-awesome:before {\n  content: \"\\F2B4\";\n}\n/* makes the font 33% larger relative to the icon container */\n.fa-lg {\n  font-size: 1.33333333em;\n  line-height: 0.75em;\n  vertical-align: -15%;\n}\n.fa-2x {\n  font-size: 2em;\n}\n.fa-3x {\n  font-size: 3em;\n}\n.fa-4x {\n  font-size: 4em;\n}\n.fa-5x {\n  font-size: 5em;\n}\n.fa-ul {\n  padding-left: 0;\n  margin-left: 2.14285714em;\n  list-style-type: none;\n}\n.fa-ul > li {\n  position: relative;\n}\n.fa-li {\n  position: absolute;\n  left: -2.14285714em;\n  width: 2.14285714em;\n  top: 0.14285714em;\n  text-align: center;\n}\n.fa-li.fa-lg {\n  left: -1.85714286em;\n}\n/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(" + __webpack_require__(283) + ");\n  src: url(" + __webpack_require__(284) + "?#iefix&v=4.6.3) format('embedded-opentype'), url(" + __webpack_require__(285) + ") format('woff2'), url(" + __webpack_require__(286) + ") format('woff'), url(" + __webpack_require__(287) + ") format('truetype'), url(" + __webpack_require__(288) + "#fontawesomeregular) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n  -ms-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n  -ms-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n  -ms-transform: scale(-1, 1);\n  transform: scale(-1, 1);\n}\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n  -ms-transform: scale(1, -1);\n  transform: scale(1, -1);\n}\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  filter: none;\n}\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n  animation: fa-spin 2s infinite linear;\n}\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n  animation: fa-spin 1s infinite steps(8);\n}\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n.fa-stack {\n  position: relative;\n  display: inline-block;\n  width: 2em;\n  height: 2em;\n  line-height: 2em;\n  vertical-align: middle;\n}\n.fa-stack-1x,\n.fa-stack-2x {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  text-align: center;\n}\n.fa-stack-1x {\n  line-height: inherit;\n}\n.fa-stack-2x {\n  font-size: 2em;\n}\n.fa-inverse {\n  color: #fff;\n}\n", ""]);
+	exports.push([module.id, ".fa-border {\n  padding: .2em .25em .15em;\n  border: solid 0.08em #eee;\n  border-radius: .1em;\n}\n.fa-pull-left {\n  float: left;\n}\n.fa-pull-right {\n  float: right;\n}\n.fa.fa-pull-left {\n  margin-right: .3em;\n}\n.fa.fa-pull-right {\n  margin-left: .3em;\n}\n/* Deprecated as of 4.4.0 */\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.fa.pull-left {\n  margin-right: .3em;\n}\n.fa.pull-right {\n  margin-left: .3em;\n}\n.fa {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.fa-fw {\n  width: 1.28571429em;\n  text-align: center;\n}\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\n   readers do not read off random characters that represent icons */\n.fa-glass:before {\n  content: \"\\F000\";\n}\n.fa-music:before {\n  content: \"\\F001\";\n}\n.fa-search:before {\n  content: \"\\F002\";\n}\n.fa-envelope-o:before {\n  content: \"\\F003\";\n}\n.fa-heart:before {\n  content: \"\\F004\";\n}\n.fa-star:before {\n  content: \"\\F005\";\n}\n.fa-star-o:before {\n  content: \"\\F006\";\n}\n.fa-user:before {\n  content: \"\\F007\";\n}\n.fa-film:before {\n  content: \"\\F008\";\n}\n.fa-th-large:before {\n  content: \"\\F009\";\n}\n.fa-th:before {\n  content: \"\\F00A\";\n}\n.fa-th-list:before {\n  content: \"\\F00B\";\n}\n.fa-check:before {\n  content: \"\\F00C\";\n}\n.fa-remove:before,\n.fa-close:before,\n.fa-times:before {\n  content: \"\\F00D\";\n}\n.fa-search-plus:before {\n  content: \"\\F00E\";\n}\n.fa-search-minus:before {\n  content: \"\\F010\";\n}\n.fa-power-off:before {\n  content: \"\\F011\";\n}\n.fa-signal:before {\n  content: \"\\F012\";\n}\n.fa-gear:before,\n.fa-cog:before {\n  content: \"\\F013\";\n}\n.fa-trash-o:before {\n  content: \"\\F014\";\n}\n.fa-home:before {\n  content: \"\\F015\";\n}\n.fa-file-o:before {\n  content: \"\\F016\";\n}\n.fa-clock-o:before {\n  content: \"\\F017\";\n}\n.fa-road:before {\n  content: \"\\F018\";\n}\n.fa-download:before {\n  content: \"\\F019\";\n}\n.fa-arrow-circle-o-down:before {\n  content: \"\\F01A\";\n}\n.fa-arrow-circle-o-up:before {\n  content: \"\\F01B\";\n}\n.fa-inbox:before {\n  content: \"\\F01C\";\n}\n.fa-play-circle-o:before {\n  content: \"\\F01D\";\n}\n.fa-rotate-right:before,\n.fa-repeat:before {\n  content: \"\\F01E\";\n}\n.fa-refresh:before {\n  content: \"\\F021\";\n}\n.fa-list-alt:before {\n  content: \"\\F022\";\n}\n.fa-lock:before {\n  content: \"\\F023\";\n}\n.fa-flag:before {\n  content: \"\\F024\";\n}\n.fa-headphones:before {\n  content: \"\\F025\";\n}\n.fa-volume-off:before {\n  content: \"\\F026\";\n}\n.fa-volume-down:before {\n  content: \"\\F027\";\n}\n.fa-volume-up:before {\n  content: \"\\F028\";\n}\n.fa-qrcode:before {\n  content: \"\\F029\";\n}\n.fa-barcode:before {\n  content: \"\\F02A\";\n}\n.fa-tag:before {\n  content: \"\\F02B\";\n}\n.fa-tags:before {\n  content: \"\\F02C\";\n}\n.fa-book:before {\n  content: \"\\F02D\";\n}\n.fa-bookmark:before {\n  content: \"\\F02E\";\n}\n.fa-print:before {\n  content: \"\\F02F\";\n}\n.fa-camera:before {\n  content: \"\\F030\";\n}\n.fa-font:before {\n  content: \"\\F031\";\n}\n.fa-bold:before {\n  content: \"\\F032\";\n}\n.fa-italic:before {\n  content: \"\\F033\";\n}\n.fa-text-height:before {\n  content: \"\\F034\";\n}\n.fa-text-width:before {\n  content: \"\\F035\";\n}\n.fa-align-left:before {\n  content: \"\\F036\";\n}\n.fa-align-center:before {\n  content: \"\\F037\";\n}\n.fa-align-right:before {\n  content: \"\\F038\";\n}\n.fa-align-justify:before {\n  content: \"\\F039\";\n}\n.fa-list:before {\n  content: \"\\F03A\";\n}\n.fa-dedent:before,\n.fa-outdent:before {\n  content: \"\\F03B\";\n}\n.fa-indent:before {\n  content: \"\\F03C\";\n}\n.fa-video-camera:before {\n  content: \"\\F03D\";\n}\n.fa-photo:before,\n.fa-image:before,\n.fa-picture-o:before {\n  content: \"\\F03E\";\n}\n.fa-pencil:before {\n  content: \"\\F040\";\n}\n.fa-map-marker:before {\n  content: \"\\F041\";\n}\n.fa-adjust:before {\n  content: \"\\F042\";\n}\n.fa-tint:before {\n  content: \"\\F043\";\n}\n.fa-edit:before,\n.fa-pencil-square-o:before {\n  content: \"\\F044\";\n}\n.fa-share-square-o:before {\n  content: \"\\F045\";\n}\n.fa-check-square-o:before {\n  content: \"\\F046\";\n}\n.fa-arrows:before {\n  content: \"\\F047\";\n}\n.fa-step-backward:before {\n  content: \"\\F048\";\n}\n.fa-fast-backward:before {\n  content: \"\\F049\";\n}\n.fa-backward:before {\n  content: \"\\F04A\";\n}\n.fa-play:before {\n  content: \"\\F04B\";\n}\n.fa-pause:before {\n  content: \"\\F04C\";\n}\n.fa-stop:before {\n  content: \"\\F04D\";\n}\n.fa-forward:before {\n  content: \"\\F04E\";\n}\n.fa-fast-forward:before {\n  content: \"\\F050\";\n}\n.fa-step-forward:before {\n  content: \"\\F051\";\n}\n.fa-eject:before {\n  content: \"\\F052\";\n}\n.fa-chevron-left:before {\n  content: \"\\F053\";\n}\n.fa-chevron-right:before {\n  content: \"\\F054\";\n}\n.fa-plus-circle:before {\n  content: \"\\F055\";\n}\n.fa-minus-circle:before {\n  content: \"\\F056\";\n}\n.fa-times-circle:before {\n  content: \"\\F057\";\n}\n.fa-check-circle:before {\n  content: \"\\F058\";\n}\n.fa-question-circle:before {\n  content: \"\\F059\";\n}\n.fa-info-circle:before {\n  content: \"\\F05A\";\n}\n.fa-crosshairs:before {\n  content: \"\\F05B\";\n}\n.fa-times-circle-o:before {\n  content: \"\\F05C\";\n}\n.fa-check-circle-o:before {\n  content: \"\\F05D\";\n}\n.fa-ban:before {\n  content: \"\\F05E\";\n}\n.fa-arrow-left:before {\n  content: \"\\F060\";\n}\n.fa-arrow-right:before {\n  content: \"\\F061\";\n}\n.fa-arrow-up:before {\n  content: \"\\F062\";\n}\n.fa-arrow-down:before {\n  content: \"\\F063\";\n}\n.fa-mail-forward:before,\n.fa-share:before {\n  content: \"\\F064\";\n}\n.fa-expand:before {\n  content: \"\\F065\";\n}\n.fa-compress:before {\n  content: \"\\F066\";\n}\n.fa-plus:before {\n  content: \"\\F067\";\n}\n.fa-minus:before {\n  content: \"\\F068\";\n}\n.fa-asterisk:before {\n  content: \"\\F069\";\n}\n.fa-exclamation-circle:before {\n  content: \"\\F06A\";\n}\n.fa-gift:before {\n  content: \"\\F06B\";\n}\n.fa-leaf:before {\n  content: \"\\F06C\";\n}\n.fa-fire:before {\n  content: \"\\F06D\";\n}\n.fa-eye:before {\n  content: \"\\F06E\";\n}\n.fa-eye-slash:before {\n  content: \"\\F070\";\n}\n.fa-warning:before,\n.fa-exclamation-triangle:before {\n  content: \"\\F071\";\n}\n.fa-plane:before {\n  content: \"\\F072\";\n}\n.fa-calendar:before {\n  content: \"\\F073\";\n}\n.fa-random:before {\n  content: \"\\F074\";\n}\n.fa-comment:before {\n  content: \"\\F075\";\n}\n.fa-magnet:before {\n  content: \"\\F076\";\n}\n.fa-chevron-up:before {\n  content: \"\\F077\";\n}\n.fa-chevron-down:before {\n  content: \"\\F078\";\n}\n.fa-retweet:before {\n  content: \"\\F079\";\n}\n.fa-shopping-cart:before {\n  content: \"\\F07A\";\n}\n.fa-folder:before {\n  content: \"\\F07B\";\n}\n.fa-folder-open:before {\n  content: \"\\F07C\";\n}\n.fa-arrows-v:before {\n  content: \"\\F07D\";\n}\n.fa-arrows-h:before {\n  content: \"\\F07E\";\n}\n.fa-bar-chart-o:before,\n.fa-bar-chart:before {\n  content: \"\\F080\";\n}\n.fa-twitter-square:before {\n  content: \"\\F081\";\n}\n.fa-facebook-square:before {\n  content: \"\\F082\";\n}\n.fa-camera-retro:before {\n  content: \"\\F083\";\n}\n.fa-key:before {\n  content: \"\\F084\";\n}\n.fa-gears:before,\n.fa-cogs:before {\n  content: \"\\F085\";\n}\n.fa-comments:before {\n  content: \"\\F086\";\n}\n.fa-thumbs-o-up:before {\n  content: \"\\F087\";\n}\n.fa-thumbs-o-down:before {\n  content: \"\\F088\";\n}\n.fa-star-half:before {\n  content: \"\\F089\";\n}\n.fa-heart-o:before {\n  content: \"\\F08A\";\n}\n.fa-sign-out:before {\n  content: \"\\F08B\";\n}\n.fa-linkedin-square:before {\n  content: \"\\F08C\";\n}\n.fa-thumb-tack:before {\n  content: \"\\F08D\";\n}\n.fa-external-link:before {\n  content: \"\\F08E\";\n}\n.fa-sign-in:before {\n  content: \"\\F090\";\n}\n.fa-trophy:before {\n  content: \"\\F091\";\n}\n.fa-github-square:before {\n  content: \"\\F092\";\n}\n.fa-upload:before {\n  content: \"\\F093\";\n}\n.fa-lemon-o:before {\n  content: \"\\F094\";\n}\n.fa-phone:before {\n  content: \"\\F095\";\n}\n.fa-square-o:before {\n  content: \"\\F096\";\n}\n.fa-bookmark-o:before {\n  content: \"\\F097\";\n}\n.fa-phone-square:before {\n  content: \"\\F098\";\n}\n.fa-twitter:before {\n  content: \"\\F099\";\n}\n.fa-facebook-f:before,\n.fa-facebook:before {\n  content: \"\\F09A\";\n}\n.fa-github:before {\n  content: \"\\F09B\";\n}\n.fa-unlock:before {\n  content: \"\\F09C\";\n}\n.fa-credit-card:before {\n  content: \"\\F09D\";\n}\n.fa-feed:before,\n.fa-rss:before {\n  content: \"\\F09E\";\n}\n.fa-hdd-o:before {\n  content: \"\\F0A0\";\n}\n.fa-bullhorn:before {\n  content: \"\\F0A1\";\n}\n.fa-bell:before {\n  content: \"\\F0F3\";\n}\n.fa-certificate:before {\n  content: \"\\F0A3\";\n}\n.fa-hand-o-right:before {\n  content: \"\\F0A4\";\n}\n.fa-hand-o-left:before {\n  content: \"\\F0A5\";\n}\n.fa-hand-o-up:before {\n  content: \"\\F0A6\";\n}\n.fa-hand-o-down:before {\n  content: \"\\F0A7\";\n}\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\";\n}\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\";\n}\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\";\n}\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\";\n}\n.fa-globe:before {\n  content: \"\\F0AC\";\n}\n.fa-wrench:before {\n  content: \"\\F0AD\";\n}\n.fa-tasks:before {\n  content: \"\\F0AE\";\n}\n.fa-filter:before {\n  content: \"\\F0B0\";\n}\n.fa-briefcase:before {\n  content: \"\\F0B1\";\n}\n.fa-arrows-alt:before {\n  content: \"\\F0B2\";\n}\n.fa-group:before,\n.fa-users:before {\n  content: \"\\F0C0\";\n}\n.fa-chain:before,\n.fa-link:before {\n  content: \"\\F0C1\";\n}\n.fa-cloud:before {\n  content: \"\\F0C2\";\n}\n.fa-flask:before {\n  content: \"\\F0C3\";\n}\n.fa-cut:before,\n.fa-scissors:before {\n  content: \"\\F0C4\";\n}\n.fa-copy:before,\n.fa-files-o:before {\n  content: \"\\F0C5\";\n}\n.fa-paperclip:before {\n  content: \"\\F0C6\";\n}\n.fa-save:before,\n.fa-floppy-o:before {\n  content: \"\\F0C7\";\n}\n.fa-square:before {\n  content: \"\\F0C8\";\n}\n.fa-navicon:before,\n.fa-reorder:before,\n.fa-bars:before {\n  content: \"\\F0C9\";\n}\n.fa-list-ul:before {\n  content: \"\\F0CA\";\n}\n.fa-list-ol:before {\n  content: \"\\F0CB\";\n}\n.fa-strikethrough:before {\n  content: \"\\F0CC\";\n}\n.fa-underline:before {\n  content: \"\\F0CD\";\n}\n.fa-table:before {\n  content: \"\\F0CE\";\n}\n.fa-magic:before {\n  content: \"\\F0D0\";\n}\n.fa-truck:before {\n  content: \"\\F0D1\";\n}\n.fa-pinterest:before {\n  content: \"\\F0D2\";\n}\n.fa-pinterest-square:before {\n  content: \"\\F0D3\";\n}\n.fa-google-plus-square:before {\n  content: \"\\F0D4\";\n}\n.fa-google-plus:before {\n  content: \"\\F0D5\";\n}\n.fa-money:before {\n  content: \"\\F0D6\";\n}\n.fa-caret-down:before {\n  content: \"\\F0D7\";\n}\n.fa-caret-up:before {\n  content: \"\\F0D8\";\n}\n.fa-caret-left:before {\n  content: \"\\F0D9\";\n}\n.fa-caret-right:before {\n  content: \"\\F0DA\";\n}\n.fa-columns:before {\n  content: \"\\F0DB\";\n}\n.fa-unsorted:before,\n.fa-sort:before {\n  content: \"\\F0DC\";\n}\n.fa-sort-down:before,\n.fa-sort-desc:before {\n  content: \"\\F0DD\";\n}\n.fa-sort-up:before,\n.fa-sort-asc:before {\n  content: \"\\F0DE\";\n}\n.fa-envelope:before {\n  content: \"\\F0E0\";\n}\n.fa-linkedin:before {\n  content: \"\\F0E1\";\n}\n.fa-rotate-left:before,\n.fa-undo:before {\n  content: \"\\F0E2\";\n}\n.fa-legal:before,\n.fa-gavel:before {\n  content: \"\\F0E3\";\n}\n.fa-dashboard:before,\n.fa-tachometer:before {\n  content: \"\\F0E4\";\n}\n.fa-comment-o:before {\n  content: \"\\F0E5\";\n}\n.fa-comments-o:before {\n  content: \"\\F0E6\";\n}\n.fa-flash:before,\n.fa-bolt:before {\n  content: \"\\F0E7\";\n}\n.fa-sitemap:before {\n  content: \"\\F0E8\";\n}\n.fa-umbrella:before {\n  content: \"\\F0E9\";\n}\n.fa-paste:before,\n.fa-clipboard:before {\n  content: \"\\F0EA\";\n}\n.fa-lightbulb-o:before {\n  content: \"\\F0EB\";\n}\n.fa-exchange:before {\n  content: \"\\F0EC\";\n}\n.fa-cloud-download:before {\n  content: \"\\F0ED\";\n}\n.fa-cloud-upload:before {\n  content: \"\\F0EE\";\n}\n.fa-user-md:before {\n  content: \"\\F0F0\";\n}\n.fa-stethoscope:before {\n  content: \"\\F0F1\";\n}\n.fa-suitcase:before {\n  content: \"\\F0F2\";\n}\n.fa-bell-o:before {\n  content: \"\\F0A2\";\n}\n.fa-coffee:before {\n  content: \"\\F0F4\";\n}\n.fa-cutlery:before {\n  content: \"\\F0F5\";\n}\n.fa-file-text-o:before {\n  content: \"\\F0F6\";\n}\n.fa-building-o:before {\n  content: \"\\F0F7\";\n}\n.fa-hospital-o:before {\n  content: \"\\F0F8\";\n}\n.fa-ambulance:before {\n  content: \"\\F0F9\";\n}\n.fa-medkit:before {\n  content: \"\\F0FA\";\n}\n.fa-fighter-jet:before {\n  content: \"\\F0FB\";\n}\n.fa-beer:before {\n  content: \"\\F0FC\";\n}\n.fa-h-square:before {\n  content: \"\\F0FD\";\n}\n.fa-plus-square:before {\n  content: \"\\F0FE\";\n}\n.fa-angle-double-left:before {\n  content: \"\\F100\";\n}\n.fa-angle-double-right:before {\n  content: \"\\F101\";\n}\n.fa-angle-double-up:before {\n  content: \"\\F102\";\n}\n.fa-angle-double-down:before {\n  content: \"\\F103\";\n}\n.fa-angle-left:before {\n  content: \"\\F104\";\n}\n.fa-angle-right:before {\n  content: \"\\F105\";\n}\n.fa-angle-up:before {\n  content: \"\\F106\";\n}\n.fa-angle-down:before {\n  content: \"\\F107\";\n}\n.fa-desktop:before {\n  content: \"\\F108\";\n}\n.fa-laptop:before {\n  content: \"\\F109\";\n}\n.fa-tablet:before {\n  content: \"\\F10A\";\n}\n.fa-mobile-phone:before,\n.fa-mobile:before {\n  content: \"\\F10B\";\n}\n.fa-circle-o:before {\n  content: \"\\F10C\";\n}\n.fa-quote-left:before {\n  content: \"\\F10D\";\n}\n.fa-quote-right:before {\n  content: \"\\F10E\";\n}\n.fa-spinner:before {\n  content: \"\\F110\";\n}\n.fa-circle:before {\n  content: \"\\F111\";\n}\n.fa-mail-reply:before,\n.fa-reply:before {\n  content: \"\\F112\";\n}\n.fa-github-alt:before {\n  content: \"\\F113\";\n}\n.fa-folder-o:before {\n  content: \"\\F114\";\n}\n.fa-folder-open-o:before {\n  content: \"\\F115\";\n}\n.fa-smile-o:before {\n  content: \"\\F118\";\n}\n.fa-frown-o:before {\n  content: \"\\F119\";\n}\n.fa-meh-o:before {\n  content: \"\\F11A\";\n}\n.fa-gamepad:before {\n  content: \"\\F11B\";\n}\n.fa-keyboard-o:before {\n  content: \"\\F11C\";\n}\n.fa-flag-o:before {\n  content: \"\\F11D\";\n}\n.fa-flag-checkered:before {\n  content: \"\\F11E\";\n}\n.fa-terminal:before {\n  content: \"\\F120\";\n}\n.fa-code:before {\n  content: \"\\F121\";\n}\n.fa-mail-reply-all:before,\n.fa-reply-all:before {\n  content: \"\\F122\";\n}\n.fa-star-half-empty:before,\n.fa-star-half-full:before,\n.fa-star-half-o:before {\n  content: \"\\F123\";\n}\n.fa-location-arrow:before {\n  content: \"\\F124\";\n}\n.fa-crop:before {\n  content: \"\\F125\";\n}\n.fa-code-fork:before {\n  content: \"\\F126\";\n}\n.fa-unlink:before,\n.fa-chain-broken:before {\n  content: \"\\F127\";\n}\n.fa-question:before {\n  content: \"\\F128\";\n}\n.fa-info:before {\n  content: \"\\F129\";\n}\n.fa-exclamation:before {\n  content: \"\\F12A\";\n}\n.fa-superscript:before {\n  content: \"\\F12B\";\n}\n.fa-subscript:before {\n  content: \"\\F12C\";\n}\n.fa-eraser:before {\n  content: \"\\F12D\";\n}\n.fa-puzzle-piece:before {\n  content: \"\\F12E\";\n}\n.fa-microphone:before {\n  content: \"\\F130\";\n}\n.fa-microphone-slash:before {\n  content: \"\\F131\";\n}\n.fa-shield:before {\n  content: \"\\F132\";\n}\n.fa-calendar-o:before {\n  content: \"\\F133\";\n}\n.fa-fire-extinguisher:before {\n  content: \"\\F134\";\n}\n.fa-rocket:before {\n  content: \"\\F135\";\n}\n.fa-maxcdn:before {\n  content: \"\\F136\";\n}\n.fa-chevron-circle-left:before {\n  content: \"\\F137\";\n}\n.fa-chevron-circle-right:before {\n  content: \"\\F138\";\n}\n.fa-chevron-circle-up:before {\n  content: \"\\F139\";\n}\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\";\n}\n.fa-html5:before {\n  content: \"\\F13B\";\n}\n.fa-css3:before {\n  content: \"\\F13C\";\n}\n.fa-anchor:before {\n  content: \"\\F13D\";\n}\n.fa-unlock-alt:before {\n  content: \"\\F13E\";\n}\n.fa-bullseye:before {\n  content: \"\\F140\";\n}\n.fa-ellipsis-h:before {\n  content: \"\\F141\";\n}\n.fa-ellipsis-v:before {\n  content: \"\\F142\";\n}\n.fa-rss-square:before {\n  content: \"\\F143\";\n}\n.fa-play-circle:before {\n  content: \"\\F144\";\n}\n.fa-ticket:before {\n  content: \"\\F145\";\n}\n.fa-minus-square:before {\n  content: \"\\F146\";\n}\n.fa-minus-square-o:before {\n  content: \"\\F147\";\n}\n.fa-level-up:before {\n  content: \"\\F148\";\n}\n.fa-level-down:before {\n  content: \"\\F149\";\n}\n.fa-check-square:before {\n  content: \"\\F14A\";\n}\n.fa-pencil-square:before {\n  content: \"\\F14B\";\n}\n.fa-external-link-square:before {\n  content: \"\\F14C\";\n}\n.fa-share-square:before {\n  content: \"\\F14D\";\n}\n.fa-compass:before {\n  content: \"\\F14E\";\n}\n.fa-toggle-down:before,\n.fa-caret-square-o-down:before {\n  content: \"\\F150\";\n}\n.fa-toggle-up:before,\n.fa-caret-square-o-up:before {\n  content: \"\\F151\";\n}\n.fa-toggle-right:before,\n.fa-caret-square-o-right:before {\n  content: \"\\F152\";\n}\n.fa-euro:before,\n.fa-eur:before {\n  content: \"\\F153\";\n}\n.fa-gbp:before {\n  content: \"\\F154\";\n}\n.fa-dollar:before,\n.fa-usd:before {\n  content: \"\\F155\";\n}\n.fa-rupee:before,\n.fa-inr:before {\n  content: \"\\F156\";\n}\n.fa-cny:before,\n.fa-rmb:before,\n.fa-yen:before,\n.fa-jpy:before {\n  content: \"\\F157\";\n}\n.fa-ruble:before,\n.fa-rouble:before,\n.fa-rub:before {\n  content: \"\\F158\";\n}\n.fa-won:before,\n.fa-krw:before {\n  content: \"\\F159\";\n}\n.fa-bitcoin:before,\n.fa-btc:before {\n  content: \"\\F15A\";\n}\n.fa-file:before {\n  content: \"\\F15B\";\n}\n.fa-file-text:before {\n  content: \"\\F15C\";\n}\n.fa-sort-alpha-asc:before {\n  content: \"\\F15D\";\n}\n.fa-sort-alpha-desc:before {\n  content: \"\\F15E\";\n}\n.fa-sort-amount-asc:before {\n  content: \"\\F160\";\n}\n.fa-sort-amount-desc:before {\n  content: \"\\F161\";\n}\n.fa-sort-numeric-asc:before {\n  content: \"\\F162\";\n}\n.fa-sort-numeric-desc:before {\n  content: \"\\F163\";\n}\n.fa-thumbs-up:before {\n  content: \"\\F164\";\n}\n.fa-thumbs-down:before {\n  content: \"\\F165\";\n}\n.fa-youtube-square:before {\n  content: \"\\F166\";\n}\n.fa-youtube:before {\n  content: \"\\F167\";\n}\n.fa-xing:before {\n  content: \"\\F168\";\n}\n.fa-xing-square:before {\n  content: \"\\F169\";\n}\n.fa-youtube-play:before {\n  content: \"\\F16A\";\n}\n.fa-dropbox:before {\n  content: \"\\F16B\";\n}\n.fa-stack-overflow:before {\n  content: \"\\F16C\";\n}\n.fa-instagram:before {\n  content: \"\\F16D\";\n}\n.fa-flickr:before {\n  content: \"\\F16E\";\n}\n.fa-adn:before {\n  content: \"\\F170\";\n}\n.fa-bitbucket:before {\n  content: \"\\F171\";\n}\n.fa-bitbucket-square:before {\n  content: \"\\F172\";\n}\n.fa-tumblr:before {\n  content: \"\\F173\";\n}\n.fa-tumblr-square:before {\n  content: \"\\F174\";\n}\n.fa-long-arrow-down:before {\n  content: \"\\F175\";\n}\n.fa-long-arrow-up:before {\n  content: \"\\F176\";\n}\n.fa-long-arrow-left:before {\n  content: \"\\F177\";\n}\n.fa-long-arrow-right:before {\n  content: \"\\F178\";\n}\n.fa-apple:before {\n  content: \"\\F179\";\n}\n.fa-windows:before {\n  content: \"\\F17A\";\n}\n.fa-android:before {\n  content: \"\\F17B\";\n}\n.fa-linux:before {\n  content: \"\\F17C\";\n}\n.fa-dribbble:before {\n  content: \"\\F17D\";\n}\n.fa-skype:before {\n  content: \"\\F17E\";\n}\n.fa-foursquare:before {\n  content: \"\\F180\";\n}\n.fa-trello:before {\n  content: \"\\F181\";\n}\n.fa-female:before {\n  content: \"\\F182\";\n}\n.fa-male:before {\n  content: \"\\F183\";\n}\n.fa-gittip:before,\n.fa-gratipay:before {\n  content: \"\\F184\";\n}\n.fa-sun-o:before {\n  content: \"\\F185\";\n}\n.fa-moon-o:before {\n  content: \"\\F186\";\n}\n.fa-archive:before {\n  content: \"\\F187\";\n}\n.fa-bug:before {\n  content: \"\\F188\";\n}\n.fa-vk:before {\n  content: \"\\F189\";\n}\n.fa-weibo:before {\n  content: \"\\F18A\";\n}\n.fa-renren:before {\n  content: \"\\F18B\";\n}\n.fa-pagelines:before {\n  content: \"\\F18C\";\n}\n.fa-stack-exchange:before {\n  content: \"\\F18D\";\n}\n.fa-arrow-circle-o-right:before {\n  content: \"\\F18E\";\n}\n.fa-arrow-circle-o-left:before {\n  content: \"\\F190\";\n}\n.fa-toggle-left:before,\n.fa-caret-square-o-left:before {\n  content: \"\\F191\";\n}\n.fa-dot-circle-o:before {\n  content: \"\\F192\";\n}\n.fa-wheelchair:before {\n  content: \"\\F193\";\n}\n.fa-vimeo-square:before {\n  content: \"\\F194\";\n}\n.fa-turkish-lira:before,\n.fa-try:before {\n  content: \"\\F195\";\n}\n.fa-plus-square-o:before {\n  content: \"\\F196\";\n}\n.fa-space-shuttle:before {\n  content: \"\\F197\";\n}\n.fa-slack:before {\n  content: \"\\F198\";\n}\n.fa-envelope-square:before {\n  content: \"\\F199\";\n}\n.fa-wordpress:before {\n  content: \"\\F19A\";\n}\n.fa-openid:before {\n  content: \"\\F19B\";\n}\n.fa-institution:before,\n.fa-bank:before,\n.fa-university:before {\n  content: \"\\F19C\";\n}\n.fa-mortar-board:before,\n.fa-graduation-cap:before {\n  content: \"\\F19D\";\n}\n.fa-yahoo:before {\n  content: \"\\F19E\";\n}\n.fa-google:before {\n  content: \"\\F1A0\";\n}\n.fa-reddit:before {\n  content: \"\\F1A1\";\n}\n.fa-reddit-square:before {\n  content: \"\\F1A2\";\n}\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\";\n}\n.fa-stumbleupon:before {\n  content: \"\\F1A4\";\n}\n.fa-delicious:before {\n  content: \"\\F1A5\";\n}\n.fa-digg:before {\n  content: \"\\F1A6\";\n}\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\";\n}\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\";\n}\n.fa-drupal:before {\n  content: \"\\F1A9\";\n}\n.fa-joomla:before {\n  content: \"\\F1AA\";\n}\n.fa-language:before {\n  content: \"\\F1AB\";\n}\n.fa-fax:before {\n  content: \"\\F1AC\";\n}\n.fa-building:before {\n  content: \"\\F1AD\";\n}\n.fa-child:before {\n  content: \"\\F1AE\";\n}\n.fa-paw:before {\n  content: \"\\F1B0\";\n}\n.fa-spoon:before {\n  content: \"\\F1B1\";\n}\n.fa-cube:before {\n  content: \"\\F1B2\";\n}\n.fa-cubes:before {\n  content: \"\\F1B3\";\n}\n.fa-behance:before {\n  content: \"\\F1B4\";\n}\n.fa-behance-square:before {\n  content: \"\\F1B5\";\n}\n.fa-steam:before {\n  content: \"\\F1B6\";\n}\n.fa-steam-square:before {\n  content: \"\\F1B7\";\n}\n.fa-recycle:before {\n  content: \"\\F1B8\";\n}\n.fa-automobile:before,\n.fa-car:before {\n  content: \"\\F1B9\";\n}\n.fa-cab:before,\n.fa-taxi:before {\n  content: \"\\F1BA\";\n}\n.fa-tree:before {\n  content: \"\\F1BB\";\n}\n.fa-spotify:before {\n  content: \"\\F1BC\";\n}\n.fa-deviantart:before {\n  content: \"\\F1BD\";\n}\n.fa-soundcloud:before {\n  content: \"\\F1BE\";\n}\n.fa-database:before {\n  content: \"\\F1C0\";\n}\n.fa-file-pdf-o:before {\n  content: \"\\F1C1\";\n}\n.fa-file-word-o:before {\n  content: \"\\F1C2\";\n}\n.fa-file-excel-o:before {\n  content: \"\\F1C3\";\n}\n.fa-file-powerpoint-o:before {\n  content: \"\\F1C4\";\n}\n.fa-file-photo-o:before,\n.fa-file-picture-o:before,\n.fa-file-image-o:before {\n  content: \"\\F1C5\";\n}\n.fa-file-zip-o:before,\n.fa-file-archive-o:before {\n  content: \"\\F1C6\";\n}\n.fa-file-sound-o:before,\n.fa-file-audio-o:before {\n  content: \"\\F1C7\";\n}\n.fa-file-movie-o:before,\n.fa-file-video-o:before {\n  content: \"\\F1C8\";\n}\n.fa-file-code-o:before {\n  content: \"\\F1C9\";\n}\n.fa-vine:before {\n  content: \"\\F1CA\";\n}\n.fa-codepen:before {\n  content: \"\\F1CB\";\n}\n.fa-jsfiddle:before {\n  content: \"\\F1CC\";\n}\n.fa-life-bouy:before,\n.fa-life-buoy:before,\n.fa-life-saver:before,\n.fa-support:before,\n.fa-life-ring:before {\n  content: \"\\F1CD\";\n}\n.fa-circle-o-notch:before {\n  content: \"\\F1CE\";\n}\n.fa-ra:before,\n.fa-resistance:before,\n.fa-rebel:before {\n  content: \"\\F1D0\";\n}\n.fa-ge:before,\n.fa-empire:before {\n  content: \"\\F1D1\";\n}\n.fa-git-square:before {\n  content: \"\\F1D2\";\n}\n.fa-git:before {\n  content: \"\\F1D3\";\n}\n.fa-y-combinator-square:before,\n.fa-yc-square:before,\n.fa-hacker-news:before {\n  content: \"\\F1D4\";\n}\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\";\n}\n.fa-qq:before {\n  content: \"\\F1D6\";\n}\n.fa-wechat:before,\n.fa-weixin:before {\n  content: \"\\F1D7\";\n}\n.fa-send:before,\n.fa-paper-plane:before {\n  content: \"\\F1D8\";\n}\n.fa-send-o:before,\n.fa-paper-plane-o:before {\n  content: \"\\F1D9\";\n}\n.fa-history:before {\n  content: \"\\F1DA\";\n}\n.fa-circle-thin:before {\n  content: \"\\F1DB\";\n}\n.fa-header:before {\n  content: \"\\F1DC\";\n}\n.fa-paragraph:before {\n  content: \"\\F1DD\";\n}\n.fa-sliders:before {\n  content: \"\\F1DE\";\n}\n.fa-share-alt:before {\n  content: \"\\F1E0\";\n}\n.fa-share-alt-square:before {\n  content: \"\\F1E1\";\n}\n.fa-bomb:before {\n  content: \"\\F1E2\";\n}\n.fa-soccer-ball-o:before,\n.fa-futbol-o:before {\n  content: \"\\F1E3\";\n}\n.fa-tty:before {\n  content: \"\\F1E4\";\n}\n.fa-binoculars:before {\n  content: \"\\F1E5\";\n}\n.fa-plug:before {\n  content: \"\\F1E6\";\n}\n.fa-slideshare:before {\n  content: \"\\F1E7\";\n}\n.fa-twitch:before {\n  content: \"\\F1E8\";\n}\n.fa-yelp:before {\n  content: \"\\F1E9\";\n}\n.fa-newspaper-o:before {\n  content: \"\\F1EA\";\n}\n.fa-wifi:before {\n  content: \"\\F1EB\";\n}\n.fa-calculator:before {\n  content: \"\\F1EC\";\n}\n.fa-paypal:before {\n  content: \"\\F1ED\";\n}\n.fa-google-wallet:before {\n  content: \"\\F1EE\";\n}\n.fa-cc-visa:before {\n  content: \"\\F1F0\";\n}\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\";\n}\n.fa-cc-discover:before {\n  content: \"\\F1F2\";\n}\n.fa-cc-amex:before {\n  content: \"\\F1F3\";\n}\n.fa-cc-paypal:before {\n  content: \"\\F1F4\";\n}\n.fa-cc-stripe:before {\n  content: \"\\F1F5\";\n}\n.fa-bell-slash:before {\n  content: \"\\F1F6\";\n}\n.fa-bell-slash-o:before {\n  content: \"\\F1F7\";\n}\n.fa-trash:before {\n  content: \"\\F1F8\";\n}\n.fa-copyright:before {\n  content: \"\\F1F9\";\n}\n.fa-at:before {\n  content: \"\\F1FA\";\n}\n.fa-eyedropper:before {\n  content: \"\\F1FB\";\n}\n.fa-paint-brush:before {\n  content: \"\\F1FC\";\n}\n.fa-birthday-cake:before {\n  content: \"\\F1FD\";\n}\n.fa-area-chart:before {\n  content: \"\\F1FE\";\n}\n.fa-pie-chart:before {\n  content: \"\\F200\";\n}\n.fa-line-chart:before {\n  content: \"\\F201\";\n}\n.fa-lastfm:before {\n  content: \"\\F202\";\n}\n.fa-lastfm-square:before {\n  content: \"\\F203\";\n}\n.fa-toggle-off:before {\n  content: \"\\F204\";\n}\n.fa-toggle-on:before {\n  content: \"\\F205\";\n}\n.fa-bicycle:before {\n  content: \"\\F206\";\n}\n.fa-bus:before {\n  content: \"\\F207\";\n}\n.fa-ioxhost:before {\n  content: \"\\F208\";\n}\n.fa-angellist:before {\n  content: \"\\F209\";\n}\n.fa-cc:before {\n  content: \"\\F20A\";\n}\n.fa-shekel:before,\n.fa-sheqel:before,\n.fa-ils:before {\n  content: \"\\F20B\";\n}\n.fa-meanpath:before {\n  content: \"\\F20C\";\n}\n.fa-buysellads:before {\n  content: \"\\F20D\";\n}\n.fa-connectdevelop:before {\n  content: \"\\F20E\";\n}\n.fa-dashcube:before {\n  content: \"\\F210\";\n}\n.fa-forumbee:before {\n  content: \"\\F211\";\n}\n.fa-leanpub:before {\n  content: \"\\F212\";\n}\n.fa-sellsy:before {\n  content: \"\\F213\";\n}\n.fa-shirtsinbulk:before {\n  content: \"\\F214\";\n}\n.fa-simplybuilt:before {\n  content: \"\\F215\";\n}\n.fa-skyatlas:before {\n  content: \"\\F216\";\n}\n.fa-cart-plus:before {\n  content: \"\\F217\";\n}\n.fa-cart-arrow-down:before {\n  content: \"\\F218\";\n}\n.fa-diamond:before {\n  content: \"\\F219\";\n}\n.fa-ship:before {\n  content: \"\\F21A\";\n}\n.fa-user-secret:before {\n  content: \"\\F21B\";\n}\n.fa-motorcycle:before {\n  content: \"\\F21C\";\n}\n.fa-street-view:before {\n  content: \"\\F21D\";\n}\n.fa-heartbeat:before {\n  content: \"\\F21E\";\n}\n.fa-venus:before {\n  content: \"\\F221\";\n}\n.fa-mars:before {\n  content: \"\\F222\";\n}\n.fa-mercury:before {\n  content: \"\\F223\";\n}\n.fa-intersex:before,\n.fa-transgender:before {\n  content: \"\\F224\";\n}\n.fa-transgender-alt:before {\n  content: \"\\F225\";\n}\n.fa-venus-double:before {\n  content: \"\\F226\";\n}\n.fa-mars-double:before {\n  content: \"\\F227\";\n}\n.fa-venus-mars:before {\n  content: \"\\F228\";\n}\n.fa-mars-stroke:before {\n  content: \"\\F229\";\n}\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\";\n}\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\";\n}\n.fa-neuter:before {\n  content: \"\\F22C\";\n}\n.fa-genderless:before {\n  content: \"\\F22D\";\n}\n.fa-facebook-official:before {\n  content: \"\\F230\";\n}\n.fa-pinterest-p:before {\n  content: \"\\F231\";\n}\n.fa-whatsapp:before {\n  content: \"\\F232\";\n}\n.fa-server:before {\n  content: \"\\F233\";\n}\n.fa-user-plus:before {\n  content: \"\\F234\";\n}\n.fa-user-times:before {\n  content: \"\\F235\";\n}\n.fa-hotel:before,\n.fa-bed:before {\n  content: \"\\F236\";\n}\n.fa-viacoin:before {\n  content: \"\\F237\";\n}\n.fa-train:before {\n  content: \"\\F238\";\n}\n.fa-subway:before {\n  content: \"\\F239\";\n}\n.fa-medium:before {\n  content: \"\\F23A\";\n}\n.fa-yc:before,\n.fa-y-combinator:before {\n  content: \"\\F23B\";\n}\n.fa-optin-monster:before {\n  content: \"\\F23C\";\n}\n.fa-opencart:before {\n  content: \"\\F23D\";\n}\n.fa-expeditedssl:before {\n  content: \"\\F23E\";\n}\n.fa-battery-4:before,\n.fa-battery-full:before {\n  content: \"\\F240\";\n}\n.fa-battery-3:before,\n.fa-battery-three-quarters:before {\n  content: \"\\F241\";\n}\n.fa-battery-2:before,\n.fa-battery-half:before {\n  content: \"\\F242\";\n}\n.fa-battery-1:before,\n.fa-battery-quarter:before {\n  content: \"\\F243\";\n}\n.fa-battery-0:before,\n.fa-battery-empty:before {\n  content: \"\\F244\";\n}\n.fa-mouse-pointer:before {\n  content: \"\\F245\";\n}\n.fa-i-cursor:before {\n  content: \"\\F246\";\n}\n.fa-object-group:before {\n  content: \"\\F247\";\n}\n.fa-object-ungroup:before {\n  content: \"\\F248\";\n}\n.fa-sticky-note:before {\n  content: \"\\F249\";\n}\n.fa-sticky-note-o:before {\n  content: \"\\F24A\";\n}\n.fa-cc-jcb:before {\n  content: \"\\F24B\";\n}\n.fa-cc-diners-club:before {\n  content: \"\\F24C\";\n}\n.fa-clone:before {\n  content: \"\\F24D\";\n}\n.fa-balance-scale:before {\n  content: \"\\F24E\";\n}\n.fa-hourglass-o:before {\n  content: \"\\F250\";\n}\n.fa-hourglass-1:before,\n.fa-hourglass-start:before {\n  content: \"\\F251\";\n}\n.fa-hourglass-2:before,\n.fa-hourglass-half:before {\n  content: \"\\F252\";\n}\n.fa-hourglass-3:before,\n.fa-hourglass-end:before {\n  content: \"\\F253\";\n}\n.fa-hourglass:before {\n  content: \"\\F254\";\n}\n.fa-hand-grab-o:before,\n.fa-hand-rock-o:before {\n  content: \"\\F255\";\n}\n.fa-hand-stop-o:before,\n.fa-hand-paper-o:before {\n  content: \"\\F256\";\n}\n.fa-hand-scissors-o:before {\n  content: \"\\F257\";\n}\n.fa-hand-lizard-o:before {\n  content: \"\\F258\";\n}\n.fa-hand-spock-o:before {\n  content: \"\\F259\";\n}\n.fa-hand-pointer-o:before {\n  content: \"\\F25A\";\n}\n.fa-hand-peace-o:before {\n  content: \"\\F25B\";\n}\n.fa-trademark:before {\n  content: \"\\F25C\";\n}\n.fa-registered:before {\n  content: \"\\F25D\";\n}\n.fa-creative-commons:before {\n  content: \"\\F25E\";\n}\n.fa-gg:before {\n  content: \"\\F260\";\n}\n.fa-gg-circle:before {\n  content: \"\\F261\";\n}\n.fa-tripadvisor:before {\n  content: \"\\F262\";\n}\n.fa-odnoklassniki:before {\n  content: \"\\F263\";\n}\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\";\n}\n.fa-get-pocket:before {\n  content: \"\\F265\";\n}\n.fa-wikipedia-w:before {\n  content: \"\\F266\";\n}\n.fa-safari:before {\n  content: \"\\F267\";\n}\n.fa-chrome:before {\n  content: \"\\F268\";\n}\n.fa-firefox:before {\n  content: \"\\F269\";\n}\n.fa-opera:before {\n  content: \"\\F26A\";\n}\n.fa-internet-explorer:before {\n  content: \"\\F26B\";\n}\n.fa-tv:before,\n.fa-television:before {\n  content: \"\\F26C\";\n}\n.fa-contao:before {\n  content: \"\\F26D\";\n}\n.fa-500px:before {\n  content: \"\\F26E\";\n}\n.fa-amazon:before {\n  content: \"\\F270\";\n}\n.fa-calendar-plus-o:before {\n  content: \"\\F271\";\n}\n.fa-calendar-minus-o:before {\n  content: \"\\F272\";\n}\n.fa-calendar-times-o:before {\n  content: \"\\F273\";\n}\n.fa-calendar-check-o:before {\n  content: \"\\F274\";\n}\n.fa-industry:before {\n  content: \"\\F275\";\n}\n.fa-map-pin:before {\n  content: \"\\F276\";\n}\n.fa-map-signs:before {\n  content: \"\\F277\";\n}\n.fa-map-o:before {\n  content: \"\\F278\";\n}\n.fa-map:before {\n  content: \"\\F279\";\n}\n.fa-commenting:before {\n  content: \"\\F27A\";\n}\n.fa-commenting-o:before {\n  content: \"\\F27B\";\n}\n.fa-houzz:before {\n  content: \"\\F27C\";\n}\n.fa-vimeo:before {\n  content: \"\\F27D\";\n}\n.fa-black-tie:before {\n  content: \"\\F27E\";\n}\n.fa-fonticons:before {\n  content: \"\\F280\";\n}\n.fa-reddit-alien:before {\n  content: \"\\F281\";\n}\n.fa-edge:before {\n  content: \"\\F282\";\n}\n.fa-credit-card-alt:before {\n  content: \"\\F283\";\n}\n.fa-codiepie:before {\n  content: \"\\F284\";\n}\n.fa-modx:before {\n  content: \"\\F285\";\n}\n.fa-fort-awesome:before {\n  content: \"\\F286\";\n}\n.fa-usb:before {\n  content: \"\\F287\";\n}\n.fa-product-hunt:before {\n  content: \"\\F288\";\n}\n.fa-mixcloud:before {\n  content: \"\\F289\";\n}\n.fa-scribd:before {\n  content: \"\\F28A\";\n}\n.fa-pause-circle:before {\n  content: \"\\F28B\";\n}\n.fa-pause-circle-o:before {\n  content: \"\\F28C\";\n}\n.fa-stop-circle:before {\n  content: \"\\F28D\";\n}\n.fa-stop-circle-o:before {\n  content: \"\\F28E\";\n}\n.fa-shopping-bag:before {\n  content: \"\\F290\";\n}\n.fa-shopping-basket:before {\n  content: \"\\F291\";\n}\n.fa-hashtag:before {\n  content: \"\\F292\";\n}\n.fa-bluetooth:before {\n  content: \"\\F293\";\n}\n.fa-bluetooth-b:before {\n  content: \"\\F294\";\n}\n.fa-percent:before {\n  content: \"\\F295\";\n}\n.fa-gitlab:before {\n  content: \"\\F296\";\n}\n.fa-wpbeginner:before {\n  content: \"\\F297\";\n}\n.fa-wpforms:before {\n  content: \"\\F298\";\n}\n.fa-envira:before {\n  content: \"\\F299\";\n}\n.fa-universal-access:before {\n  content: \"\\F29A\";\n}\n.fa-wheelchair-alt:before {\n  content: \"\\F29B\";\n}\n.fa-question-circle-o:before {\n  content: \"\\F29C\";\n}\n.fa-blind:before {\n  content: \"\\F29D\";\n}\n.fa-audio-description:before {\n  content: \"\\F29E\";\n}\n.fa-volume-control-phone:before {\n  content: \"\\F2A0\";\n}\n.fa-braille:before {\n  content: \"\\F2A1\";\n}\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\";\n}\n.fa-asl-interpreting:before,\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\";\n}\n.fa-deafness:before,\n.fa-hard-of-hearing:before,\n.fa-deaf:before {\n  content: \"\\F2A4\";\n}\n.fa-glide:before {\n  content: \"\\F2A5\";\n}\n.fa-glide-g:before {\n  content: \"\\F2A6\";\n}\n.fa-signing:before,\n.fa-sign-language:before {\n  content: \"\\F2A7\";\n}\n.fa-low-vision:before {\n  content: \"\\F2A8\";\n}\n.fa-viadeo:before {\n  content: \"\\F2A9\";\n}\n.fa-viadeo-square:before {\n  content: \"\\F2AA\";\n}\n.fa-snapchat:before {\n  content: \"\\F2AB\";\n}\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\";\n}\n.fa-snapchat-square:before {\n  content: \"\\F2AD\";\n}\n.fa-pied-piper:before {\n  content: \"\\F2AE\";\n}\n.fa-first-order:before {\n  content: \"\\F2B0\";\n}\n.fa-yoast:before {\n  content: \"\\F2B1\";\n}\n.fa-themeisle:before {\n  content: \"\\F2B2\";\n}\n.fa-google-plus-circle:before,\n.fa-google-plus-official:before {\n  content: \"\\F2B3\";\n}\n.fa-fa:before,\n.fa-font-awesome:before {\n  content: \"\\F2B4\";\n}\n/* makes the font 33% larger relative to the icon container */\n.fa-lg {\n  font-size: 1.33333333em;\n  line-height: 0.75em;\n  vertical-align: -15%;\n}\n.fa-2x {\n  font-size: 2em;\n}\n.fa-3x {\n  font-size: 3em;\n}\n.fa-4x {\n  font-size: 4em;\n}\n.fa-5x {\n  font-size: 5em;\n}\n.fa-ul {\n  padding-left: 0;\n  margin-left: 2.14285714em;\n  list-style-type: none;\n}\n.fa-ul > li {\n  position: relative;\n}\n.fa-li {\n  position: absolute;\n  left: -2.14285714em;\n  width: 2.14285714em;\n  top: 0.14285714em;\n  text-align: center;\n}\n.fa-li.fa-lg {\n  left: -1.85714286em;\n}\n/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(" + __webpack_require__(265) + ");\n  src: url(" + __webpack_require__(266) + "?#iefix&v=4.6.3) format('embedded-opentype'), url(" + __webpack_require__(267) + ") format('woff2'), url(" + __webpack_require__(268) + ") format('woff'), url(" + __webpack_require__(269) + ") format('truetype'), url(" + __webpack_require__(270) + "#fontawesomeregular) format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n  -ms-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n  -ms-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n  -ms-transform: scale(-1, 1);\n  transform: scale(-1, 1);\n}\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n  -ms-transform: scale(1, -1);\n  transform: scale(1, -1);\n}\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  filter: none;\n}\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n  animation: fa-spin 2s infinite linear;\n}\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n  animation: fa-spin 1s infinite steps(8);\n}\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n.fa-stack {\n  position: relative;\n  display: inline-block;\n  width: 2em;\n  height: 2em;\n  line-height: 2em;\n  vertical-align: middle;\n}\n.fa-stack-1x,\n.fa-stack-2x {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  text-align: center;\n}\n.fa-stack-1x {\n  line-height: inherit;\n}\n.fa-stack-2x {\n  font-size: 2em;\n}\n.fa-inverse {\n  color: #fff;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 282 */
+/* 264 */
 /***/ function(module, exports) {
 
 	/*
@@ -28543,43 +28454,43 @@
 
 
 /***/ },
-/* 283 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "25a32416abee198dd821b0b17a198a8f.eot";
 
 /***/ },
-/* 284 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "25a32416abee198dd821b0b17a198a8f.eot";
 
 /***/ },
-/* 285 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "e6cf7c6ec7c2d6f670ae9d762604cb0b.woff2";
 
 /***/ },
-/* 286 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "c8ddf1e5e5bf3682bc7bebf30f394148.woff";
 
 /***/ },
-/* 287 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "1dc35d25e61d819a9c357074014867ab.ttf";
 
 /***/ },
-/* 288 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "d7c639084f684d66a1bc66855d193ed8.svg";
 
 /***/ },
-/* 289 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -28804,843 +28715,1487 @@
 
 
 /***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(15);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(273);
+
+	var _me = __webpack_require__(275);
+
+	var _me2 = _interopRequireDefault(_me);
+
+	var _reactRouter = __webpack_require__(186);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Home = function (_Component) {
+	  _inherits(Home, _Component);
+
+	  function Home(props) {
+	    _classCallCheck(this, Home);
+
+	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'index' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'header' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Dan Hassin'
+	          ),
+	          _react2.default.createElement('img', { src: _me2.default })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'content' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'menu' },
+	            ' ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'item' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: 'software' },
+	                'software'
+	              )
+	            ),
+	            ' | ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'item' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: 'music' },
+	                'music'
+	              )
+	            ),
+	            ' | ',
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'item' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: 'writing' },
+	                'writing'
+	              )
+	            ),
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'about' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'hi, oh uh, hi, i haven\'t decided what to write here yet. anyway, thanks for visiting! -dan'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'separator' },
+	            '~'
+	          ),
+	          !this.state.showEmail && _react2.default.createElement(
+	            'a',
+	            { className: 'show', onClick: function onClick() {
+	                return _this2.setState({ showEmail: true });
+	              } },
+	            '            contact'
+	          ),
+	          this.state.showEmail && _react2.default.createElement(
+	            'span',
+	            { id: 'email' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'danhassin'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-light' },
+	              'at'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'mac'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-light' },
+	              'dot'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'com'
+	            )
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'color-light' },
+	            '|'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'stuff/hassin-resume.pdf', target: '_blank', className: 'color-ish' },
+	            'resume'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Home;
+	}(_react.Component);
+
+	exports.default = Home;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "home.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(274);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(258)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./index.sass", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./index.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(257)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".index .header img {\n  width: 200px;\n  border-radius: 10px; }\n\n.index .content {\n  color: gray;\n  padding-bottom: 10px;\n  width: 448px;\n  margin-left: auto;\n  margin-right: auto; }\n  .index .content .menu {\n    margin-bottom: 30px;\n    font-size: 20px; }\n    .index .content .menu .item {\n      display: inline-block; }\n  .index .content .about {\n    text-align: justify; }\n\n.index .footer {\n  color: gray;\n  font-size: 0.95em;\n  margin-top: 10px;\n  padding-bottom: 60px; }\n  .index .footer .separator {\n    font-size: 1em;\n    padding: 10px 0px; }\n  .index .footer #email span {\n    margin: 0 2px; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "36524e691d4675ad8c7612764bb61874.jpg";
+
+/***/ },
+/* 276 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(15);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(186);
+
+	__webpack_require__(277);
+
+	var _ios = __webpack_require__(279);
+
+	var _ios2 = _interopRequireDefault(_ios);
+
+	var _big = __webpack_require__(280);
+
+	var _big2 = _interopRequireDefault(_big);
+
+	var _small = __webpack_require__(281);
+
+	var _small2 = _interopRequireDefault(_small);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Software = function (_Component) {
+	  _inherits(Software, _Component);
+
+	  function Software() {
+	    _classCallCheck(this, Software);
+
+	    return _possibleConstructorReturn(this, (Software.__proto__ || Object.getPrototypeOf(Software)).apply(this, arguments));
+	  }
+
+	  _createClass(Software, [{
+	    key: 'renderItem',
+	    value: function renderItem(item) {
+	      return _react2.default.createElement(
+	        'div',
+	        { key: item.name, className: 'item' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: item.link },
+	          item.img && _react2.default.createElement('img', { className: item.noBorder ? 'no-border' : item.app ? 'app' : null, src: __webpack_require__(282)("./" + item.img) }),
+	          _react2.default.createElement(
+	            'h3',
+	            null,
+	            item.name
+	          )
+	        ),
+	        '      ',
+	        item.description(),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'tech' },
+	          item.tech
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'links' },
+	          Object.keys(item.links).map(function (link) {
+	            return _react2.default.createElement(
+	              'a',
+	              { key: link, href: item.links[link] },
+	              link
+	            );
+	          })
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'software' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'header' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              _react2.default.createElement('i', { className: 'fa fa-angle-left' })
+	            ),
+	            'Software',
+	            _react2.default.createElement('div', { className: 'back-counterbalance' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement('i', { className: 'fa fa-github' }),
+	            'follow me on github! ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://github.com/dingbat' },
+	              '@dingbat'
+	            ),
+	            ' '
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'content' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'iOS/macOS'
+	            ),
+	            _ios2.default.map(this.renderItem)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'bigger things'
+	            ),
+	            _big2.default.map(this.renderItem)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col' },
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'smaller things'
+	            ),
+	            _small2.default.map(this.renderItem)
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Software;
+	}(_react.Component);
+
+	exports.default = Software;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "software.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(278);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(258)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./software.sass", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./software.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(257)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".software i.fa-github {\n  font-size: 20px;\n  margin-right: 5px; }\n\n.software .content {\n  margin: auto;\n  width: 90%; }\n  .software .content .col {\n    vertical-align: top;\n    text-align: left;\n    width: 30%;\n    display: inline-block; }\n    .software .content .col:nth-child(2) {\n      margin: 0 5%; }\n    .software .content .col h2 {\n      color: #4d4d4d;\n      margin-bottom: 40px; }\n    .software .content .col .item {\n      margin-bottom: 50px; }\n      .software .content .col .item h3 {\n        font-size: 20px;\n        margin-bottom: 5px; }\n      .software .content .col .item img {\n        width: 80%; }\n        .software .content .col .item img.app {\n          width: 50%; }\n        .software .content .col .item img:not(.no-border):not(.app) {\n          border: gray 1px solid; }\n      .software .content .col .item .tech {\n        color: gray; }\n      .software .content .col .item .links a {\n        margin: 0 5px;\n        font-family: 'Roboto Mono', monospace;\n        font-size: 0.9em; }\n        .software .content .col .item .links a:before {\n          content: '<'; }\n        .software .content .col .item .links a:after {\n          content: '>'; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(15);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [{
+	  name: "camena",
+	  img: "app/camena.png",
+	  app: true,
+	  link: "https://itunes.apple.com/us/app/camena/id312578836?mt=8",
+	  links: {
+	    'app store': "https://itunes.apple.com/us/app/camena/id312578836?mt=8"
+	  },
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "shows you the lyrics to the song you're listening to. also shows you album, artist, music video, and tour dates."
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "my most successful app! (not so much anymore). was #1 in the music category & eventually reached #24 of all paid apps on the app store"
+	      )
+	    );
+	  }
+	}, {
+	  name: "newsalert",
+	  img: "app/na.png",
+	  app: true,
+	  link: "https://itunes.apple.com/us/app/camena/id312578836?mt=8",
+	  links: {
+	    'web access': "http://app.newsalertapp.com/",
+	    'app store': "https://itunes.apple.com/us/app/camena/id312578836?mt=8"
+	  },
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "notifies you automatically whenever keywords of your choice appear in the news."
+	    );
+	  }
+	}, {
+	  name: "dissolve",
+	  img: "app/dissolve.png",
+	  app: true,
+	  link: "https://itunes.apple.com/us/app/dissolve/id554344914?mt=8",
+	  links: {
+	    'app store': "https://itunes.apple.com/us/app/dissolve/id554344914?mt=8"
+	  },
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "make awesome, living doodles and share them with others. each stroke you make will dissolve away as you start your next ones, bringing your drawings to life in continuous evolution. save the replays of the drawing and share them with friends."
+	    );
+	  }
+	}, {
+	  name: "angles",
+	  img: "app/angles.png",
+	  app: true,
+	  link: "https://itunes.apple.com/us/app/angles/id390865784?mt=8",
+	  links: {
+	    'app store': "https://itunes.apple.com/us/app/angles/id390865784?mt=8",
+	    video: "http://vimeo.com/dq/angles"
+	  },
+	  tech: 'chipmunk 2d (C physics)',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "physics-based action/puzzle game, where you continuously bounce a ball into targets using a platform you control. avoid traps, falling off the edge, or more exciting things in later levels"
+	    );
+	  }
+	}, {
+	  name: "countdown",
+	  img: "app/count.png",
+	  noBorder: true,
+	  links: {
+	    'download': "stuff/countdown.zip"
+	  },
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "an applet for macOS that’ll show you how many days away you are from any number of target dates, color-coded"
+	    );
+	  }
+	}];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ios.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(15);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [{
+	  name: "sight unseen",
+	  img: "blackout.png",
+	  link: "http://www.sightunseen.audio",
+	  links: {
+	    teaser: "http://www.sightunseen.audio",
+	    fb: "https://www.facebook.com/blackoutvirtualreality",
+	    twitter: "https://twitter.com/sightunseengame"
+	  },
+	  tech: 'unity (C#), wwise',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "horror audio game.",
+	      _react2.default.createElement("br", null),
+	      "coming soon"
+	    );
+	  }
+	}, {
+	  name: "worksource",
+	  links: {},
+	  tech: 'rails, react.js, react native (iOS & android), letsencrypt',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "freelance project for ",
+	      _react2.default.createElement(
+	        "a",
+	        { href: "http://earthmov.es/" },
+	        "Earth Moves"
+	      ),
+	      ".",
+	      _react2.default.createElement("br", null),
+	      "full-stack (including iOS and android apps), custom CMS for creating and maintaining health insurance benefits guides for employers/employees."
+	    );
+	  }
+	}, {
+	  name: "skedge",
+	  img: "skedge.png",
+	  link: "http://www.skedgeur.com",
+	  links: {
+	    live: "http://skedgeur.com",
+	    source: "https://github.com/RocHack/skedge",
+	    thesis: "https://dropbox.com/s/dg0zic5376d7re4/thesis.pdf?raw=1"
+	  },
+	  tech: 'rails, postgres, react.js, facebook & google integration, latex',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "alternative to rochester's ",
+	      _react2.default.createElement(
+	        "a",
+	        { href: "https://cdcs.ur.rochester.edu" },
+	        "course finder/scheduler system"
+	      ),
+	      "."
+	    );
+	  }
+	}, {
+	  name: "quicktrainer",
+	  img: "qt.jpg",
+	  links: {
+	    'news – WXXI Rochester': "http://innovationtrail.org/post/upstate-researchers-tackle-toilet-training-autistic-children"
+	  },
+	  tech: 'cocoatouch (objective-C), bgscript',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "a system to more effectively toilet-train children with autism. r & d at the university of rochester that involves communication between an iOS app and a bluetooth module placed in the child's underwear."
+	    );
+	  }
+	}, {
+	  name: "probabilistic programming",
+	  img: "ide.png",
+	  link: "cs200/index.html",
+	  links: {
+	    live: "cs200/index.html",
+	    paper: "cs200/paper.pdf",
+	    source: "https://github.com/RocHack/jschain"
+	  },
+	  tech: 'js, node.js, escodegen, esprima',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "proof of concept system for generating javascript programs and code snippets based off a corpus of source files, using a ",
+	      _react2.default.createElement(
+	        "a",
+	        { href: "https://en.wikipedia.org/wiki/Markov_chain" },
+	        "markov-chain"
+	      ),
+	      " mechanism for tree structures."
+	    );
+	  }
+	}, {
+	  name: "nsrails",
+	  img: "iror.png",
+	  noBorder: true,
+	  link: "https://github.com/dingbat/nsrails",
+	  links: {
+	    source: "https://github.com/dingbat/nsrails",
+	    site: "http://nsrails.com",
+	    railsconf: "http://www.youtube.com/watch?feature=player_detailpage&v=5GS9Ta8dqhE#t=311"
+	  },
+	  tech: 'objective-C, coredata, xcunit',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "objective-c framework for high-level, easy, and flexible communication with a RESTful back-end (with rails conventions)."
+	    );
+	  }
+	}];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "big.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(15);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [{
+	  name: "haml-jsx-loader",
+	  link: "https://github.com/dingbat/haml-jsx-loader",
+	  links: {
+	    github: "https://github.com/dingbat/haml-jsx-loader",
+	    npm: "https://www.npmjs.com/package/haml-jsx-loader"
+	  },
+	  tech: 'js, webpack, mocha',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "a webpack loader that lets you embed HAML into your react.js JSX. never settle for pointy brackets again"
+	    );
+	  }
+	}, {
+	  name: "crm114_native",
+	  img: "crm114.jpg",
+	  link: "https://github.com/dingbat/crm114_native",
+	  links: {
+	    source: "https://github.com/dingbat/crm114_native"
+	  },
+	  tech: 'ruby gem, ruby-C bindings',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "a native ruby wrapper around ",
+	      _react2.default.createElement(
+	        "a",
+	        { href: "http://crm114.sourceforge.net/wiki/doku.php" },
+	        "CRM114"
+	      ),
+	      ", a machine learning library in C for text classification."
+	    );
+	  }
+	}, {
+	  name: "clockout",
+	  img: "clockout.png",
+	  noBorder: true,
+	  link: "https://github.com/dingbat/clockout",
+	  links: {
+	    source: "https://github.com/dingbat/crm114_native"
+	  },
+	  tech: 'ruby gem/executable, git hook',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "tool that analyzes a git repository and converts your commits into blocks of time worked (useful as a replacement/addition to contract timekeeping)"
+	    );
+	  }
+	}, {
+	  name: "blarfb",
+	  img: "blarfb.jpg",
+	  link: "https://chrome.google.com/webstore/detail/blarfb/japabiflacoedddenbhneajhepopkdif",
+	  links: {
+	    chrome: "https://chrome.google.com/webstore/detail/blarfb/japabiflacoedddenbhneajhepopkdif",
+	    safari: "stuff/blarfb.safariextz",
+	    source: "https://github.com/dingbat/blarfb"
+	  },
+	  tech: 'chrome, safari extension',
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "got the idly-scroll-fb-when-there's-stuff-to-be-done disease? this may help"
+	    );
+	  }
+	}, {
+	  name: "'memoring'",
+	  img: "memoring.jpg",
+	  link: "https://chrome.google.com/webstore/detail/blarfb/japabiflacoedddenbhneajhepopkdif",
+	  links: {
+	    'hackny standings': "http://hackny.org/a/2013/10/fall-2013-hackny-hackathon-recap-and-winners/"
+	  },
+	  tech: "ios, shapeways API, php (just a tiny bit, don't worry)",
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "a 24-hour hack, done for the fall 2013 HackNY Hackathon in NYC, my first hackathon. tracks your location throughout a night, and allows you to order a 3d-printed ring in the shape of your walk."
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "won 2nd place overall, among around 250 competitors and 50 other projects, and was presented at the november 2013 NY Tech Meetup."
+	      )
+	    );
+	  }
+	}, {
+	  name: "λ-calculus interpreter",
+	  img: "lambda.png",
+	  link: "lambda",
+	  app: true,
+	  links: {},
+	  description: function description() {
+	    return _react2.default.createElement(
+	      "p",
+	      null,
+	      "an interpreter for ",
+	      _react2.default.createElement(
+	        "a",
+	        { href: "http://en.wikipedia.org/wiki/Lambda_calculus" },
+	        "the lambda calculus"
+	      )
+	    );
+	  }
+	}];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "small.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 282 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./app/angles.png": 283,
+		"./app/camena.png": 284,
+		"./app/count.png": 285,
+		"./app/dissolve.png": 286,
+		"./app/na.png": 287,
+		"./blackout.png": 288,
+		"./blarfb.jpg": 289,
+		"./clockout.png": 290,
+		"./crm114.jpg": 291,
+		"./ide.png": 292,
+		"./iror.png": 293,
+		"./lambda.png": 294,
+		"./memoring.jpg": 295,
+		"./qt.jpg": 296,
+		"./skedge.png": 297
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 282;
+
+
+/***/ },
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a572be4cd3efbb38bc6c70b65a1c2744.png";
+
+/***/ },
+/* 284 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0e8cf69aafee78c7aa6060bd99c53570.png";
+
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0a765bf417a587e80cfad7d6feff4ad8.png";
+
+/***/ },
+/* 286 */
+/***/ function(module, exports) {
+
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAFf9JREFUeNrtnU+ILFe9x7/nVHVV/5np7ukZzSU8Uy9CuG60ghoCupIg6EYXSiQEXDxRxIUuHlEI6CJCHiIu9IE8lOSBEEQxGzdxE3QTIUQl9YSHElAqvEWid/rOTE/3THX9OW/RfWpq+vbM7Zmuc05Vz+8DRc+dmVv1q5rzrd/vd/78DkPF+eQnP8myLOsA6AIYANidH3vzzwGA/vzYnh/t+eHODweAPT8sAHx+sMKxMowxJEmCwWCABx98EEII04/pHvum0ylu3bqF27dvr2ufKBzZ/EgBJPNjCiCaH5P5MZofB/NjCGAfwB0A+4yx/SRJhv1+/+jhf314/CH/Q9V6gAVs0wZIPM+zATwA4DZj7CNxHH98b2/vE5gJgzBH8QViqbhAEARHAH4L4DUAfwTwVwDv+r6fmL55YwLxPK8B4BEATwB4GsDjph8GYYwugM/Oj5wgCF4H8BKAVwG85ft+rNswrQLxPM8B8HEAXwPwed03S9SOx1F4cQZB8CsAPwbwmu/7Ux0GaBGI53l7AL4M4Hkd1yM2ls/PDwRB8CyAn/q+f0flBbnKk3ue94DneT8E8E+QOIhyeR7AP4Mg+GEQBA+ouogSgXie1/Y879sA3gHwdVXGEwRm7eudIAi+HQRBu+yTly4Qz/M+BWAM4DkND4cgJM8BGAdB8KkyT1qaQDzP63me9wsAr+h+MgRR4JUgCH4RBEGvjJOVIhDP8z6K2YDQkwYfDEFIngRwEATBR9c90doC8Tzv3wC8YfqJEMQS3giC4N/WOcG1u3k9z2MAvgfgGdNPgSAu4YUgCD4A4Fu+7195Ssu1PMh8WshLIHEQ9eAZAC8FQXBlh3BlgczF8TKAp3TcWdUmAhK15SkAL19VJFcSyDys+hmAz+i6K8ZY/lmVY9E+U9cmrsxnAPwsCIKVH+RVXc73oMlzMMYghECappXzIowxZFmGNE2RJIlS+2aaOHtJnP88+5mkas+qgjwF4P8AfHOVX15ZIPPeKm05R5ZlcBwH29vbSNO0cm/PJEnQ7XYxGAxKa5RCiPxcWZbl/86y7Nwhv7d43UVPU/yahHOOZ4Ig+Ivv+y/e7xdXEsh8nOMFnXeQpimazSZ6vR6yLNN56fsiFyTt7u7i1q1bauwTgIDIRSIgILIzsaRpmnuwJEkQx3H+tRRQmqbnhFS1l4xhXgiC4H983//DZb90X4F4nteDoXGOvHFU9O2n2r578g7r4ka+KJzJZIJutwvXdZEkSR6qCiEonznjjSAI+r7vH170C6t4kJ+YvosqokO4y85/2TUty4JlW+CMw3Vd7OzsYDAYIEtTxAVPI72N9Hw3XDA/AfCFi354aS/WfOIhTR9ZQhUblRCzMEx6ESkAbllwXRdbW1vo9/vY3d3F7u4u+v0+2q02LMu6MK+5ATx52QTHCwXieV4bNPGwliyKt5joCyHAOYfjONja2sLOYAd7e3vY2dlBp9O5qWJ55aKp8pd5kH83bTVRHouCKYrAsiy02230+33s7e2h3++j1WqBc36ThLK0vS8ViOd5D4DWc9wYFsXS6XQwGAywu7uLbrcL27ZvglCeW7Yy8SIP8qxpawkzFMXSaDSwvb2Nvd1d7OzswHGcSvcqlsA97f4egcwLLNAyWSIXA597ld3NF8rXgyDYK35jmQf5smkriWohvQpjDO12O+8BazQamxh6nWv/5wQyr1tF1UeIpUihAMg9Sr/Xg2VZlZvtsAbPB28GjvzHogf5uGnriHqQZRk459ja3sbe3h46nc4mhV0fk18sCuRrpi0j6oP0KJZlod/vYzAY5GFXzfmq/CIXyLxWLpUDJa6M9BytVgu7u7vY2tqquzf53N/+9rcGcN6DPGLaKqLeyLCr1+thZ2en7rnJI8B5gTxh2iKi/kjPIXu7XNetq0ieAM4L5GnTFtUJnSFEHUOVLMtg2zYGgwE6nU4dRfI0MJ/uPi/EcKP251hnJi5jDJzz/NBh66JI5L+rLB45MbLf78OyLIxGo7P7QXXtnvP4m2++acn1IMqqY1cNuX3aeDxe6xxxHMNxHLzzzjv5ij92tZ3cLj0/ADDOwNmZEC3Luudz2czd4qdppB3dbheccxweHs4WbZX0rBQzkAK5bdoSnWRZhvF4fO1GJEXmui6Gw6GW8KG43lyKw7Zs2A0bjuOg0WjAcRzYtg3btnMRSe8jVxKaIssybG1tnRNJDXhICuQjpi3RDec8bzRX/WMVQyzZENU1QIFF8+Ra9AjRufXmnHM0Gg00m01Y80VSaZrC4hyiAsUbsixDu90GZxz/uPOPmS0MqHC0dVsK5MaNoJcVihSTdV2NT4phmR1RFCGKIkynU1iWlQ/eOY4D13VhWZZWWxfJsgytdgs7/Z3cjuu8pDTxQSmQT5i2hLgayxqUFI6s2wUgX4c+mUxg2zZc10Wz2YTjOLnn0904pSexDYt1BT5se55ngbZa3hiK3kwKRoqgKBbHcdBut9FsNvOVg7rtbLZacF0XURSZfmwX0bEBtExbQahhsSxRscfr9PQUURTBcRx0Oh0jQpHFAbMsw3Q6rVwRDGA2DkLe4wYic5jpdIrpdJpXPXFdF4DesEd2JlSxgiYHMDBtBGEO6VVOT08xHA5xeHiYz6nSgQwFpQerGhzArmkjCPPIxnl8fIw7d+7g9PQUjOt5m8tiEdJ7VQkSCHEOzjmSJMH+/j5GRyOA6anpK4tENBqNSvVqcQB7a5+F2Chk2HV0dISDuwf5enQdOI4Di1uVGTwkD0JcCOcck8kEw+EQSZIozxHyqo+ug6pM1aIknbgUy7IQRRGGwyHiONYiEjmfrAqhFgfQN20EUV1kAh3HcS4S1eEWYwyO41Siy5cEQtyXcyK5O1Q+XiGv5zQc416EA9g2agFRC3KRTGPcvXtXS+LecBrGx0ZIIMTKyCQ6iiIcHR1puZbpbl8OoL32WYgbBecc4/EYx8fHyt/wjcbcixjSCAmEuBaMMYxGI0RRpGzE/ZwXMaQQDqB64/tE5ZFrTo6OjiBStfmIbdvGchESCHFtZD5yPB4rE4jsHDA1LsIBOGufhbixMMYwHo+Vr+ewbdvIuAjHaltBE8RSGGNI0xTHx8fKriG9iNxgVCckEGJtOOc4OTnB6empslyBMQbb1t9UOQBL+1WJjUMIgfF4rHTJriyxpBOOy7eCJoiVkAl7FEVKGrHs8tUdZpFAiNIQQmAymUBkahowYyyv66ULjsrMvCfqjvQi01hdj5buMIsEQpRKlmU4OTlRcu48zOL6wiwSCFEqskKKqinxjDFwS68HIYjSkOMiURQpDbN0DRqSQIjSEULg9PRUSRgkwyxdeQgJhCgducFQkiRK3vRSIDryEBIIUToyzFI5P0tXdy8JhFCCEALT6VTZW15u86AaEgihBBlmqVi7LvMQEghRW+Q+jkmSKDu/jjyEBEIoI8syZXW0lm1DpwISCKGUOI6V5iGqIYEQypBhlsjU7ACsIw8hgRBKSZIEaZYqOXdxSzlVkEAIZcjKJyrmZcmdqRhjSmtmkUAIpQghkMTqerIYY0prZpFACOUkaaIkUdfRk0UCIdQiE3Vlp6cchKgxDLPxEKGoGjwJhKg9WZYpq3aiuieLBEIoRfZkqdpPhDwIUXuEEEjTeo6FkEAILagMsVRCAiGUI4RQIhDZdaxysJAEQmghyzJlYyEAlA0WkkAILais2Us5CFF7VHkQ1ZBACOUwxs7EoeBlTx6EqD1CiNkM3LIVonhZOgmE0IIUSNmULrgFSCCEFlTmHxRiERsBJekEsWGQQAgt1NF7ACQQQiN1FAkJhCAugQRC1B6VnokEQhCXQAIhiEsggRDaUDGgR9XdiY1A5Wg35SAEYQgSCKEFlcUVyIMQG4Guvc3LhARCaEGJOFihcIOiae8kEEIL+WY3JYZDUhRCCGULp0gghHKKe3mUnS1QNy+xEajapkDVSsXcbmVnJogCuvY1L91u0wYQm4/KjW6EELQFG1F/lIZYtAUbUWcYY7AsS8m5VVZsBEgghGJkD5bFeenJtOoEHSCBEBrgnIMr8iAkEKLWCACWZZ0vP1rWuVVVayxAAiHUIgRs2y69i1cKTuUoOkACITSgQiAA5SDEBsA5g23bSs6tY0sFEgihDCEEOLdg27aShqyjzhYJhFCGmOcfXFEXr+oxEIAEQiim0Wgoyz+yLKPtD4j6whiD4zjKerCyLKMNdIh6IoSAZVloNBpKcgUd4RVAAiEUIYRAo9GAZVnKBEJJOlFbGGNwXVdp/qEDEghROrPuXQ7HcZR172ZZpmUBFgmEUEKj0VAy/sEYQ5Zl5EGIetNsNpUtktKVfwAkEKJkZHjluq6y8CpNU233QwIhSkUIAdd1lYVXOvMPgARClAxjDK1WS1kD1pl/ACQQokTk2Ieq3isASNNU62agJBCiNIQQaLVaygYHdecfwEwg9dubl6gccuZuq9VSIg7ZvZumqdYCdCQQohSk91C19gMAkiTRvtc6CYRYG+k92u22sgZsIrwCZgLR1yVAbCRCCLTbbWUzdxljSNNUe3gFkECINZE9Vyq9B2AmvAJmAtHvt4iNYmtrS1nuYSo5l3AAifarEhtBlmVwXVdZz5VEhlcmIIEQ10KuGOx2u0qqJhavE8exsfvkAKbGrk7UFiEEtra2lI6am0zOJRxAZOTKRC2ROUGr1UKn01E6L0p6DxPJuYQEQqyMFEej0UCv11P6VpfXSpLE6NZtHMDE2NWJWiGnmfd6PaUj5pLpdGrUewAkEOKK9Ho9NJtNpaEVYwxpkhr3HsBMICOjFhC1IMsydLtd5XkHMMs9prF57wGQQIgVkOLY2tpSLg7Zc1UF7wHMBHJg2giiuggh0O12sb29reWNLoSoRO4hsUECIRaQPUgA0Ov20NnqaGmwjDFMp9PKeA9gJpChaSOIapGmKSzLQq/XQ7vd1rYGPE1TTKfTyogDmAlk37QRhHmKFUNc10Wv14PjOFoLJEynU60VS1bBBnDHtBGEedI0Becc29vb2N7ePhdmqUaGVnEcV0ocAHmQG4/cCNN1XXS3u3CbrpbNMSWy1yqKosqJAyCB3EwYg5iX77RtG51OB51OR6vXmJkxC+uiKJrtd15RgVCSfoMQQkBkGSzLQrvdPrdU1kTXahRFSBNzs3Xvhw3gyLQRhBoYY/lbWh6WZaHVauXCAPTt1rRo28nJCTrtDhhXt55kXWwAJ6aNIMqDMeRvY1mms1izSpbmAfRso7wMzjmOj48BAHt7e6Yf2eW2hmGYgrxIbZGCkKJI09kU8WweRrWaLezs7GB3dxfdbjefhWtSHFEU4eDgIM87quo9AIzt+Re/BfBZ09bopKw/jI4/8KztF2N0AXnJND3bK0Pu6tRqt+A0HDz44IPYGezM/ofGbcsugnOO6XSKu3fvIssycFb+/ukl8ycpkNdwwwQi36LXSQ7zN3DhTVxeL8xZ45dk2dk1JIyxXBCu6+bFExzHgeM4SNM0Xw5bhUYoxTEcDmfi4BwCAgwMorq1C/8sBfJH05bUEflnzRvgug2RMQAMnM+ExjnPhWBZVn7I7c0ajUa+k6zczUkKIk3TM4/B2Pq2rUFRHHIaS5LWolbIX6VA/mraEl3IhHUwGFz7HIwxxHGM9773vXjf+95XaugivVBRHMXPRS8lBVG04Z7fMyyOKIpw9+7dvPiCEDPPUQPelgJ517QlOmGModlsrnUOzrm2wgUAICAqEy6tCuccJycnODg4OAuramQ/gKENAGEYJp7nvQ7gcdMW6WKdRl3cafVcKFMyVR08W9Xu0WiE0WhUh96qZbz+6KOPpnbhGy/hBglkXWQYsyzsuclwzpGmKY6OjjCZTOr8fF4CZgOFkldNW0TUG5mMHx4eIooiZdtAa+JV4LxA3jJtEVFPpIc4Pj7GaDTK842a8xZQ2KMwDMMYwK9MW0XUB9m7FscxhsMhDg8PK7fg6Zq8/P73vz8G7t3E88emLSPqAeccWZZhNBphf38fJycndc43Fvkv+YW98IPXTFtGVBvZVXtycoLj4+N8odMGhFRFfp/fb/G7YRhOATxr2jqiekjvEJ2eYjgcYjgcYjqd5gOYG8Sz/qN+vuPBMtn/1LSFRDUojuBPo9kkw/3hcNPCqUXOtf97BBKG4R0APzJtJWEOKYwsy3BycoLhcIj94T4mk1kZ5w0Lp4r8yPf9c0VMLrrT501bSuil6C2SJMFoNMpDqZOT2Zq6DRaG5J52v/SOwzB8F8B3TFtLqKUoCuktDg4OsL+/j6Ojo7yI2w0QBgB8x/f9e+Yk2pf8hx8AeM601cT1WDbvqZg3yCnxcRwjiiJEUZRvtbzB+cVl/GDZNy8USBiGE8/zPg3gFdOWE1dHNnLZLSunxCdJgjiO80Jti6K4gcIAgE/7vr90n5zLPAjCMPyN53m/BPCkSeurWDMprxSCslcULlwHuHDlRPF6y9aJJEmC09PTXBBJkuSCIFHk/NL3/d9c9EN7hRN8BYYEUnwLVglpE+ccnHFkbD69Yo12dtUFREWvID2D9A5xHGM8HmM8HufFp4sCJlGc4yuX/fC+AgnD8NDzvMcAvKHTapk4mt4GeLlxONcgy1wPknslcVZoQX7KZyEFITeaKX5fCiGOY3S7XQCo40IlXTzm+/7hZb+wigdBGIZ/8DzvSwBe0GW5ZVmYTCa4c+eO8Woci8iuUMZYiZtZnhVrEAvFIIrHMluKnlZ+XZxRS+JYypd83//D/X5pJYEAQBiGL3qe9wEAz+i6A/mmrNofuLhNWJkeZKmXXKh7tdyTnheX/Kzac6sQ3/d9/8VVfnFlgcz5FoB/AfCUjrsojuhWiWVv7cvT6esgltZaoEa/Nj/HrB2vxJWy3zAMBYAvAvi1rrupeoM4C3/uDYfWO0zf2UbyawBf9H1/5ad75e6hMAwTAJ/DTInKqVRyTtSZnwP4nO/7VyrIda3+07lIngbwfdN3TRAr8H0AT19VHMDVc5Ccebj1Tc/z/gKNvVsEcUW+tGpCvoy1R+DCMHwRwGOmnwJBLOGxdcQBlCAQYDZOAqAP4JemnwhBYNYO+6uMc9yPa4dYi4RheAjgC57n/TdogiNhjk9fNrfqqpQ+ySkMw98A6IDWkxB6+Q6ATpniABQIBJhNlQ/D8LsAboGW7xJq+RGAW77vf/eiKevroHSabBiG74Zh+A0A78GGVkup8jhNLaazs2s/w2cBvMf3/W8sWwlYFqXlIJcxLwTxHw899NAPAHwMwFcxG2y8L1UeSa+ybdK+OtgoP1eY8v8yZkXdfl8szaMSLQKRvP3221MAvwPwu4cffrgB4BEAT2A26JhXlpezUeVuSlWciwUg3+5sne3cykYIkc/ibTabaLfblROJnI7f6XSwvb09NxzLprK9jlmV9VcBvCXLgepEq0CK/P3vf48B/O/8+E/P8ywAAwAPAbidZdkH0zT9cJIknTRNTZm5FM55PpM3iqJKNsAoinB6eorJZFJJ++I4huu6GI1GADAWQvyJMfZnzHY7exvA0Pd943/4/we8d3KeyDnHvAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMy0xMC0xMFQxMDo1NzozNC0wNDowMIy/A30AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTMtMTAtMTBUMTA6NTc6MzQtMDQ6MDD94rvBAAAAAElFTkSuQmCC"
+
+/***/ },
+/* 287 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "e97877b2adb119e5b51ee5648a1aecb7.png";
+
+/***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "39f68ea013264c638499e1774002124e.png";
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "baac945d808bb3c8c0c5467b36e45503.jpg";
+
+/***/ },
 /* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(291);
+	module.exports = __webpack_require__.p + "de4ff81c5cb8489485c867cdbc726b07.png";
 
 /***/ },
 /* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactCSSTransitionGroup
-	 */
-
-	'use strict';
-
-	var _assign = __webpack_require__(18);
-
-	var React = __webpack_require__(16);
-
-	var ReactTransitionGroup = __webpack_require__(292);
-	var ReactCSSTransitionGroupChild = __webpack_require__(294);
-
-	function createTransitionTimeoutPropValidator(transitionType) {
-	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
-	  var enabledPropName = 'transition' + transitionType;
-
-	  return function (props) {
-	    // If the transition is enabled
-	    if (props[enabledPropName]) {
-	      // If no timeout duration is provided
-	      if (props[timeoutPropName] == null) {
-	        return new Error(timeoutPropName + ' wasn\'t supplied to ReactCSSTransitionGroup: ' + 'this can cause unreliable animations and won\'t be supported in ' + 'a future version of React. See ' + 'https://fb.me/react-animation-transition-group-timeout for more ' + 'information.');
-
-	        // If the duration isn't a number
-	      } else if (typeof props[timeoutPropName] !== 'number') {
-	          return new Error(timeoutPropName + ' must be a number (in milliseconds)');
-	        }
-	    }
-	  };
-	}
-
-	/**
-	 * An easy way to perform CSS transitions and animations when a React component
-	 * enters or leaves the DOM.
-	 * See https://facebook.github.io/react/docs/animation.html#high-level-api-reactcsstransitiongroup
-	 */
-	var ReactCSSTransitionGroup = React.createClass({
-	  displayName: 'ReactCSSTransitionGroup',
-
-	  propTypes: {
-	    transitionName: ReactCSSTransitionGroupChild.propTypes.name,
-
-	    transitionAppear: React.PropTypes.bool,
-	    transitionEnter: React.PropTypes.bool,
-	    transitionLeave: React.PropTypes.bool,
-	    transitionAppearTimeout: createTransitionTimeoutPropValidator('Appear'),
-	    transitionEnterTimeout: createTransitionTimeoutPropValidator('Enter'),
-	    transitionLeaveTimeout: createTransitionTimeoutPropValidator('Leave')
-	  },
-
-	  getDefaultProps: function () {
-	    return {
-	      transitionAppear: false,
-	      transitionEnter: true,
-	      transitionLeave: true
-	    };
-	  },
-
-	  _wrapChild: function (child) {
-	    // We need to provide this childFactory so that
-	    // ReactCSSTransitionGroupChild can receive updates to name, enter, and
-	    // leave while it is leaving.
-	    return React.createElement(ReactCSSTransitionGroupChild, {
-	      name: this.props.transitionName,
-	      appear: this.props.transitionAppear,
-	      enter: this.props.transitionEnter,
-	      leave: this.props.transitionLeave,
-	      appearTimeout: this.props.transitionAppearTimeout,
-	      enterTimeout: this.props.transitionEnterTimeout,
-	      leaveTimeout: this.props.transitionLeaveTimeout
-	    }, child);
-	  },
-
-	  render: function () {
-	    return React.createElement(ReactTransitionGroup, _assign({}, this.props, { childFactory: this._wrapChild }));
-	  }
-	});
-
-	module.exports = ReactCSSTransitionGroup;
+	module.exports = __webpack_require__.p + "ca81815e9a365457b78af9f8025c77db.jpg";
 
 /***/ },
 /* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactTransitionGroup
-	 */
-
-	'use strict';
-
-	var _assign = __webpack_require__(18);
-
-	var React = __webpack_require__(16);
-	var ReactInstanceMap = __webpack_require__(133);
-	var ReactTransitionChildMapping = __webpack_require__(293);
-
-	var emptyFunction = __webpack_require__(26);
-
-	/**
-	 * A basis for animations. When children are declaratively added or removed,
-	 * special lifecycle hooks are called.
-	 * See https://facebook.github.io/react/docs/animation.html#low-level-api-reacttransitiongroup
-	 */
-	var ReactTransitionGroup = React.createClass({
-	  displayName: 'ReactTransitionGroup',
-
-	  propTypes: {
-	    component: React.PropTypes.any,
-	    childFactory: React.PropTypes.func
-	  },
-
-	  getDefaultProps: function () {
-	    return {
-	      component: 'span',
-	      childFactory: emptyFunction.thatReturnsArgument
-	    };
-	  },
-
-	  getInitialState: function () {
-	    return {
-	      // TODO: can we get useful debug information to show at this point?
-	      children: ReactTransitionChildMapping.getChildMapping(this.props.children)
-	    };
-	  },
-
-	  componentWillMount: function () {
-	    this.currentlyTransitioningKeys = {};
-	    this.keysToEnter = [];
-	    this.keysToLeave = [];
-	  },
-
-	  componentDidMount: function () {
-	    var initialChildMapping = this.state.children;
-	    for (var key in initialChildMapping) {
-	      if (initialChildMapping[key]) {
-	        this.performAppear(key);
-	      }
-	    }
-	  },
-
-	  componentWillReceiveProps: function (nextProps) {
-	    var nextChildMapping;
-	    if (process.env.NODE_ENV !== 'production') {
-	      nextChildMapping = ReactTransitionChildMapping.getChildMapping(nextProps.children, ReactInstanceMap.get(this)._debugID);
-	    } else {
-	      nextChildMapping = ReactTransitionChildMapping.getChildMapping(nextProps.children);
-	    }
-	    var prevChildMapping = this.state.children;
-
-	    this.setState({
-	      children: ReactTransitionChildMapping.mergeChildMappings(prevChildMapping, nextChildMapping)
-	    });
-
-	    var key;
-
-	    for (key in nextChildMapping) {
-	      var hasPrev = prevChildMapping && prevChildMapping.hasOwnProperty(key);
-	      if (nextChildMapping[key] && !hasPrev && !this.currentlyTransitioningKeys[key]) {
-	        this.keysToEnter.push(key);
-	      }
-	    }
-
-	    for (key in prevChildMapping) {
-	      var hasNext = nextChildMapping && nextChildMapping.hasOwnProperty(key);
-	      if (prevChildMapping[key] && !hasNext && !this.currentlyTransitioningKeys[key]) {
-	        this.keysToLeave.push(key);
-	      }
-	    }
-
-	    // If we want to someday check for reordering, we could do it here.
-	  },
-
-	  componentDidUpdate: function () {
-	    var keysToEnter = this.keysToEnter;
-	    this.keysToEnter = [];
-	    keysToEnter.forEach(this.performEnter);
-
-	    var keysToLeave = this.keysToLeave;
-	    this.keysToLeave = [];
-	    keysToLeave.forEach(this.performLeave);
-	  },
-
-	  performAppear: function (key) {
-	    this.currentlyTransitioningKeys[key] = true;
-
-	    var component = this.refs[key];
-
-	    if (component.componentWillAppear) {
-	      component.componentWillAppear(this._handleDoneAppearing.bind(this, key));
-	    } else {
-	      this._handleDoneAppearing(key);
-	    }
-	  },
-
-	  _handleDoneAppearing: function (key) {
-	    var component = this.refs[key];
-	    if (component.componentDidAppear) {
-	      component.componentDidAppear();
-	    }
-
-	    delete this.currentlyTransitioningKeys[key];
-
-	    var currentChildMapping;
-	    if (process.env.NODE_ENV !== 'production') {
-	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children, ReactInstanceMap.get(this)._debugID);
-	    } else {
-	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
-	    }
-
-	    if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
-	      // This was removed before it had fully appeared. Remove it.
-	      this.performLeave(key);
-	    }
-	  },
-
-	  performEnter: function (key) {
-	    this.currentlyTransitioningKeys[key] = true;
-
-	    var component = this.refs[key];
-
-	    if (component.componentWillEnter) {
-	      component.componentWillEnter(this._handleDoneEntering.bind(this, key));
-	    } else {
-	      this._handleDoneEntering(key);
-	    }
-	  },
-
-	  _handleDoneEntering: function (key) {
-	    var component = this.refs[key];
-	    if (component.componentDidEnter) {
-	      component.componentDidEnter();
-	    }
-
-	    delete this.currentlyTransitioningKeys[key];
-
-	    var currentChildMapping;
-	    if (process.env.NODE_ENV !== 'production') {
-	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children, ReactInstanceMap.get(this)._debugID);
-	    } else {
-	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
-	    }
-
-	    if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
-	      // This was removed before it had fully entered. Remove it.
-	      this.performLeave(key);
-	    }
-	  },
-
-	  performLeave: function (key) {
-	    this.currentlyTransitioningKeys[key] = true;
-
-	    var component = this.refs[key];
-	    if (component.componentWillLeave) {
-	      component.componentWillLeave(this._handleDoneLeaving.bind(this, key));
-	    } else {
-	      // Note that this is somewhat dangerous b/c it calls setState()
-	      // again, effectively mutating the component before all the work
-	      // is done.
-	      this._handleDoneLeaving(key);
-	    }
-	  },
-
-	  _handleDoneLeaving: function (key) {
-	    var component = this.refs[key];
-
-	    if (component.componentDidLeave) {
-	      component.componentDidLeave();
-	    }
-
-	    delete this.currentlyTransitioningKeys[key];
-
-	    var currentChildMapping;
-	    if (process.env.NODE_ENV !== 'production') {
-	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children, ReactInstanceMap.get(this)._debugID);
-	    } else {
-	      currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
-	    }
-
-	    if (currentChildMapping && currentChildMapping.hasOwnProperty(key)) {
-	      // This entered again before it fully left. Add it again.
-	      this.performEnter(key);
-	    } else {
-	      this.setState(function (state) {
-	        var newChildren = _assign({}, state.children);
-	        delete newChildren[key];
-	        return { children: newChildren };
-	      });
-	    }
-	  },
-
-	  render: function () {
-	    // TODO: we could get rid of the need for the wrapper node
-	    // by cloning a single child
-	    var childrenToRender = [];
-	    for (var key in this.state.children) {
-	      var child = this.state.children[key];
-	      if (child) {
-	        // You may need to apply reactive updates to a child as it is leaving.
-	        // The normal React way to do it won't work since the child will have
-	        // already been removed. In case you need this behavior you can provide
-	        // a childFactory function to wrap every child, even the ones that are
-	        // leaving.
-	        childrenToRender.push(React.cloneElement(this.props.childFactory(child), { ref: key, key: key }));
-	      }
-	    }
-
-	    // Do not forward ReactTransitionGroup props to primitive DOM nodes
-	    var props = _assign({}, this.props);
-	    delete props.transitionLeave;
-	    delete props.transitionName;
-	    delete props.transitionAppear;
-	    delete props.transitionEnter;
-	    delete props.childFactory;
-	    delete props.transitionLeaveTimeout;
-	    delete props.transitionEnterTimeout;
-	    delete props.transitionAppearTimeout;
-	    delete props.component;
-
-	    return React.createElement(this.props.component, props, childrenToRender);
-	  }
-	});
-
-	module.exports = ReactTransitionGroup;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+	module.exports = __webpack_require__.p + "1acc2c262227bd1b686d940d4d43af67.png";
 
 /***/ },
 /* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactTransitionChildMapping
-	 */
-
-	'use strict';
-
-	var flattenChildren = __webpack_require__(142);
-
-	var ReactTransitionChildMapping = {
-	  /**
-	   * Given `this.props.children`, return an object mapping key to child. Just
-	   * simple syntactic sugar around flattenChildren().
-	   *
-	   * @param {*} children `this.props.children`
-	   * @param {number=} selfDebugID Optional debugID of the current internal instance.
-	   * @return {object} Mapping of key to child
-	   */
-	  getChildMapping: function (children, selfDebugID) {
-	    if (!children) {
-	      return children;
-	    }
-
-	    if (process.env.NODE_ENV !== 'production') {
-	      return flattenChildren(children, selfDebugID);
-	    }
-
-	    return flattenChildren(children);
-	  },
-
-	  /**
-	   * When you're adding or removing children some may be added or removed in the
-	   * same render pass. We want to show *both* since we want to simultaneously
-	   * animate elements in and out. This function takes a previous set of keys
-	   * and a new set of keys and merges them with its best guess of the correct
-	   * ordering. In the future we may expose some of the utilities in
-	   * ReactMultiChild to make this easy, but for now React itself does not
-	   * directly have this concept of the union of prevChildren and nextChildren
-	   * so we implement it here.
-	   *
-	   * @param {object} prev prev children as returned from
-	   * `ReactTransitionChildMapping.getChildMapping()`.
-	   * @param {object} next next children as returned from
-	   * `ReactTransitionChildMapping.getChildMapping()`.
-	   * @return {object} a key set that contains all keys in `prev` and all keys
-	   * in `next` in a reasonable order.
-	   */
-	  mergeChildMappings: function (prev, next) {
-	    prev = prev || {};
-	    next = next || {};
-
-	    function getValueForKey(key) {
-	      if (next.hasOwnProperty(key)) {
-	        return next[key];
-	      } else {
-	        return prev[key];
-	      }
-	    }
-
-	    // For each key of `next`, the list of keys to insert before that key in
-	    // the combined list
-	    var nextKeysPending = {};
-
-	    var pendingKeys = [];
-	    for (var prevKey in prev) {
-	      if (next.hasOwnProperty(prevKey)) {
-	        if (pendingKeys.length) {
-	          nextKeysPending[prevKey] = pendingKeys;
-	          pendingKeys = [];
-	        }
-	      } else {
-	        pendingKeys.push(prevKey);
-	      }
-	    }
-
-	    var i;
-	    var childMapping = {};
-	    for (var nextKey in next) {
-	      if (nextKeysPending.hasOwnProperty(nextKey)) {
-	        for (i = 0; i < nextKeysPending[nextKey].length; i++) {
-	          var pendingNextKey = nextKeysPending[nextKey][i];
-	          childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
-	        }
-	      }
-	      childMapping[nextKey] = getValueForKey(nextKey);
-	    }
-
-	    // Finally, add the keys which didn't appear before any key in `next`
-	    for (i = 0; i < pendingKeys.length; i++) {
-	      childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
-	    }
-
-	    return childMapping;
-	  }
-	};
-
-	module.exports = ReactTransitionChildMapping;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+	module.exports = __webpack_require__.p + "986cf0494e65b262e9b7d0f3b38bcacf.png";
 
 /***/ },
 /* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactCSSTransitionGroupChild
-	 */
-
-	'use strict';
-
-	var React = __webpack_require__(16);
-	var ReactDOM = __webpack_require__(49);
-
-	var CSSCore = __webpack_require__(295);
-	var ReactTransitionEvents = __webpack_require__(296);
-
-	var onlyChild = __webpack_require__(47);
-
-	var TICK = 17;
-
-	var ReactCSSTransitionGroupChild = React.createClass({
-	  displayName: 'ReactCSSTransitionGroupChild',
-
-	  propTypes: {
-	    name: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.shape({
-	      enter: React.PropTypes.string,
-	      leave: React.PropTypes.string,
-	      active: React.PropTypes.string
-	    }), React.PropTypes.shape({
-	      enter: React.PropTypes.string,
-	      enterActive: React.PropTypes.string,
-	      leave: React.PropTypes.string,
-	      leaveActive: React.PropTypes.string,
-	      appear: React.PropTypes.string,
-	      appearActive: React.PropTypes.string
-	    })]).isRequired,
-
-	    // Once we require timeouts to be specified, we can remove the
-	    // boolean flags (appear etc.) and just accept a number
-	    // or a bool for the timeout flags (appearTimeout etc.)
-	    appear: React.PropTypes.bool,
-	    enter: React.PropTypes.bool,
-	    leave: React.PropTypes.bool,
-	    appearTimeout: React.PropTypes.number,
-	    enterTimeout: React.PropTypes.number,
-	    leaveTimeout: React.PropTypes.number
-	  },
-
-	  transition: function (animationType, finishCallback, userSpecifiedDelay) {
-	    var node = ReactDOM.findDOMNode(this);
-
-	    if (!node) {
-	      if (finishCallback) {
-	        finishCallback();
-	      }
-	      return;
-	    }
-
-	    var className = this.props.name[animationType] || this.props.name + '-' + animationType;
-	    var activeClassName = this.props.name[animationType + 'Active'] || className + '-active';
-	    var timeout = null;
-
-	    var endListener = function (e) {
-	      if (e && e.target !== node) {
-	        return;
-	      }
-
-	      clearTimeout(timeout);
-
-	      CSSCore.removeClass(node, className);
-	      CSSCore.removeClass(node, activeClassName);
-
-	      ReactTransitionEvents.removeEndEventListener(node, endListener);
-
-	      // Usually this optional callback is used for informing an owner of
-	      // a leave animation and telling it to remove the child.
-	      if (finishCallback) {
-	        finishCallback();
-	      }
-	    };
-
-	    CSSCore.addClass(node, className);
-
-	    // Need to do this to actually trigger a transition.
-	    this.queueClassAndNode(activeClassName, node);
-
-	    // If the user specified a timeout delay.
-	    if (userSpecifiedDelay) {
-	      // Clean-up the animation after the specified delay
-	      timeout = setTimeout(endListener, userSpecifiedDelay);
-	      this.transitionTimeouts.push(timeout);
-	    } else {
-	      // DEPRECATED: this listener will be removed in a future version of react
-	      ReactTransitionEvents.addEndEventListener(node, endListener);
-	    }
-	  },
-
-	  queueClassAndNode: function (className, node) {
-	    this.classNameAndNodeQueue.push({
-	      className: className,
-	      node: node
-	    });
-
-	    if (!this.timeout) {
-	      this.timeout = setTimeout(this.flushClassNameAndNodeQueue, TICK);
-	    }
-	  },
-
-	  flushClassNameAndNodeQueue: function () {
-	    if (this.isMounted()) {
-	      this.classNameAndNodeQueue.forEach(function (obj) {
-	        CSSCore.addClass(obj.node, obj.className);
-	      });
-	    }
-	    this.classNameAndNodeQueue.length = 0;
-	    this.timeout = null;
-	  },
-
-	  componentWillMount: function () {
-	    this.classNameAndNodeQueue = [];
-	    this.transitionTimeouts = [];
-	  },
-
-	  componentWillUnmount: function () {
-	    if (this.timeout) {
-	      clearTimeout(this.timeout);
-	    }
-	    this.transitionTimeouts.forEach(function (timeout) {
-	      clearTimeout(timeout);
-	    });
-
-	    this.classNameAndNodeQueue.length = 0;
-	  },
-
-	  componentWillAppear: function (done) {
-	    if (this.props.appear) {
-	      this.transition('appear', done, this.props.appearTimeout);
-	    } else {
-	      done();
-	    }
-	  },
-
-	  componentWillEnter: function (done) {
-	    if (this.props.enter) {
-	      this.transition('enter', done, this.props.enterTimeout);
-	    } else {
-	      done();
-	    }
-	  },
-
-	  componentWillLeave: function (done) {
-	    if (this.props.leave) {
-	      this.transition('leave', done, this.props.leaveTimeout);
-	    } else {
-	      done();
-	    }
-	  },
-
-	  render: function () {
-	    return onlyChild(this.props.children);
-	  }
-	});
-
-	module.exports = ReactCSSTransitionGroupChild;
+	module.exports = __webpack_require__.p + "02d43848b1afd004db99b270a42890ca.png";
 
 /***/ },
 /* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-
-	/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @typechecks
-	 */
-
-	var invariant = __webpack_require__(22);
-
-	/**
-	 * The CSSCore module specifies the API (and implements most of the methods)
-	 * that should be used when dealing with the display of elements (via their
-	 * CSS classes and visibility on screen. It is an API focused on mutating the
-	 * display and not reading it as no logical state should be encoded in the
-	 * display of elements.
-	 */
-
-	/* Slow implementation for browsers that don't natively support .matches() */
-	function matchesSelector_SLOW(element, selector) {
-	  var root = element;
-	  while (root.parentNode) {
-	    root = root.parentNode;
-	  }
-
-	  var all = root.querySelectorAll(selector);
-	  return Array.prototype.indexOf.call(all, element) !== -1;
-	}
-
-	var CSSCore = {
-
-	  /**
-	   * Adds the class passed in to the element if it doesn't already have it.
-	   *
-	   * @param {DOMElement} element the element to set the class on
-	   * @param {string} className the CSS className
-	   * @return {DOMElement} the element passed in
-	   */
-	  addClass: function addClass(element, className) {
-	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.addClass takes only a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : void 0;
-
-	    if (className) {
-	      if (element.classList) {
-	        element.classList.add(className);
-	      } else if (!CSSCore.hasClass(element, className)) {
-	        element.className = element.className + ' ' + className;
-	      }
-	    }
-	    return element;
-	  },
-
-	  /**
-	   * Removes the class passed in from the element
-	   *
-	   * @param {DOMElement} element the element to set the class on
-	   * @param {string} className the CSS className
-	   * @return {DOMElement} the element passed in
-	   */
-	  removeClass: function removeClass(element, className) {
-	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.removeClass takes only a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : void 0;
-
-	    if (className) {
-	      if (element.classList) {
-	        element.classList.remove(className);
-	      } else if (CSSCore.hasClass(element, className)) {
-	        element.className = element.className.replace(new RegExp('(^|\\s)' + className + '(?:\\s|$)', 'g'), '$1').replace(/\s+/g, ' ') // multiple spaces to one
-	        .replace(/^\s*|\s*$/g, ''); // trim the ends
-	      }
-	    }
-	    return element;
-	  },
-
-	  /**
-	   * Helper to add or remove a class from an element based on a condition.
-	   *
-	   * @param {DOMElement} element the element to set the class on
-	   * @param {string} className the CSS className
-	   * @param {*} bool condition to whether to add or remove the class
-	   * @return {DOMElement} the element passed in
-	   */
-	  conditionClass: function conditionClass(element, className, bool) {
-	    return (bool ? CSSCore.addClass : CSSCore.removeClass)(element, className);
-	  },
-
-	  /**
-	   * Tests whether the element has the class specified.
-	   *
-	   * @param {DOMNode|DOMWindow} element the element to check the class on
-	   * @param {string} className the CSS className
-	   * @return {boolean} true if the element has the class, false if not
-	   */
-	  hasClass: function hasClass(element, className) {
-	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSS.hasClass takes only a single class name.') : invariant(false) : void 0;
-	    if (element.classList) {
-	      return !!className && element.classList.contains(className);
-	    }
-	    return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
-	  },
-
-	  /**
-	   * Tests whether the element matches the selector specified
-	   *
-	   * @param {DOMNode|DOMWindow} element the element that we are querying
-	   * @param {string} selector the CSS selector
-	   * @return {boolean} true if the element matches the selector, false if not
-	   */
-	  matchesSelector: function matchesSelector(element, selector) {
-	    var matchesImpl = element.matches || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector || function (s) {
-	      return matchesSelector_SLOW(element, s);
-	    };
-	    return matchesImpl.call(element, selector);
-	  }
-
-	};
-
-	module.exports = CSSCore;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)))
+	module.exports = __webpack_require__.p + "8326ca6577dda602a6a6bde4348e4a55.jpg";
 
 /***/ },
 /* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactTransitionEvents
-	 */
-
-	'use strict';
-
-	var ExecutionEnvironment = __webpack_require__(63);
-
-	var getVendorPrefixedEventName = __webpack_require__(123);
-
-	var endEvents = [];
-
-	function detectEvents() {
-	  var animEnd = getVendorPrefixedEventName('animationend');
-	  var transEnd = getVendorPrefixedEventName('transitionend');
-
-	  if (animEnd) {
-	    endEvents.push(animEnd);
-	  }
-
-	  if (transEnd) {
-	    endEvents.push(transEnd);
-	  }
-	}
-
-	if (ExecutionEnvironment.canUseDOM) {
-	  detectEvents();
-	}
-
-	// We use the raw {add|remove}EventListener() call because EventListener
-	// does not know how to remove event listeners and we really should
-	// clean up. Also, these events are not triggered in older browsers
-	// so we should be A-OK here.
-
-	function addEventListener(node, eventName, eventListener) {
-	  node.addEventListener(eventName, eventListener, false);
-	}
-
-	function removeEventListener(node, eventName, eventListener) {
-	  node.removeEventListener(eventName, eventListener, false);
-	}
-
-	var ReactTransitionEvents = {
-	  addEndEventListener: function (node, eventListener) {
-	    if (endEvents.length === 0) {
-	      // If CSS transitions are not supported, trigger an "end animation"
-	      // event immediately.
-	      window.setTimeout(eventListener, 0);
-	      return;
-	    }
-	    endEvents.forEach(function (endEvent) {
-	      addEventListener(node, endEvent, eventListener);
-	    });
-	  },
-
-	  removeEndEventListener: function (node, eventListener) {
-	    if (endEvents.length === 0) {
-	      return;
-	    }
-	    endEvents.forEach(function (endEvent) {
-	      removeEventListener(node, endEvent, eventListener);
-	    });
-	  }
-	};
-
-	module.exports = ReactTransitionEvents;
+	module.exports = __webpack_require__.p + "d0a36672c3f7c5587620a669581140f3.jpg";
 
 /***/ },
 /* 297 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0c89945685c04743726f490b18ec2194.png";
+
+/***/ },
+/* 298 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(15);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(186);
+
+	var _radio = __webpack_require__(299);
+
+	var _radio2 = _interopRequireDefault(_radio);
+
+	__webpack_require__(300);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Music = function (_Component) {
+	  _inherits(Music, _Component);
+
+	  function Music() {
+	    _classCallCheck(this, Music);
+
+	    return _possibleConstructorReturn(this, (Music.__proto__ || Object.getPrototypeOf(Music)).apply(this, arguments));
+	  }
+
+	  _createClass(Music, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      (0, _radio2.default)();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'music' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'header' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              _react2.default.createElement('i', { className: 'fa fa-angle-left' })
+	            ),
+	            'Music',
+	            _react2.default.createElement('div', { className: 'back-counterbalance' })
+	          ),
+	          _react2.default.createElement('canvas', { id: 'radio-canvas', width: '600', height: '451' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'content' },
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'speedway racer boy'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'color-ish' },
+	            'music made with my friends chris and kevin. see our  ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'http://swrb.info', className: 'show' },
+	              'website'
+	            ),
+	            ' and ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://www.facebook.com/speedwayracerboy/', className: 'show' },
+	              'facebook page'
+	            ),
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'iframe',
+	              { src: 'https://bandcamp.com/EmbeddedPlayer/album=3806414790/size=medium/bgcol=d6d6d6/linkcol=333333/transparent=true/', width: '530px', seamless: true },
+	              _react2.default.createElement('a', { href: 'https://swrb.bandcamp.com/album/sutherland' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'ambient solo work'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'color-ish' },
+	            'this is me playing around with a microkorg and a looper',
+	            _react2.default.createElement('br', null),
+	            'listen w headphones'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'soundcloud' },
+	            _react2.default.createElement('iframe', { width: '100%', height: '166', src: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139168849&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'sc-sub color-ish' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'january 2012'
+	              )
+	            ),
+	            _react2.default.createElement('iframe', { width: '100%', height: '166', src: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184856527&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'sc-sub color-ish' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'april 2013'
+	              )
+	            ),
+	            _react2.default.createElement('iframe', { width: '100%', height: '166', src: 'https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F104186145%3Fsecret_token%3Ds-fyR86' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'sc-sub color-ish' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'july 2013'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'other'
+	          ),
+	          _react2.default.createElement('iframe', { src: 'https://player.vimeo.com/video/39452010', width: '500', height: '281', allowFullScreen: true }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'sc-sub color-ish' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'march 2012, first jam with kaoss pad and microkorg'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'piano' },
+	            _react2.default.createElement('iframe', { width: '560', height: '315', src: 'https://www.youtube.com/embed/eJnsdyKWD_w', allowFullScreen: true }),
+	            _react2.default.createElement('iframe', { width: '560', height: '315', src: 'https://www.youtube.com/embed/Sp0s_uRFm9U', allowFullScreen: true }),
+	            _react2.default.createElement('iframe', { width: '560', height: '315', src: 'https://www.youtube.com/embed/-rVQIij_lV8', allowFullScreen: true })
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'color-ish' },
+	            'october 2012 solarium piano improvisations'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Music;
+	}(_react.Component);
+
+	exports.default = Music;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "music.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 299 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function () {
+	  canvas = document.getElementById("radio-canvas");
+	  context = canvas.getContext("2d");
+	  playing = true;
+	  canvas.addEventListener("mouseover", function () {
+	    playing = false;
+	  });
+	  canvas.addEventListener("mouseout", function () {
+	    playing = true;
+	  });
+
+	  animloop();
+	};
+
+	var step = 0;
+
+	var playing, canvas, context;
+
+	var requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function (callback) {
+	  return setTimeout(callback, 1000 / 60.0);
+	};
+
+	function clear() {
+	  context.fillStyle = "rgb(0,0,0)";
+	  context.fillRect(0, 0, canvas.width, canvas.height);
+	}
+
+	function randRGB(darkness) {
+	  return Math.floor(Math.random() * 255 / darkness);
+	}
+
+	function randPoint(extra) {
+	  return [Math.random() * (canvas.width + extra * 2) - extra, Math.random() * (canvas.height + extra * 2) - extra];
+	}
+
+	function waves(num) {
+	  var distance = 30;
+	  var i;
+	  for (i = 0; i < num; i++) {
+	    var y = distance * i;
+	    context.strokeStyle = "rgb(" + randRGB(2) + "," + randRGB(2) + "," + randRGB(2) + ")";
+	    context.beginPath();
+	    context.moveTo(0, y);
+
+	    var left = Math.random() * 30;
+	    var waveW = Math.random() * 30 + 130;
+	    var x;
+	    for (x = 0; x < canvas.width / 3; x++) {
+	      context.lineTo(x * 3, y + Math.sin((x - left) * waveW * 0.1) * 50);
+	    }
+
+	    context.stroke();
+	  }
+	}
+
+	function lines(num, darkness, extra) {
+	  var i;
+	  for (i = 0; i < num; i++) {
+	    var pt1 = randPoint(extra);
+	    var pt2 = randPoint(extra);
+
+	    context.strokeStyle = "rgb(" + randRGB(darkness) + "," + randRGB(darkness) + "," + randRGB(darkness) + ")";
+	    context.beginPath();
+	    context.moveTo(pt1[0], pt1[1]);
+	    context.lineTo(pt2[0], pt2[1]);
+	    context.stroke();
+	  }
+	}
+
+	function animloop() {
+	  if (step == 0) {
+	    clear();
+
+	    if (!playing) {
+	      lines(16, 1, 100);
+	    } else {
+	      waves(18);
+	    }
+	  }
+
+	  step = (step + 1) % 5;
+	  requestAnimationFrame(animloop);
+	}
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "radio.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 300 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(301);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(258)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./music.sass", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./music.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 301 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(257)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".music {\n  padding-bottom: 30px; }\n  .music #radio-canvas {\n    border-radius: 10px; }\n  .music h2:not(:first-child) {\n    margin-top: 50px; }\n  .music iframe {\n    margin: auto;\n    border-style: none; }\n  .music .soundcloud iframe {\n    margin-top: 30px;\n    width: 600px; }\n  .music .piano {\n    margin-top: 50px; }\n    .music .piano iframe {\n      margin-top: 20px;\n      display: block; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 302 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(15);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(186);
+
+	__webpack_require__(303);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var papers = [{
+	  title: "“Skedge” – Honors senior thesis",
+	  url: "https://dropbox.com/s/dg0zic5376d7re4/thesis.pdf?raw=1",
+	  year: "2016"
+	}, {
+	  title: "“Advice & Dissent”",
+	  url: "papers/ad.pdf",
+	  year: "2015"
+	}, {
+	  title: "“The Memetic Cigarette”",
+	  url: "papers/cig.pdf",
+	  year: "2015"
+	}, {
+	  title: function title() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      '    “Between Two Worlds: Mysticism in ',
+	      _react2.default.createElement(
+	        'span',
+	        { className: 'italics' },
+	        'Four Quartets'
+	      )
+	    );
+	  },
+	  url: "papers/eliot.pdf",
+	  year: "2014"
+	}, {
+	  title: "“Non-Duality” – A study of Zen philosophy",
+	  url: "papers/zen-nonduality.pdf",
+	  year: "2014"
+	}, {
+	  title: "Refutation of a proof of P=NP",
+	  url: "http://arxiv.org/abs/1404.5352",
+	  year: "2014"
+	}];
+
+	var other = [{
+	  title: "twitter",
+	  url: "http://twitter.com/2nf340"
+	}, {
+	  title: "2nf340",
+	  url: "http://2nf340.danhassin.me"
+	}, {
+	  title: "how i felt in the summer of 2013",
+	  url: "stuff/poems.pdf"
+	}];
+
+	var Writing = function (_Component) {
+	  _inherits(Writing, _Component);
+
+	  function Writing() {
+	    _classCallCheck(this, Writing);
+
+	    return _possibleConstructorReturn(this, (Writing.__proto__ || Object.getPrototypeOf(Writing)).apply(this, arguments));
+	  }
+
+	  _createClass(Writing, [{
+	    key: 'renderItem',
+	    value: function renderItem(item) {
+	      return _react2.default.createElement(
+	        'li',
+	        { key: item.title },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'paper-title' },
+	          _react2.default.createElement(
+	            'a',
+	            { href: item.url, target: '_blank' },
+	            typeof item.title === 'function' ? item.title() : item.title
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'year color-light' },
+	          item.year
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'renderOtherItem',
+	    value: function renderOtherItem(item) {
+	      return _react2.default.createElement(
+	        'div',
+	        { key: item.title },
+	        _react2.default.createElement(
+	          'a',
+	          { href: item.url, target: '_blank' },
+	          item.title
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'writing' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'header' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              _react2.default.createElement('i', { className: 'fa fa-angle-left' })
+	            ),
+	            'Writing',
+	            _react2.default.createElement('div', { className: 'back-counterbalance' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'content' },
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'selected university papers'
+	          ),
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'paper-table' },
+	            papers.map(this.renderItem)
+	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'other'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'other-table' },
+	            other.map(this.renderOtherItem)
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Writing;
+	}(_react.Component);
+
+	exports.default = Writing;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "writing.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 303 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(304);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(258)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./writing.sass", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./writing.sass");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 304 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(257)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".writing ul.paper-table, .writing .other-table {\n  width: 450px;\n  margin: auto;\n  line-height: 25px;\n  margin-bottom: 50px; }\n\n.writing ul.paper-table {\n  text-align: left; }\n  .writing ul.paper-table .paper-title {\n    width: 90%;\n    display: inline-block; }\n  .writing ul.paper-table .year {\n    display: inline-block; }\n  .writing ul.paper-table .italics {\n    font-style: italic; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.html";
