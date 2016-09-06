@@ -20,9 +20,12 @@ const papers = [
     year: "2015",
   },
   {
-    title: () => <div>
-      “Between Two Worlds: Mysticism in <span className="italics">Four Quartets</span>”
-    </div>,
+    title: () => (~
+      .
+        “Between Two Worlds: Mysticism in 
+        %span.italics Four Quartets
+        ”
+    ~),
     url: "papers/eliot.pdf",
     year: "2014",
   },
