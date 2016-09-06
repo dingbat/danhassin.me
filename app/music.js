@@ -13,12 +13,7 @@ export default class Music extends Component {
   render() {
     return (~
       .music
-        .header
-          %h1
-            %Link(to="/") %i.fa.fa-angle-left
-            Music
-            .back-counterbalance
-          
+        .subheader
           %canvas(id="radio-canvas" width="600" height="451")
 
         .content

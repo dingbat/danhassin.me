@@ -25,7 +25,7 @@ export default class Software extends Component {
           {item.tech}
         .links
           {Object.keys(item.links).map((link) =>
-            (~ %a(key={link} href={item.links[link]}) {link} ~)
+            (~ %a.angle-link(key={link} href={item.links[link]}) {link} ~)
           )}
     ~)
   }
@@ -33,15 +33,10 @@ export default class Software extends Component {
   render() {
     return (~
       .software
-        .header
-          %h1
-            %Link(to="/") %i.fa.fa-angle-left
-            Software
-            .back-counterbalance
-          .
-            %i.fa.fa-github
-            follow me on github!
-            %a(href="https://github.com/dingbat")> @dingbat
+        .subheader
+          %i.fa.fa-github
+          follow me on github!
+          %a(href="https://github.com/dingbat")> @dingbat
           
         .content
           .col

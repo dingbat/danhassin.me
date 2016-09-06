@@ -20,7 +20,6 @@ body
 
 .header
   margin-top: 50px
-  margin-bottom: 40px
 
   i.fa-angle-left, .back-counterbalance
     width: 200px
@@ -28,8 +27,36 @@ body
     padding-right: 15px
     display: inline-block
 
+.subheader
+  margin-bottom: 40px
 
-a[href], a.show
+.footer
+  color: $color-ish
+
+  font-size: 0.95em
+  margin-top: 10px
+  padding-bottom: 60px
+
+  .separator
+    font-size: 1em
+    padding: 10px 0px
+
+  .links
+    .contact
+      width: 100px
+      text-align: right
+      display: inline-block
+
+    .source
+      width: 100px
+      text-align: left
+      display: inline-block
+
+  #email
+    span
+      margin: 0 2px
+
+a[href], a.show, a.angle-link
   cursor: pointer
   color: inherit
   text-decoration: none
@@ -43,3 +70,13 @@ a[href], a.show
 
 .color-light
   color: $color-light
+
+a.angle-link
+  margin: 0 5px
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em
+
+  &:before
+    content: '<'
+  &:after
+    content: '>'

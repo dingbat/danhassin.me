@@ -83,13 +83,13 @@ export default [
 
   {
     name: "λ-calculus interpreter",
-    img: "lambda.png",
     link: "lambda",
-    app: true,
     links: {},
+    noBorder: true,
     description: () =>
       <p>
-        an interpreter for <a href="http://en.wikipedia.org/wiki/Lambda_calculus">the lambda calculus</a>
+        an interpreter for <a href="http://en.wikipedia.org/wiki/Lambda_calculus">the lambda calculus</a>,
+        made while studying it in college.
       </p>
   }, 
 ]

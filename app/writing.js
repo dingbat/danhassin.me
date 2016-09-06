@@ -28,7 +28,7 @@ const papers = [
     year: "2014",
   },
   {
-    title: "“Non-Duality” – A study of Zen philosophy",
+    title: "“Non-Duality” – A study of Zen philosophy”",
     url: "papers/zen-nonduality.pdf",
     year: "2014",
   },
@@ -77,12 +77,7 @@ export default class Writing extends Component {
   render() {
     return (~
       .writing
-        .header
-          %h1
-            %Link(to="/") %i.fa.fa-angle-left
-            Writing
-            .back-counterbalance
-          
+        .subheader
         .content
           %h2 selected university papers
           %ul.paper-table
