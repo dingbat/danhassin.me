@@ -30,7 +30,7 @@ class App extends Component {
           ~)}
           
           {this.state.showEmail && (~
-            %span#email
+            %span.contact#email
               %span.color-ish danhassin
               %span.color-light at
               %span.color-ish mac
