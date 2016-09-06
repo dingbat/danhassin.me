@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(14);
-	module.exports = __webpack_require__(305);
+	module.exports = __webpack_require__(304);
 
 
 /***/ },
@@ -68,6 +68,8 @@
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(15);
 
@@ -97,36 +99,147 @@
 
 	var _software2 = _interopRequireDefault(_software);
 
-	var _music = __webpack_require__(298);
+	var _music = __webpack_require__(297);
 
 	var _music2 = _interopRequireDefault(_music);
 
-	var _writing = __webpack_require__(302);
+	var _writing = __webpack_require__(301);
 
 	var _writing2 = _interopRequireDefault(_writing);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var App = function App(_ref) {
-	  var children = _ref.children;
-	  var location = _ref.location;
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	  var key = location.pathname.replace("/", "");
-	  var transition = key === '' ? "pop" : "push";
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      _reactAddonsCssTransitionGroup2.default,
-	      { transitionName: transition, transitionEnterTimeout: 500, transitionLeaveTimeout: 500 },
-	      _react2.default.createElement(
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var App = function (_Component) {
+	  _inherits(App, _Component);
+
+	  function App(props) {
+	    _classCallCheck(this, App);
+
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(App, [{
+	    key: 'renderFooter',
+	    value: function renderFooter() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
 	        'div',
-	        { key: key, className: 'page container' },
-	        children
-	      )
-	    )
-	  );
-	};
+	        { className: 'footer' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'separator' },
+	          '~'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'links' },
+	          !this.state.showEmail && _react2.default.createElement(
+	            'a',
+	            { onClick: function onClick() {
+	                return _this2.setState({ showEmail: true });
+	              }, className: 'angle-link contact' },
+	            'contact'
+	          ),
+	          this.state.showEmail && _react2.default.createElement(
+	            'span',
+	            { id: 'email' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'danhassin'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-light' },
+	              'at'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'mac'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-light' },
+	              'dot'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'color-ish' },
+	              'com'
+	            )
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'color-light' },
+	            '|'
+	          ),
+	          ' ',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://github.com/dingbat/danhassin.me', target: '_blank', className: 'angle-link source' },
+	            'source'
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'renderHeader',
+	    value: function renderHeader(path) {
+	      var title = path === '' ? "Dan Hassin" : path[0].toUpperCase() + path.substring(1);
+	      var back = path !== '';
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'header' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          back && _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            _react2.default.createElement('i', { className: 'fa fa-angle-left' })
+	          ),
+	          title,
+	          back && _react2.default.createElement('div', { className: 'back-counterbalance' })
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var key = this.props.location.pathname.replace("/", "");
+	      var transition = key === '' ? "pop" : "push";
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          _reactAddonsCssTransitionGroup2.default,
+	          { transitionName: transition, transitionEnterTimeout: 500, transitionLeaveTimeout: 500 },
+	          _react2.default.createElement(
+	            'div',
+	            { key: key, className: 'page container' },
+	            this.renderHeader(key),
+	            this.props.children,
+	            this.renderFooter()
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return App;
+	}(_react.Component);
 
 	var routes = {
 	  path: '/',
@@ -27997,7 +28110,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: 'Oxygen', sans-serif; }\n\n.container {\n  width: 80%;\n  text-align: center;\n  padding-top: 20px;\n  position: absolute;\n  left: 10%; }\n\n.header {\n  margin-top: 50px;\n  margin-bottom: 40px; }\n  .header i.fa-angle-left, .header .back-counterbalance {\n    width: 200px;\n    font-size: 35px;\n    padding-right: 15px;\n    display: inline-block; }\n\na[href], a.show {\n  cursor: pointer;\n  color: inherit;\n  text-decoration: none; }\n  a[href]:hover, a.show:hover {\n    text-decoration: underline;\n    color: black; }\n\n.color-ish {\n  color: gray; }\n\n.color-light {\n  color: #9a9a9a; }\n", ""]);
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n  font-family: 'Oxygen', sans-serif; }\n\n.container {\n  width: 80%;\n  text-align: center;\n  padding-top: 20px;\n  position: absolute;\n  left: 10%; }\n\n.header {\n  margin-top: 50px; }\n  .header i.fa-angle-left, .header .back-counterbalance {\n    width: 200px;\n    font-size: 35px;\n    padding-right: 15px;\n    display: inline-block; }\n\n.subheader {\n  margin-bottom: 40px; }\n\n.footer {\n  color: gray;\n  font-size: 0.95em;\n  margin-top: 10px;\n  padding-bottom: 60px; }\n  .footer .separator {\n    font-size: 1em;\n    padding: 10px 0px; }\n  .footer .links .contact {\n    width: 100px;\n    text-align: right;\n    display: inline-block; }\n  .footer .links .source {\n    width: 100px;\n    text-align: left;\n    display: inline-block; }\n  .footer #email span {\n    margin: 0 2px; }\n\na[href], a.show, a.angle-link {\n  cursor: pointer;\n  color: inherit;\n  text-decoration: none; }\n  a[href]:hover, a.show:hover, a.angle-link:hover {\n    text-decoration: underline;\n    color: black; }\n\n.color-ish {\n  color: gray; }\n\n.color-light {\n  color: #9a9a9a; }\n\na.angle-link {\n  margin: 0 5px;\n  font-family: 'Roboto Mono', monospace;\n  font-size: 0.9em; }\n  a.angle-link:before {\n    content: '<'; }\n  a.angle-link:after {\n    content: '>'; }\n", ""]);
 
 	// exports
 
@@ -28751,31 +28864,21 @@
 	var Home = function (_Component) {
 	  _inherits(Home, _Component);
 
-	  function Home(props) {
+	  function Home() {
 	    _classCallCheck(this, Home);
 
-	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
-
-	    _this.state = {};
-	    return _this;
+	    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
 	  }
 
 	  _createClass(Home, [{
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
-
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'index' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'header' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Dan Hassin'
-	          ),
+	          { className: 'subheader' },
 	          _react2.default.createElement('img', { src: _me2.default })
 	        ),
 	        _react2.default.createElement(
@@ -28822,65 +28925,8 @@
 	            _react2.default.createElement(
 	              'p',
 	              null,
-	              'hi, oh uh, hi, i haven\'t decided what to write here yet. anyway, thanks for visiting! -dan'
+	              'hi, oh uh, hi, i haven‘t decided what to write here yet. anyway, thanks for visiting! -dan'
 	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'footer' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'separator' },
-	            '~'
-	          ),
-	          !this.state.showEmail && _react2.default.createElement(
-	            'a',
-	            { className: 'show', onClick: function onClick() {
-	                return _this2.setState({ showEmail: true });
-	              } },
-	            '            contact'
-	          ),
-	          this.state.showEmail && _react2.default.createElement(
-	            'span',
-	            { id: 'email' },
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-ish' },
-	              'danhassin'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-light' },
-	              'at'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-ish' },
-	              'mac'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-light' },
-	              'dot'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'color-ish' },
-	              'com'
-	            )
-	          ),
-	          ' ',
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'color-light' },
-	            '|'
-	          ),
-	          ' ',
-	          _react2.default.createElement(
-	            'a',
-	            { href: 'stuff/hassin-resume.pdf', target: '_blank', className: 'color-ish' },
-	            'resume'
 	          )
 	        )
 	      );
@@ -28910,8 +28956,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./index.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./index.sass");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./home.sass", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?indentedSyntax!./home.sass");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -28929,7 +28975,7 @@
 
 
 	// module
-	exports.push([module.id, ".index .header img {\n  width: 200px;\n  border-radius: 10px; }\n\n.index .content {\n  color: gray;\n  padding-bottom: 10px;\n  width: 448px;\n  margin-left: auto;\n  margin-right: auto; }\n  .index .content .menu {\n    margin-bottom: 30px;\n    font-size: 20px; }\n    .index .content .menu .item {\n      display: inline-block; }\n  .index .content .about {\n    text-align: justify; }\n\n.index .footer {\n  color: gray;\n  font-size: 0.95em;\n  margin-top: 10px;\n  padding-bottom: 60px; }\n  .index .footer .separator {\n    font-size: 1em;\n    padding: 10px 0px; }\n  .index .footer #email span {\n    margin: 0 2px; }\n", ""]);
+	exports.push([module.id, ".index .subheader img {\n  width: 200px;\n  border-radius: 10px; }\n\n.index .content {\n  color: gray;\n  padding-bottom: 10px;\n  width: 448px;\n  margin-left: auto;\n  margin-right: auto; }\n  .index .content .menu {\n    margin-bottom: 30px;\n    font-size: 20px; }\n    .index .content .menu .item {\n      display: inline-block; }\n  .index .content .about {\n    text-align: justify; }\n", ""]);
 
 	// exports
 
@@ -29020,7 +29066,7 @@
 	          Object.keys(item.links).map(function (link) {
 	            return _react2.default.createElement(
 	              'a',
-	              { key: link, href: item.links[link] },
+	              { key: link, href: item.links[link], className: 'angle-link' },
 	              link
 	            );
 	          })
@@ -29035,30 +29081,15 @@
 	        { className: 'software' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'header' },
+	          { className: 'subheader' },
+	          _react2.default.createElement('i', { className: 'fa fa-github' }),
+	          'follow me on github! ',
 	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              _react2.default.createElement('i', { className: 'fa fa-angle-left' })
-	            ),
-	            'Software',
-	            _react2.default.createElement('div', { className: 'back-counterbalance' })
+	            'a',
+	            { href: 'https://github.com/dingbat' },
+	            '@dingbat'
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement('i', { className: 'fa fa-github' }),
-	            'follow me on github! ',
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'https://github.com/dingbat' },
-	              '@dingbat'
-	            ),
-	            ' '
-	          )
+	          ' '
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -29140,7 +29171,7 @@
 
 
 	// module
-	exports.push([module.id, ".software i.fa-github {\n  font-size: 20px;\n  margin-right: 5px; }\n\n.software .content {\n  margin: auto;\n  width: 90%; }\n  .software .content .col {\n    vertical-align: top;\n    text-align: left;\n    width: 30%;\n    display: inline-block; }\n    .software .content .col:nth-child(2) {\n      margin: 0 5%; }\n    .software .content .col h2 {\n      color: #4d4d4d;\n      margin-bottom: 40px; }\n    .software .content .col .item {\n      margin-bottom: 50px; }\n      .software .content .col .item h3 {\n        font-size: 20px;\n        margin-bottom: 5px; }\n      .software .content .col .item img {\n        width: 80%; }\n        .software .content .col .item img.app {\n          width: 50%; }\n        .software .content .col .item img:not(.no-border):not(.app) {\n          border: gray 1px solid; }\n      .software .content .col .item .tech {\n        color: gray; }\n      .software .content .col .item .links a {\n        margin: 0 5px;\n        font-family: 'Roboto Mono', monospace;\n        font-size: 0.9em; }\n        .software .content .col .item .links a:before {\n          content: '<'; }\n        .software .content .col .item .links a:after {\n          content: '>'; }\n", ""]);
+	exports.push([module.id, ".software i.fa-github {\n  font-size: 20px;\n  margin-right: 5px; }\n\n.software .content {\n  margin: auto;\n  width: 90%; }\n  .software .content .col {\n    vertical-align: top;\n    text-align: left;\n    width: 30%;\n    display: inline-block; }\n    .software .content .col:nth-child(2) {\n      margin: 0 5%; }\n    .software .content .col h2 {\n      color: #4d4d4d;\n      margin-bottom: 40px; }\n    .software .content .col .item {\n      margin-bottom: 50px; }\n      .software .content .col .item h3 {\n        font-size: 20px;\n        margin-bottom: 5px; }\n      .software .content .col .item img {\n        max-width: 80%; }\n        .software .content .col .item img.app {\n          width: 50%; }\n        .software .content .col .item img:not(.no-border):not(.app) {\n          border: gray 1px solid; }\n      .software .content .col .item .tech {\n        color: gray; }\n", ""]);
 
 	// exports
 
@@ -29504,10 +29535,9 @@
 	  }
 	}, {
 	  name: "λ-calculus interpreter",
-	  img: "lambda.png",
 	  link: "lambda",
-	  app: true,
 	  links: {},
+	  noBorder: true,
 	  description: function description() {
 	    return _react2.default.createElement(
 	      "p",
@@ -29517,7 +29547,8 @@
 	        "a",
 	        { href: "http://en.wikipedia.org/wiki/Lambda_calculus" },
 	        "the lambda calculus"
-	      )
+	      ),
+	      ", made while studying it in college."
 	    );
 	  }
 	}];
@@ -29540,10 +29571,9 @@
 		"./crm114.jpg": 291,
 		"./ide.png": 292,
 		"./iror.png": 293,
-		"./lambda.png": 294,
-		"./memoring.jpg": 295,
-		"./qt.jpg": 296,
-		"./skedge.png": 297
+		"./memoring.jpg": 294,
+		"./qt.jpg": 295,
+		"./skedge.png": 296
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -29629,28 +29659,22 @@
 /* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "02d43848b1afd004db99b270a42890ca.png";
+	module.exports = __webpack_require__.p + "8326ca6577dda602a6a6bde4348e4a55.jpg";
 
 /***/ },
 /* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "8326ca6577dda602a6a6bde4348e4a55.jpg";
+	module.exports = __webpack_require__.p + "d0a36672c3f7c5587620a669581140f3.jpg";
 
 /***/ },
 /* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "d0a36672c3f7c5587620a669581140f3.jpg";
-
-/***/ },
-/* 297 */
-/***/ function(module, exports, __webpack_require__) {
-
 	module.exports = __webpack_require__.p + "0c89945685c04743726f490b18ec2194.png";
 
 /***/ },
-/* 298 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -29669,11 +29693,11 @@
 
 	var _reactRouter = __webpack_require__(186);
 
-	var _radio = __webpack_require__(299);
+	var _radio = __webpack_require__(298);
 
 	var _radio2 = _interopRequireDefault(_radio);
 
-	__webpack_require__(300);
+	__webpack_require__(299);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29705,18 +29729,7 @@
 	        { className: 'music' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'header' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              _react2.default.createElement('i', { className: 'fa fa-angle-left' })
-	            ),
-	            'Music',
-	            _react2.default.createElement('div', { className: 'back-counterbalance' })
-	          ),
+	          { className: 'subheader' },
 	          _react2.default.createElement('canvas', { id: 'radio-canvas', width: '600', height: '451' })
 	        ),
 	        _react2.default.createElement(
@@ -29839,7 +29852,7 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "music.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 299 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -29937,13 +29950,13 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "radio.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 300 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(301);
+	var content = __webpack_require__(300);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(258)(content, {});
@@ -29963,7 +29976,7 @@
 	}
 
 /***/ },
-/* 301 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(257)();
@@ -29977,7 +29990,7 @@
 
 
 /***/ },
-/* 302 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
@@ -29996,7 +30009,7 @@
 
 	var _reactRouter = __webpack_require__(186);
 
-	__webpack_require__(303);
+	__webpack_require__(302);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30034,7 +30047,7 @@
 	  url: "papers/eliot.pdf",
 	  year: "2014"
 	}, {
-	  title: "“Non-Duality” – A study of Zen philosophy",
+	  title: "“Non-Duality” – A study of Zen philosophy”",
 	  url: "papers/zen-nonduality.pdf",
 	  year: "2014"
 	}, {
@@ -30104,21 +30117,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'writing' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'header' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              _react2.default.createElement('i', { className: 'fa fa-angle-left' })
-	            ),
-	            'Writing',
-	            _react2.default.createElement('div', { className: 'back-counterbalance' })
-	          )
-	        ),
+	        _react2.default.createElement('div', { className: 'subheader' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'content' },
@@ -30155,13 +30154,13 @@
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/dan/projects/danhassin-react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "writing.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 303 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(304);
+	var content = __webpack_require__(303);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(258)(content, {});
@@ -30181,7 +30180,7 @@
 	}
 
 /***/ },
-/* 304 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(257)();
@@ -30195,7 +30194,7 @@
 
 
 /***/ },
-/* 305 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.html";
