@@ -54,15 +54,15 @@ export default class Home extends Component {
 
             %p.unjustified
               or, you could reject the very notion of self-advertisement and
-               come up with a hypothesis of your own. for instance, the tangled
+               come up with a hypothesis of your own. for one, the tangled
                relationships between self, its creations, and others make
                it unclear what exactly is advertising what. or maybe there exist
                justifications for this site of an entirely different nature,
                or maybe justifications don’t even matter at all. &nbsp;
 
             %p
-              anyway, this site is provided 'as is', with no warranty of any
-               kind. contact me with stuff and i’ll try to respond.
+              "site", interesting word. anyway, contact me with stuff and i’ll try
+               to respond.
     ~)
   }
 }

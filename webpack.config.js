@@ -27,7 +27,7 @@ module.exports = {
       { test: /\.html$/, loader: "file?name=[name].[ext]", },
       { test: /\.sass$/, loaders: ["style", "css", "sass?indentedSyntax"] },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192', exclude: /node_modules/, },
-      
+
       // FontAwesome
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
@@ -44,6 +44,13 @@ module.exports = {
 
     new webpack.DefinePlugin({
       '__DEV__': (process.env.NODE_ENV !== 'production')
+    }),
+
+    // For turning off react dev
+    new webpack.DefinePlugin({
+      "process.env": {
+         NODE_ENV: JSON.stringify("production")
+       }
     })
   ],
 }
