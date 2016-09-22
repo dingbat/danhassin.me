@@ -34,10 +34,11 @@ export default class Software extends Component {
     return (~
       .software
         .subheader
-          %i.fa.fa-github
-          follow me on github!
-          %a(href="https://github.com/dingbat")> @dingbat
-          
+          follow me on github:
+          %a.angle-link(href="https://github.com/dingbat")>
+            %i.fa.fa-github
+            dingbat
+
         .content
           .col
             %h2 iOS/macOS
