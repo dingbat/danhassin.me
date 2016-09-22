@@ -28,7 +28,7 @@ class App extends Component {
           {!this.state.showEmail && (~
             %a.angle-link.contact(onClick={() => this.setState({showEmail: true})}) contact
           ~)}
-          
+
           {this.state.showEmail && (~
             %span.contact#email
               %span.color-ish danhassin
