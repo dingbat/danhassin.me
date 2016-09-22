@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import startRadio from 'radio';
+import * as Radio from 'radio';
 
 import 'style/music.sass';
 
 export default class Music extends Component {
   componentDidMount() {
-    startRadio()
+    Radio.start('music-radio', 'waves')
   }
 
   render() {
     return (~
       .music
         .subheader
-          %canvas(id="radio-canvas" width="600" height="451")
+          %canvas#music-radio.radio(width="600" height="451")
 
         .content
           %h2 speedway racer boy
           %p.color-ish
-            music made with my friends chris and kevin. see our 
+            music made with my friends chris and kevin. see our
             %a.show(href="http://swrb.info")> website
             and
             %a.show(href="https://www.facebook.com/speedwayracerboy/")> facebook page
@@ -35,16 +35,16 @@ export default class Music extends Component {
             this is me playing around with a microkorg and a looper
             %br
             listen w headphones
-        
+
           .soundcloud
             %iframe(width="100%" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139168849&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true")
             .sc-sub.color-ish
               %p january 2012
-            
+
             %iframe(width="100%" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184856527&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true")
             .sc-sub.color-ish
               %p april 2013
-            
+
             %iframe(width="100%" height="166" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F104186145%3Fsecret_token%3Ds-fyR86")
             %div.sc-sub.color-ish
               %p july 2013

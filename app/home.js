@@ -4,12 +4,20 @@ import imgMe from 'img/me.jpg';
 
 import { Router, Route, Link } from 'react-router'
 
+import * as Radio from 'radio';
+
+import 'style/music.sass';
+
 export default class Home extends Component {
+  componentDidMount() {
+    Radio.start('home-radio', 'static');
+  }
+
   render() {
     return (~
       .index
         .subheader
-          %img(src={imgMe})
+          %canvas#home-radio.radio(width="200" height="200")
 
         .content
           .menu

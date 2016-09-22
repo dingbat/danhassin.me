@@ -1,8 +1,6 @@
 var step = 0;
 
-var playing, canvas, context;
-
-var requestAnimationFrame =  
+var requestAnimationFrame =
   window.requestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
   window.mozRequestAnimationFrame ||
@@ -12,8 +10,9 @@ var requestAnimationFrame =
     return setTimeout(callback, 1000/60.0);
   };
 
-function clear()
+function clear(canvas)
 {
+  var context = canvas.getContext("2d");
   context.fillStyle = "rgb(0,0,0)";
   context.fillRect(0,0,canvas.width,canvas.height);
 }
@@ -23,13 +22,14 @@ function randRGB(darkness)
   return Math.floor(Math.random()*255/darkness);
 }
 
-function randPoint(extra)
+function randPoint(canvas,extra)
 {
-  return [Math.random()*(canvas.width+extra*2)-extra, Math.random()*(canvas.height+extra*2)-extra]; 
+  return [Math.random()*(canvas.width+extra*2)-extra, Math.random()*(canvas.height+extra*2)-extra];
 }
 
-function waves(num)
+function waves(canvas,num)
 {
+  var context = canvas.getContext("2d");
   var distance = 30;
   var i;
   for (i = 0; i < num; i++) {
@@ -49,12 +49,13 @@ function waves(num)
   }
 }
 
-function lines(num,darkness,extra)
-{   
+function lines(canvas,num,darkness,extra)
+{
+  var context = canvas.getContext("2d");
   var i;
   for (i = 0; i < num; i++) {
-    var pt1 = randPoint(extra);
-    var pt2 = randPoint(extra);
+    var pt1 = randPoint(canvas,extra);
+    var pt2 = randPoint(canvas,extra);
 
     context.strokeStyle = "rgb("+randRGB(darkness)+","+randRGB(darkness)+","+randRGB(darkness)+")";
     context.beginPath();
@@ -64,33 +65,34 @@ function lines(num,darkness,extra)
   }
 }
 
-function animloop()
+function animloop(id, playing)
 {
+  var canvas = document.getElementById(id);
+  if (!canvas) {
+    return;
+  }
+
   if (step == 0) {
-    clear();
-  
-    if (!playing) {
-      lines(16,1,100);
+    clear(canvas);
+
+    if (playing === 'static') {
+      lines(canvas,16,1,100);
     }
-    else {
-      waves(18);
+    else if (playing === 'waves') {
+      waves(canvas,18);
     }
   }
 
-  step = (step + 1) % 5;
-  requestAnimationFrame(animloop);
+  var refreshRate = {
+    static: 6,
+    waves: 6,
+  }[playing];
+
+  step = (step + 1) % refreshRate;
+
+  requestAnimationFrame(animloop.bind(this, id, playing));
 }
 
-export default function() {
-  canvas = document.getElementById("radio-canvas");
-  context = canvas.getContext("2d");
-  playing = true;
-  canvas.addEventListener("mouseover", function () {
-    playing = false;
-  });
-  canvas.addEventListener("mouseout", function () {
-    playing = true;
-  });
-
-  animloop();
+export const start = function (id, playing) {
+  animloop(id, playing);
 }
