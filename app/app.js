@@ -44,18 +44,6 @@ class App extends Component {
     ~)
   }
 
-  renderHeader(path) {
-    const title = path[0] && path[0].toUpperCase() + path.substring(1);
-    const back = path !== '';
-    return (~
-      .header
-        %h1
-          {back && (~ %Link(to="/") %i.fa.fa-angle-left ~)}
-          {title}
-          {back && (~ .back-counterbalance ~)}
-    ~);
-  }
-
   render() {
     const key = this.props.location.pathname.replace("/","")
     const transition = key === '' ? "pop" : "push"
@@ -67,7 +55,6 @@ class App extends Component {
           transitionLeaveTimeout={500}
         )
           .page.container(key={key})
-            {this.renderHeader(key)}
             {this.props.children}
             {this.renderFooter()}
     ~)

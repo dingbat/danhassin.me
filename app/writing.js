@@ -56,7 +56,9 @@ const other = [
   },
 ]
 
-export default class Writing extends Component {
+import Page from 'page';
+
+export default class Writing extends Page {
   renderItem(item) {
     return (~
       %li(key={item.title})
@@ -80,6 +82,7 @@ export default class Writing extends Component {
     return (~
       .writing
         .subheader
+          {this.renderBack()}
         .content
           %h2 selected university papers
           %ul.paper-table

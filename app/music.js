@@ -5,7 +5,9 @@ import * as Radio from 'radio';
 
 import 'style/music.sass';
 
-export default class Music extends Component {
+import Page from 'page';
+
+export default class Music extends Page {
   componentDidMount() {
     Radio.start('music-radio', 'waves')
   }
@@ -14,6 +16,7 @@ export default class Music extends Component {
     return (~
       .music
         .subheader
+          {this.renderBack()}
           %canvas#music-radio.radio(width="500" height="351")
 
         .content

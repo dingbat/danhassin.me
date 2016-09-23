@@ -7,7 +7,7 @@ body
   font-family: 'Oxygen', sans-serif
 
 .container
-  width: 80%
+  width: 70%
 
   text-align: center
 
@@ -16,19 +16,26 @@ body
   // needed for transitions to work
   // (so that two pages can 'overlay' each other)
   position: absolute
-  left: 10%
+  left: 15%
 
-.header
-  margin-top: 50px
 
-  i.fa-angle-left, .back-counterbalance
-    width: 200px
-    font-size: 35px
-    padding-right: 15px
-    display: inline-block
+.back
+  float: left
+  color: $color-ish
+
+  i
+    font-size: 40px
+    vertical-align: middle
+    height: 48px
+
+  span
+    font-size: 20px
+    margin-left: 5px
 
 .subheader
+  margin-top: 60px
   margin-bottom: 40px
+  text-align: center
 
 .footer
   color: $color-ish

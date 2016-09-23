@@ -7,7 +7,14 @@ import iOSItems from 'projects/ios';
 import BigItems from 'projects/big';
 import SmallItems from 'projects/small';
 
-export default class Software extends Component {
+import * as Radio from 'radio';
+import Page from 'page';
+
+export default class Software extends Page {
+  componentDidMount() {
+    Radio.start('software-radio', 'waves')
+  }
+
   renderItem(item) {
     return (~
       .item(key={item.name})
@@ -34,10 +41,13 @@ export default class Software extends Component {
     return (~
       .software
         .subheader
-          follow me on github:
-          %a.angle-link(href="https://github.com/dingbat")>
-            %i.fa.fa-github
-            dingbat
+          {this.renderBack()}
+          %canvas#software-radio.radio(width="700" height="251")
+          %p
+            follow me on github:
+            %a.angle-link(href="https://github.com/dingbat")>
+              %i.fa.fa-github
+              dingbat
 
         .content
           .col
