@@ -32,37 +32,43 @@ export default class Home extends Component {
 
           .about
             %p
-              you’ve found this site. think about everything that had to happen
-               for this moment to occur. i mean everything. well, maybe not.
+              you’ve found this site. think about, for a second, everything that
+               had to happen for this moment to occur.
 
             %p
-              this paragraph text alignment is set to
+              these paragraph text alignments are set to
               %span.monospace> justify
-              because it’s attempting to justify the existence of this site, but
-               that is difficult because at first this site doesn’t really seem
-               like anything beyond self-advertisement.
+              because they’re attempting to justify the existence of this site,
+               but that is difficult because at first this site doesn’t really
+               seem like anything beyond self-advertisement.
 
             %p
-              although it may seem unfair, it may lie within your own power
-               and responsibility to make that judgment. luckily for you, there
-               is a fair amount of content around here of different form which
-               increases the chances that you will appreciate something for its
-               own merit. unluckily for you, or maybe me, there’s a fairly high
-               chance of you being here to recruit me for something, and thus,
-               the value (or non-value) of the things here for you are,
-               ultimately, me.
+              although it may at first seem unfair, it may be within your own power
+               and responsibility to make such a judgment regarding this site.
+               luckily for you, there is a fair amount of content around here
+               of various different form, which increases the chances of you
+               appreciating something for its own merit. unluckily for you, or maybe
+               me, there’s a fairly high chance of you being here to recruit me
+               for something, and thus, the value (or non-value) of this content
+               for you ultimately reflects only me, and thus you. is there even
+               a difference between the two values, and could one live without
+               the other?
 
             %p.unjustified
-              or, you could reject the very notion of self-advertisement and
-               come up with a hypothesis of your own. for one, the tangled
-               relationships between self, its creations, and others make
-               it unclear what exactly is advertising what. or maybe there exist
-               justifications for this site of an entirely different nature,
-               or maybe justifications don’t even matter at all. &nbsp;
+              the tangled relationships between self, its creations, and others
+               make it rather unclear exactly who/what is advertising who/what,
+               and what constitutes the difference between advertising and
+               gloating, or between gloating and self-expression. maybe there
+               exist justifications for this site of an entirely different nature,
+               known or unknown to us. what justification even is there beyond
+               the forces that brought me to write this and that brought you here.
+               maybe the justifications don’t
+               &nbsp;&nbsp;
+               matter at all.
+               &nbsp;&nbsp;&nbsp;
 
             %p
-              "site", interesting word. anyway, contact me with stuff and i’ll try
-               to respond.
+              anyway, contact me with stuff and i’ll try to respond.
     ~)
   }
 }
