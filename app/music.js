@@ -14,7 +14,7 @@ export default class Music extends Component {
     return (~
       .music
         .subheader
-          %canvas#music-radio.radio(width="600" height="451")
+          %canvas#music-radio.radio(width="500" height="351")
 
         .content
           %h2 speedway racer boy
