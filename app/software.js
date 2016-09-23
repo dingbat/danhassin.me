@@ -42,7 +42,7 @@ export default class Software extends Page {
       .software
         .subheader
           {this.renderBack()}
-          %canvas#software-radio.radio(width="700" height="251")
+          %canvas#software-radio.radio(width="700" height="175")
           %p
             follow me on github:
             %a.angle-link(href="https://github.com/dingbat")>

@@ -71,16 +71,18 @@ function textile(canvas)
   }
 }
 
-function squares(canvas,num)
+function squares(canvas)
 {
   var context = canvas.getContext("2d");
   var i;
-  for (i = 0; i < num; i++) {
-    var topLeft = randPoint(canvas,100);
+  for (i = 0; i < 1000; i++) {
+    var center = randPoint(canvas,50);
     var width = Math.random()*300;
     var height = Math.random()*300;
+    var topLeft = [center[0]-width/2, center[1]-height/2];
 
-    context.strokeStyle = "rgb("+randRGB(1)+","+randRGB(1)+","+randRGB(1)+")";
+    var d = Math.random() + Math.random() + Math.random();
+    context.strokeStyle = "rgb("+randRGB(d)+","+randRGB(d)+","+randRGB(d)+")";
     context.beginPath();
 
     context.moveTo(topLeft[0],topLeft[1]);
@@ -148,7 +150,7 @@ function animloop(id, playing)
       waves(canvas,18);
     }
     else if (playing === 'squares') {
-      squares(canvas,100);
+      squares(canvas);
     }
     else if (playing === 'textile') {
       textile(canvas);
