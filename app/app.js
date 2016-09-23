@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   renderHeader(path) {
-    const title = path === '' ? "Dan Hassin" : path[0].toUpperCase() + path.substring(1);
+    const title = path[0] && path[0].toUpperCase() + path.substring(1);
     const back = path !== '';
     return (~
       .header

@@ -55,15 +55,16 @@ export default class Home extends Component {
                the other?
 
             %p.unjustified
-              the tangled relationships between self, its creations, and others
-               make it rather unclear exactly who/what is advertising who/what,
-               and what constitutes the difference between advertising and
+              the tangled relationships between self, others, and creation
+               muddle exactly who (or what) is advertising what, and to whom.
+               or what constitutes the difference between advertising and
                gloating, or between gloating and self-expression. maybe there
-               exist justifications for this site of an entirely different nature,
-               known or unknown to us. what justification even is there beyond
-               the forces that brought me to write this and that brought you here.
+               exists justification for this site of an entirely different nature,
+               known or unknown to us. or is there even any justification at all,
+               beyond the motives of the forces that brought me to write this
+               and that brought you to read this?
                maybe the justifications don’t
-               &nbsp;&nbsp;
+               &nbsp;
                matter at all.
                &nbsp;&nbsp;&nbsp;
 
