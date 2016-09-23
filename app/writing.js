@@ -58,7 +58,13 @@ const other = [
 
 import Page from 'page';
 
+import * as Radio from 'radio';
+
 export default class Writing extends Page {
+  componentDidMount() {
+    Radio.start('writing-radio', 'textile')
+  }
+
   renderItem(item) {
     return (~
       %li(key={item.title})
@@ -72,9 +78,10 @@ export default class Writing extends Page {
 
   renderOtherItem(item) {
     return (~
-      .(key={item.title})
-        %a(href={item.url} target="_blank")
+      %span(key={item.title})
+        %a(href={item.url} target="_blank")>
           {item.title}
+        %span.other-separator {"//"}
     ~)
   }
 
@@ -83,14 +90,15 @@ export default class Writing extends Page {
       .writing
         .subheader
           {this.renderBack()}
+          %canvas#writing-radio.radio(width="220" height="300")
         .content
           %h2 selected university papers
           %ul.paper-table
             {papers.map(this.renderItem)}
 
           %h2 other
-          .other-table
-            {other.map(this.renderOtherItem)}
+          %span.other-separator {"//"}
+          {other.map(this.renderOtherItem)}
     ~)
   }
 }

@@ -27,6 +27,50 @@ function randPoint(canvas,extra)
   return [Math.random()*(canvas.width+extra*2)-extra, Math.random()*(canvas.height+extra*2)-extra];
 }
 
+function textile(canvas)
+{
+  var context = canvas.getContext("2d");
+  var lines = function(start, width, slope, offset) {
+    offset = offset || 0;
+    var i;
+    for (i = -canvas.height; i < canvas.height*2; i += width) {
+      var d = Math.random()*1 + 1;
+      context.strokeStyle = "rgb("+randRGB(d)+","+randRGB(d)+","+randRGB(d)+")";
+      context.beginPath();
+
+      context.moveTo(start+offset,i);
+      context.lineTo(canvas.width - start + offset, i+canvas.height*slope);
+
+      context.stroke();
+    }
+  };
+
+  var widthA = Math.random()*5 + 2;
+  var widthB = Math.random()*5 + 2;
+
+  var slopeA = Math.min(1, Math.random() + 0.5);
+  var slopeB = Math.min(1, Math.random() + 0.5);
+
+  if (widthA > widthB) {
+    lines(0, widthA, slopeA);
+    lines(canvas.width, widthB, slopeB);
+  } else {
+    lines(canvas.width, widthA, slopeA);
+    lines(0, widthB, slopeB);
+  }
+
+  var i;
+  for (i = 0; i < Math.random()*3 - 1; i++) {
+    var widthC = Math.random()*6 + 2;
+    var slopeC = Math.min(1, Math.random() + 0.5);
+
+    var offset = Math.random()*canvas.width*2 - canvas.width;
+    var middle = Math.random()*canvas.width/2;
+    var sign = Math.random() < 0.5 ? -1 : 1;
+    lines(middle, widthC, sign * slopeC, offset);
+  }
+}
+
 function squares(canvas,num)
 {
   var context = canvas.getContext("2d");
@@ -106,15 +150,12 @@ function animloop(id, playing)
     else if (playing === 'squares') {
       squares(canvas,100);
     }
+    else if (playing === 'textile') {
+      textile(canvas);
+    }
   }
 
-  var refreshRate = {
-    static: 6,
-    waves: 6,
-    squares: 5,
-  }[playing];
-
-  step = (step + 1) % refreshRate;
+  step = (step + 1) % 6;
 
   requestAnimationFrame(animloop.bind(this, id, playing));
 }
