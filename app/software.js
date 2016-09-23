@@ -12,7 +12,7 @@ import Page from 'page';
 
 export default class Software extends Page {
   componentDidMount() {
-    Radio.start('software-radio', 'waves')
+    Radio.start('software-radio', 'squares')
   }
 
   renderItem(item) {

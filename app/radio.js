@@ -27,6 +27,28 @@ function randPoint(canvas,extra)
   return [Math.random()*(canvas.width+extra*2)-extra, Math.random()*(canvas.height+extra*2)-extra];
 }
 
+function squares(canvas,num)
+{
+  var context = canvas.getContext("2d");
+  var i;
+  for (i = 0; i < num; i++) {
+    var topLeft = randPoint(canvas,100);
+    var width = Math.random()*300;
+    var height = Math.random()*300;
+
+    context.strokeStyle = "rgb("+randRGB(1)+","+randRGB(1)+","+randRGB(1)+")";
+    context.beginPath();
+
+    context.moveTo(topLeft[0],topLeft[1]);
+    context.lineTo(topLeft[0] + width,topLeft[1]);
+    context.lineTo(topLeft[0] + width,topLeft[1] + height);
+    context.lineTo(topLeft[0],topLeft[1] + height);
+    context.lineTo(topLeft[0],topLeft[1]);
+
+    context.stroke();
+  }
+}
+
 function waves(canvas,num)
 {
   var context = canvas.getContext("2d");
@@ -81,11 +103,15 @@ function animloop(id, playing)
     else if (playing === 'waves') {
       waves(canvas,18);
     }
+    else if (playing === 'squares') {
+      squares(canvas,100);
+    }
   }
 
   var refreshRate = {
     static: 6,
     waves: 6,
+    squares: 5,
   }[playing];
 
   step = (step + 1) % refreshRate;
