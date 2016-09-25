@@ -18,6 +18,10 @@ body
   position: absolute
   left: 15%
 
+  @media screen and (max-width: $mobile-small)
+    padding-top: 0px
+    width: calc(100% - 30px)
+    left: 15px
 
 .back
   position: absolute
@@ -33,6 +37,9 @@ body
   span
     font-size: 20px
     margin-left: 5px
+
+  @media screen and (max-width: $mobile)
+    top: 15px
 
 .subheader
   margin-top: 60px
@@ -51,15 +58,26 @@ body
     padding: 10px 0px
 
   .links
-    .contact, .source
-      width: 200px
-      display: inline-block
-
     .contact
       text-align: right
 
     .source
       text-align: left
+
+    .link-separator
+      color: $color-light
+      @media screen and (max-width: $mobile)
+        display: none
+
+    .contact, .source
+      width: 200px
+      display: inline-block
+
+      @media screen and (max-width: $mobile)
+        display: block
+        width: auto
+        text-align: center
+        line-height: 25px
 
   #email
     margin: 0 5px

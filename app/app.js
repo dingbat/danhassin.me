@@ -38,7 +38,7 @@ class App extends Component {
               %span.color-ish com
           ~)}
 
-          %span.color-light> |
+          %span.link-separator> |
 
           %a.angle-link.source(href="https://github.com/dingbat/danhassin.me" target="_blank") source
     ~)

@@ -16,11 +16,11 @@ export default class Writing extends Page {
   renderItem(item) {
     return (~
       %li(key={item.title})
+        .year.color-light
+          {item.year}
         .paper-title
           %a(href={item.url} target="_blank")
             {typeof item.title === 'function' ? item.title() : item.title}
-        .year.color-light
-          {item.year}
     ~)
   }
 
