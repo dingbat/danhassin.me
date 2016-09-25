@@ -3,7 +3,7 @@ import React from 'react';
 export const papers = [
   {
     title: "“Skedge” – Honors senior thesis",
-    url: "https://dropbox.com/s/dg0zic5376d7re4/thesis.pdf?raw=1",
+    url: "papers/skedge-thesis.pdf",
     year: "2016",
   },
   {
