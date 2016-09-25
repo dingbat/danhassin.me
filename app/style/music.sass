@@ -6,10 +6,6 @@
   h2:not(:first-child)
     margin-top: 50px
 
-  iframe
-    margin: auto
-    border-style: none
-
   .soundcloud
     iframe
       margin-top: 30px
@@ -20,3 +16,15 @@
     iframe
       margin-top: 20px
       display: block
+
+  iframe
+    margin: auto
+    border-style: none
+
+    @media screen and (max-width: $mobile)
+      width: calc(100% - 20px) !important
+
+
+  .radio
+    @media screen and (max-width: $mobile)
+      width: calc(100% - 20px)

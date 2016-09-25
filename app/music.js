@@ -26,7 +26,8 @@ export default class Music extends Page {
             %a.show(href="http://swrb.info")> website
             and
             %a.show(href="https://www.facebook.com/speedwayracerboy/")> facebook page
-          .
+
+          .bandcamp
             %iframe(src="https://bandcamp.com/EmbeddedPlayer/album=3806414790/size=medium/bgcol=d6d6d6/linkcol=333333/transparent=true/"
                     width="530px"
                     seamless={true})
