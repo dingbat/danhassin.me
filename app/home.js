@@ -36,14 +36,16 @@ export default class Home extends Component {
                had to happen for this moment to occur.
 
             %p
-              these paragraph text alignments are set to
+              the text alignments of these paragraphs are set to
               %span.monospace> justify
               because they’re attempting to justify the existence of this site,
                but that is difficult because at first this site doesn’t really
                seem like anything beyond self-advertisement.
 
             %p
-              although it may at first seem unfair, it may be within your own power
+              although it may at first seem unfair, it may be within
+              %span.emph> your
+              own power
                and responsibility to make such a judgment regarding this site.
                luckily for you, there is a fair amount of content around here
                of various different form, which increases the chances of you
