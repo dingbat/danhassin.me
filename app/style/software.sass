@@ -17,12 +17,21 @@
       width: 30%
       display: inline-block
 
+      @media screen and (max-width: $mobile)
+        display: block
+        width: 100%
+
       &:nth-child(2)
         margin: 0 5%
+
+        @media screen and (max-width: $mobile)
+          margin: 0
 
       h2
         color: darken($color-ish, 20%)
         margin-bottom: 40px
+        @media screen and (max-width: $mobile)
+          font-size: 40px
 
       .item
         margin-bottom: 50px
@@ -35,7 +44,7 @@
           max-width: 80%
 
           &.app
-            width: 50%
+            width: 100px
 
           &:not(.no-border):not(.app)
             border: $color-ish 1px solid

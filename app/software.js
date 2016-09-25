@@ -51,14 +51,14 @@ export default class Software extends Page {
 
         .content
           .col
-            %h2 iOS/macOS
-            {iOSItems.map(this.renderItem)}
-          .col
             %h2 bigger things
             {BigItems.map(this.renderItem)}
           .col
             %h2 smaller things
             {SmallItems.map(this.renderItem)}
+          .col
+            %h2 iOS/macOS
+            {iOSItems.map(this.renderItem)}
     ~)
   }
 }
