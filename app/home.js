@@ -53,14 +53,14 @@ export default class Home extends Component {
                me, there’s a fairly high chance of you being here to recruit me
                for something, and thus, the value (or non-value) of this content
                for you ultimately reflects only me, and thus you. is there even
-               a difference between the two values, and could one live without
-               the other?
+               a difference between the two valuations&mdash;of creation vs.
+               creator&mdash;and could one exist without the other?
 
             %p.unjustified
-              the tangled relationships between self, others, and creation
+              the tangled relationships between self, others, and art can
                muddle exactly who (or what) is advertising what, and to whom.
                or what constitutes the difference between advertising and
-               gloating, or between gloating and self-expression. maybe there
+               boasting, or between boasting and self-expression. maybe there
                exists justification for this site of an entirely different nature,
                known or unknown to us. or is there even any justification at all,
                beyond the motives of the forces that brought me to write this
