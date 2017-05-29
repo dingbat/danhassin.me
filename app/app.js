@@ -12,6 +12,7 @@ import Home from 'home';
 import Software from 'software';
 import Music from 'music';
 import Writing from 'writing';
+import Photos from 'photos';
 
 class App extends Component {
   constructor(props) {
@@ -69,10 +70,23 @@ const routes = {
     { path: 'software', component: Software },
     { path: 'music', component: Music },
     { path: 'writing', component: Writing },
+    { path: 'photos', component: Photos },
   ]
 }
 
+function handleUpdate() {
+  const { action } = this.state.location;
+
+  if (action === "PUSH") {
+    window.scrollTo(0, 0);
+  }
+}
+
 ReactDOM.render(
-  <Router history={__DEV__ ? hashHistory : browserHistory} routes={routes} />,
+  <Router
+    history={__DEV__ ? hashHistory : browserHistory}
+    onUpdate={handleUpdate}
+    routes={routes}
+  />,
   document.getElementById('root')
 );

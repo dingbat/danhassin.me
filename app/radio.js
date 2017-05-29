@@ -133,6 +133,24 @@ function lines(canvas,num,darkness,extra)
   }
 }
 
+function circles(canvas)
+{
+  var context = canvas.getContext("2d");
+  var i;
+  for (i = 0; i < 150; i++) {
+    var center = randPoint(canvas,50);
+    var radius = Math.random()*300;
+
+    var d = Math.random() + Math.random() + Math.random();
+    context.strokeStyle = "rgb("+randRGB(d)+","+randRGB(d)+","+randRGB(d)+")";
+    context.beginPath();
+
+    context.arc(center[0], center[1], radius, 0, 2 * Math.PI);
+
+    context.stroke();
+  }
+}
+
 function animloop(id, playing)
 {
   var canvas = document.getElementById(id);
@@ -154,6 +172,9 @@ function animloop(id, playing)
     }
     else if (playing === 'textile') {
       textile(canvas);
+    }
+    else if (playing === 'circles') {
+      circles(canvas);
     }
   }
 

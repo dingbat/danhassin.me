@@ -73,7 +73,8 @@ export default class Home extends Component {
             %p
               anyway, contact me with stuff and i’ll try to respond.
 
-          %img.picture(src={require("img/me2.jpg")} title="mug shot")
+          %Link(to="photos")
+            %img.picture(src={require("img/me2.jpg")} title="mug shot")
     ~)
   }
 }
