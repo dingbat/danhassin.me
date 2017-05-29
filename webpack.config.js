@@ -40,6 +40,7 @@ module.exports = {
       { from: 'index.html', to: 'software.html' },
       { from: 'index.html', to: 'music.html' },
       { from: 'index.html', to: 'writing.html' },
+      { from: 'index.html', to: 'photos.html' },
     ]),
 
     new webpack.DefinePlugin({
