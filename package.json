@@ -27,7 +27,7 @@
     "haml-jsx-loader": "^1.0.2",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "node-sass": "^3.8.0",
+    "node-sass": "^4.14.1",
     "react": "^15.3.1",
     "react-addons-css-transition-group": "^15.3.1",
     "react-dom": "^15.3.1",

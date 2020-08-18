@@ -17,7 +17,11 @@ import Photos from 'photos';
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {showing: false}
+    document.addEventListener("click", () => {
+      document.body.classList.remove("initial");
+      this.setState({showing: true});
+    });
   }
 
   renderFooter() {
@@ -48,6 +52,9 @@ class App extends Component {
   render() {
     const key = this.props.location.pathname.replace("/","")
     const transition = key === '' ? "pop" : "push"
+    if (!this.state.showing) {
+      return null
+    }
     return (~
       %div
         %ReactCSSTransitionGroup(
