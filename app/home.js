@@ -51,8 +51,8 @@ export default class Home extends Component {
                of various different form, which increases the chances of you
                appreciating something for its own merit. unluckily for you, or maybe
                me, there’s a fairly high chance of you being here to recruit me
-               for something, and thus, the value (or non-value) of this content
-               for you ultimately reflects only me, and thus you. is there even
+               for something, and so the value (or non-value) of this content
+               for you ultimately reflects only me, and thus back on you. is there even
                a difference between the two valuations&mdash;of creation vs.
                creator&mdash;and could one exist without the other?
 
@@ -71,7 +71,7 @@ export default class Home extends Component {
                &nbsp;&nbsp;&nbsp;
 
             %p
-              anyway, contact me with stuff and i’ll try to respond.
+              anyway, enough of that stupidity. contact me with stuff and i’ll try to respond.
 
           %Link(to="photos")
             %img.picture(src={require("img/me2.jpg")} title="mug shot")
