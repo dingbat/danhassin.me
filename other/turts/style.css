@@ -1,0 +1,103 @@
+html {
+    height: 100%;
+}
+
+body {
+	background: #D6D6D6;
+
+	padding: 0;
+	margin: 0;
+
+	text-align: center;
+
+    background-image: url(bg.png);
+    background-size: 100px 100px;
+
+    font-family: 'Nunito Sans 10pt', sans-serif;
+    height: 100%;
+}
+
+.outer, .inner {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 93%;
+}
+.inner {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 26px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.page svg, .rules-top {
+    width: 100%;
+    max-width: 350px;
+}
+
+.rules-top {
+    margin: auto;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rules-top p {
+    margin: 20px;
+    margin-bottom: 5px;
+}
+
+p, li {
+    text-align: left;
+}
+
+/* .rules {
+    position: relative;
+    width: 100%;
+}
+
+.page {
+    width: 100%;
+    overflow: hidden;
+}
+
+.page img {
+    clip-path: rect(0px 0px 50% 25% round 0%);
+    width: 400%;
+}
+
+.page-1 {
+    margin-top: -100px;
+}
+
+@media screen and (min-width: 480px) {
+    .page img {
+        width: 1920px;
+    }
+}
+*/
